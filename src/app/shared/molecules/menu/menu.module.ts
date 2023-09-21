@@ -2,8 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { MenuRoutingModule } from './menu-routing.module';
-import { MenuPrincipalComponent } from './menu-principal-component/menu-principal.component';
-import { MenuLateralComponent } from './menu-lateral-component/menu-lateral.component';
+import { MenuPrincipalComponent } from './menu-principal/menu-principal.component';
+import { MenuLateralComponent } from './menu-lateral/menu-lateral.component';
+
 
 
 @NgModule({
