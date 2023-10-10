@@ -1,4 +1,3 @@
-button {
-    color: black;
-    background-color: aqua;
+border {
+    border: 2px solid white;
 }

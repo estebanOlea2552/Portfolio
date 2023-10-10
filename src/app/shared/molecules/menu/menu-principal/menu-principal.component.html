@@ -1,31 +1,37 @@
-<h3>Menu principal</h3>
-
 <nav>
-    <div>
-        <button (click)="NavigateToANewRoute('section/descripcion')">Descripción</button>
-    </div>
-    <div>
-        <button (click)="NavigateToANewRoute('section/stack')">Stack</button>
-    </div>
-    <div>
-        <button (click)="NavigateToANewRoute('section/educacion')">Educación</button>
-    </div>
-    <div>
-        <button (click)="NavigateToANewRoute('section/proyectos')">Proyectos</button>
-    </div>
-    <div>
-        <button (click)="NavigateToANewRoute('section/experiencia')">Experiencia</button>
-    </div>
-    <div>
-        <button (click)="NavigateToANewRoute('section/cv')">CV</button>
-    </div>
-    <div>
-        <button (click)="NavigateToANewRoute('section/redes')">Redes</button>
-    </div>
-    <div>
-        <button (click)="NavigateToANewRoute('section/contacto')">Contacto</button>
-    </div>
-    <div>
-        <button (click)="NavigateToANewRoute('section/gracias')">Gracias</button>
+    <div class="container p-3 border">
+        <div class="row bg-info mx-3 border">
+            <div class="col d-flex justify-content-center bg-primary g-0 border">
+                <button class="btn btn-info" (click)="NavigateToANewRoute('section/descripcion')">Descripción</button>
+            </div>
+            <div class="col d-flex justify-content-center bg-primary g-0 border">
+                <button class="btn btn-info" (click)="NavigateToANewRoute('section/stack')">Stack</button>
+            </div>
+            <div class="col d-flex justify-content-center bg-primary g-0 border">
+                <button class="btn btn-info" (click)="NavigateToANewRoute('section/educacion')">Educación</button>
+            </div>
+        </div>
+        <div class="row bg-info mx-3 border">
+            <div class="col d-flex justify-content-center bg-primary g-0 border">
+                <button class="btn btn-info" (click)="NavigateToANewRoute('section/proyectos')">Proyectos</button>
+            </div>
+            <div class="col d-flex justify-content-center bg-primary g-0 border">
+                <button class="btn btn-info" (click)="NavigateToANewRoute('section/experiencia')">Experiencia</button>
+            </div>
+            <div class="col d-flex justify-content-center bg-primary g-0 border">
+                <button class="btn btn-info" (click)="NavigateToANewRoute('section/cv')">CV</button>
+            </div>
+        </div>
+        <div class="row bg-info mx-3 border">
+            <div class="col d-flex justify-content-center bg-primary g-0 border">
+                <button class="btn btn-info" (click)="NavigateToANewRoute('section/redes')">Redes</button>
+            </div>
+            <div class="col d-flex justify-content-center bg-primary g-0 border">
+                <button class="btn btn-info" (click)="NavigateToANewRoute('section/contacto')">Contacto</button>
+            </div>
+            <div class="col d-flex justify-content-center bg-primary g-0 border">
+                <button class="btn btn-info" (click)="NavigateToANewRoute('section/gracias')">Gracias</button>
+            </div>
+        </div>
     </div>
 </nav>
