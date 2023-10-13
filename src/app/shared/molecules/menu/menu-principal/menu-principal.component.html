@@ -1,36 +1,105 @@
-<nav>
-    <div class="container p-3 border">
-        <div class="row bg-info mx-3 border">
-            <div class="col d-flex justify-content-center bg-primary g-0 border">
-                <button class="btn btn-info" (click)="NavigateToANewRoute('section/descripcion')">Descripción</button>
+<nav class="container d-flex flex-column justify-content-center align-items-center border" style="height: 100%;">
+    <!--Contenedor de las rows-->
+    <div class="d-flex flex-column align-items-center p-3 border">
+        <!--Row 1-->
+        <div class="row d-flex justify-content-between g-0 border" style="width: 100%;">
+            <!--Columna 1-->
+            <div class="col-3 d-flex justify-content-center mx-2 border">
+                <div class="card bg-primary">
+                    <div class="card-body d-flex justify-content-center align-items-center p-0 ">
+                        <img src="./assets/images/menu/Descripción color.png" alt="" class="card-img-top img-fluid"
+                        style="height: auto; width: 6rem;">
+                    </div>
+                    <button class="btn btn-sm text-white btn-info"
+                    (click)="NavigateToANewRoute('section/descripcion')">Descripción</button>
+                </div>
             </div>
-            <div class="col d-flex justify-content-center bg-primary g-0 border">
-                <button class="btn btn-info" (click)="NavigateToANewRoute('section/stack')">Stack</button>
+            <!--Columna 2-->
+            <div class="col-3 d-flex justify-content-center mx-2 border">
+                <div class="card bg-primary">
+                    <div class="card-body d-flex justify-content-center align-items-center p-0">
+                        <img src="./assets/images/menu/Stack color.png" alt="" class="img-fluid"
+                        style="height: auto; width: 6rem;">
+                    </div>
+                    <button class="btn btn-sm text-white btn-info" (click)="NavigateToANewRoute('section/stack')">Stack</button>
+                </div>
             </div>
-            <div class="col d-flex justify-content-center bg-primary g-0 border">
-                <button class="btn btn-info" (click)="NavigateToANewRoute('section/educacion')">Educación</button>
+            <!--Columna 3-->
+            <div class="col-3 d-flex justify-content-center mx-2 border">
+                <div class="card bg-primary">
+                    <div class="card-body d-flex justify-content-center align-items-center p-0">
+                        <img src="./assets/images/menu/Educación color.png" alt="" class="img-fluid"
+                        style="height: auto; width: 6rem;">
+                    </div>
+                    <button class="btn btn-sm text-white btn-info" (click)="NavigateToANewRoute('section/educacion')">Educación</button>
+                </div>
             </div>
         </div>
-        <div class="row bg-info mx-3 border">
-            <div class="col d-flex justify-content-center bg-primary g-0 border">
-                <button class="btn btn-info" (click)="NavigateToANewRoute('section/proyectos')">Proyectos</button>
+        <!--Row 2-->
+        <div class="row d-flex justify-content-between my-3 g-0 border" style="width: 100%;">
+            <!--Columna 4-->
+            <div class="col-3 d-flex justify-content-center mx-2 border">
+                <div class="card bg-primary">
+                    <div class="card-body d-flex justify-content-center align-items-center p-0">
+                        <img src="./assets/images/menu/Proyectos color.png" alt="" class="img-fluid"
+                        style="height: auto; width: 6rem;">
+                    </div>
+                    <button class="btn btn-sm text-white btn-info" (click)="NavigateToANewRoute('section/proyectos')">Proyectos</button>
+                </div>
             </div>
-            <div class="col d-flex justify-content-center bg-primary g-0 border">
-                <button class="btn btn-info" (click)="NavigateToANewRoute('section/experiencia')">Experiencia</button>
+            <!--Columna 5-->
+            <div class="col-3 d-flex justify-content-center mx-2 border">
+                <div class="card bg-primary">
+                    <div class="card-body d-flex justify-content-center align-items-center p-0">
+                        <img src="./assets/images/menu/Experiencia color.png" alt="" class="img-fluid"
+                        style="height: auto; width: 6rem;">
+                    </div>
+                    <button class="btn btn-sm text-white btn-info"
+                    (click)="NavigateToANewRoute('section/experiencia')">Experiencia</button>
+                </div>
             </div>
-            <div class="col d-flex justify-content-center bg-primary g-0 border">
-                <button class="btn btn-info" (click)="NavigateToANewRoute('section/cv')">CV</button>
+            <!--Columna 6-->
+            <div class="col-3 d-flex justify-content-center mx-2 border">
+                <div class="card bg-primary">
+                    <div class="card-body d-flex justify-content-center align-items-center p-0">
+                        <img src="./assets/images/menu/CV color.png" alt="" class="img-fluid"
+                        style="height: 6rem; width: auto;">
+                    </div>
+                    <button class="btn btn-sm text-white btn-info" (click)="NavigateToANewRoute('section/cv')">CV</button>
+                </div>
             </div>
         </div>
-        <div class="row bg-info mx-3 border">
-            <div class="col d-flex justify-content-center bg-primary g-0 border">
-                <button class="btn btn-info" (click)="NavigateToANewRoute('section/redes')">Redes</button>
+        <!--Row 3-->
+        <div class="row d-flex justify-content-between g-0 border" style="width: 100%;">
+            <!--Columna 7-->
+            <div class="col-3 d-flex justify-content-center mx-2 border">
+                <div class="card bg-primary">
+                    <div class="card-body d-flex justify-content-center align-items-center p-0">
+                        <img src="./assets/images/menu/Redes color.png" alt="" class="img-fluid"
+                        style="height: auto; width: 6rem;">
+                    </div>
+                    <button class="btn btn-sm text-white btn-info" (click)="NavigateToANewRoute('section/redes')">Redes</button>
+                </div>
             </div>
-            <div class="col d-flex justify-content-center bg-primary g-0 border">
-                <button class="btn btn-info" (click)="NavigateToANewRoute('section/contacto')">Contacto</button>
+            <!--Columna 8-->
+            <div class="col-3 d-flex justify-content-center mx-2 border">
+                <div class="card bg-primary">
+                    <div class="card-body d-flex justify-content-center align-items-center p-0">
+                        <img src="./assets/images/menu/Contacto color.png" alt="" class="img-fluid"
+                        style="height: auto; width: 6rem;">
+                    </div>
+                    <button class="btn btn-sm text-white btn-info" (click)="NavigateToANewRoute('section/contacto')">Contacto</button>
+                </div>
             </div>
-            <div class="col d-flex justify-content-center bg-primary g-0 border">
-                <button class="btn btn-info" (click)="NavigateToANewRoute('section/gracias')">Gracias</button>
+            <!--Columna 9-->
+            <div class="col-3 d-flex justify-content-center mx-2 border">
+                <div class="card bg-primary">
+                    <div class="card-body d-flex justify-content-center align-items-center p-0">
+                        <img src="./assets/images/menu/Gracias color.png" alt="" class="img-fluid"
+                        style="height: auto; width: 6rem;">
+                    </div>
+                    <button class="btn btn-sm text-white btn-info" (click)="NavigateToANewRoute('section/gracias')">Gracias</button>
+                </div>
             </div>
         </div>
     </div>

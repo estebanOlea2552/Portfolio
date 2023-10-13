@@ -4,13 +4,15 @@ import { CommonModule } from '@angular/common';
 import { MenuRoutingModule } from './menu-routing.module';
 import { MenuPrincipalComponent } from './menu-principal/menu-principal.component';
 import { MenuLateralComponent } from './menu-lateral/menu-lateral.component';
+import { GatitoTextoPrincipalComponent } from './gatito-texto-principal/gatito-texto-principal.component';
 
 
 
 @NgModule({
   declarations: [
     MenuPrincipalComponent,
-    MenuLateralComponent
+    MenuLateralComponent,
+    GatitoTextoPrincipalComponent
   ],
   imports: [
     CommonModule,
@@ -18,7 +20,8 @@ import { MenuLateralComponent } from './menu-lateral/menu-lateral.component';
   ],
   exports: [
     MenuPrincipalComponent,
-    MenuLateralComponent
+    MenuLateralComponent,
+    GatitoTextoPrincipalComponent
   ]
 })
 export class MenuModule { }
