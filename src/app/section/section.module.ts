@@ -13,7 +13,8 @@ import { RedesComponent } from './pages/redes/redes.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { GraciasComponent } from './pages/gracias/gracias.component';
 import { MenuModule } from '../shared/molecules/menu/menu.module';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -32,7 +33,10 @@ import { MenuModule } from '../shared/molecules/menu/menu.module';
   imports: [
     CommonModule,
     SectionRoutingModule,
-    MenuModule
+    MenuModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule
   ]
 })
 export class SectionModule { }

@@ -1,16 +1,19 @@
-<h3>Contáctame</h3>
-<br>
-<ul>
-    <li>
-        <label for="name">Nombre</label>
-        <input type="text" name="name">
-    </li>
-    <li>
-        <label for="issue">Asunto</label>
-        <input type="text" name="issue">
-    </li>
-    <li>
-        <label for="message">Mensaje</label>
-        <input type="text" name="message">
-    </li>
-</ul>
+<div class="container-fluid p-2" style="border: 2px solid white;">
+    <form [formGroup]="contactForm" (ngSubmit)="submit()">
+
+        <label class="form-label text-white" for="name">Nombre</label>
+        <input class="form-control" type="text" id="name" formControlName="name">
+
+        <label class="form-label text-white" for="email">Email</label>
+        <input class="form-control" type="email" id="email" formControlName="email">
+
+        <label class="form-label text-white" for="message">Mensaje</label>
+        <textarea class="form-control"  id="message" formControlName="message" rows="3"></textarea>
+
+        <button class="btn btn-primary mt-4 mb-4" type="submit" [disabled]="!contactForm.valid">Enviar</button>
+
+        <div *ngIf="contactForm.invalid">
+            <span class="text-white form-text">Hay campos sin completar</span>
+        </div>        
+    </form>
+</div>
