@@ -1,19 +1,21 @@
 <div class="container-fluid p-2" style="border: 2px solid white;">
+    <!--Formulario-->
     <form [formGroup]="contactForm" (ngSubmit)="submit()">
-
+        <!--Inputs-->
         <label class="form-label text-white" for="name">Nombre</label>
         <input class="form-control" type="text" id="name" formControlName="name">
-
         <label class="form-label text-white" for="email">Email</label>
         <input class="form-control" type="email" id="email" formControlName="email">
-
         <label class="form-label text-white" for="message">Mensaje</label>
         <textarea class="form-control"  id="message" formControlName="message" rows="3"></textarea>
-
+        <!--Botón-->
         <button class="btn btn-primary mt-4 mb-4" type="submit" [disabled]="!contactForm.valid">Enviar</button>
-
-        <div *ngIf="contactForm.invalid">
-            <span class="text-white form-text">Hay campos sin completar</span>
-        </div>        
+        <!--Mensajes-->
+        <div>
+            <span *ngIf="loading">Enviando...</span>
+        </div>
+        <div [ngClass]="!submitted? 'hidden' : 'visible'">
+            <span>{{responseMessage}}</span>
+          </div>       
     </form>
 </div>
