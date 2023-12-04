@@ -1,8 +1,15 @@
+@font-face {
+    font-family: 'amiga4ever_pro';
+    src: url('./assets/fonts/amiga4ever_pro.ttf');
+}
 * {
     color: #d0d0d0;
-    font-family: Arial, Helvetica, sans-serif;    
 }
 body {
-    background-image: url("./assets/images/Background.png");
-    background-size:cover;
+    background-image: url("./assets/images/fondo.png");
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    
 }

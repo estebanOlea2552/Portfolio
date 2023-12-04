@@ -1,7 +1,33 @@
-button {
-    font-size: 0.8rem;
-    padding: 0.2rem;
+span {
+    height: auto;
+    width: 85%;
+    font-size: 13px;
+    font-family: "amiga4ever_pro";
+}
+a {
+    text-decoration: none;
 }
 .border {
     border: 2px solid white;
+}
+.menu-item-lg {
+    height: 160px; 
+    width: 160px;
+    background-image: url("../../../../../assets/images/menu_item_lg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.card {
+    background-color: transparent;
+    border: none; 
+    box-shadow: none;
+}
+
+.menu-container-lg {
+    height: 100%;
+    background-image: url("../../../../../assets/images/menu_lg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }

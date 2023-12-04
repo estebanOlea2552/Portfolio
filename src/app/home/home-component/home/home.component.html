@@ -1,23 +1,22 @@
 <!--Contenedor general-->
-<div class="d-flex flex-column justify-content-between" style="height: 100vh;">
+<main class="d-flex flex-column justify-content-between" style="height: 100vh;">
     <!--Contenedor del header-->
-    <div class="d-flex justify-content-between mx-auto" style="width: 70vw;">
-        <button class="btn text-white p-2 btn-info" routerLink="">VOLVER</button>
-        <h5 class="bg-info m-0 p-2 rounded">Esteban Olea_Desarrollador Web</h5>
-    </div>
+    <section class="d-flex justify-content-between mx-auto mt-3 top-bar" style="width: 65vw;">
+        <button class="btn text-white ms-5 p-2" routerLink="">VOLVER</button>
+    </section>
     <!--Contenedor principal-->    
-    <div class="container" style="height: 80vh; width: 70vw;">
-        <div class="row p-1 g-0" style="height: 100%;">
-            <div class="col">
+    <div class="container" style="height: 75vh; width: 60vw;">
+        <nav class="row g-0" style="height: 100%;">
+            <div class="col-7">
                 <app-menu-principal></app-menu-principal>
             </div>
-            <div class="col">
+            <div class="col-5">
                 <app-gatito-texto-principal></app-gatito-texto-principal>
             </div>
-        </div>        
+        </nav>        
     </div>
     <!--Contenedor footer-->
-    <div class="d-flex justify-content-center rounded bg-info mx-auto" style="width: 70vw;">
+    <section class="d-flex justify-content-center mx-auto mb-3 bottom-bar" style="width: 65vw;">
         <h5 class="m-0 p-2">Esteban Olea_Desarrollador Web</h5>
-    </div>
-</div>
+    </section>
+</main>

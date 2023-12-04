@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+  opciones: boolean = false;
+  music: boolean = true;
 
+  constructor(){
+  };
+  
+  opcionesHandle(){
+    this.opciones = !this.opciones;
+  };
 }

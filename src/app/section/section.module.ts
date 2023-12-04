@@ -15,11 +15,13 @@ import { GraciasComponent } from './pages/gracias/gracias.component';
 import { MenuModule } from '../shared/molecules/menu/menu.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { GatitoTextoSecundarioComponent } from '../shared/molecules/gatito-texto-secundario/gatito-texto-secundario.component';
 
 
 @NgModule({
   declarations: [
     SectionComponent,
+    GatitoTextoSecundarioComponent,
     DescripcionComponent,
     StackComponent,
     EducacionComponent,

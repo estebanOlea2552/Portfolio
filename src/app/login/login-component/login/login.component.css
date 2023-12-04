@@ -1,4 +1,21 @@
-.border {
+.border{
     border: 2px solid white;
 }
+.esteban_olea{
+    width: 1080px;
+    height: auto;
+}
+.ds_fullstack{
+    width: 600px;
+    height: auto;
+}
+div, a, span {
+    font-family: "amiga4ever_pro";
+    color: white;
+    font-size: 22px;
+}
+button {
+    background-color: transparent;
+}
+
 

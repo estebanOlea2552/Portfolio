@@ -1,0 +1,16 @@
+.border {
+    border: 2px solid white;
+}
+p {
+    font-family: "amiga4ever_pro";
+    font-size: 12px;
+}
+.gato-texto-caja{
+    height: 100%;
+    width: 350px;
+
+    background-image: url("../../../../assets/images/puflito_caja.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
