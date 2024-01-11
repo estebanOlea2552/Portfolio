@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'app-descripcion',
   templateUrl: './descripcion.component.html',
-  styleUrls: ['./descripcion.component.css']
+  styleUrls: ['./descripcion.component.css'],
+  animations:[]
 })
 export class DescripcionComponent {
-
+  
 }

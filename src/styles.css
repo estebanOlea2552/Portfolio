@@ -1,15 +1,29 @@
+:root {
+    --pixel-size: 2;
+    --color-white: #e6e6e6;
+    --box-background: rgba(0, 119, 132, 0.3);
+}
+
 @font-face {
     font-family: 'amiga4ever_pro';
     src: url('./assets/fonts/amiga4ever_pro.ttf');
 }
-* {
-    color: #d0d0d0;
-}
+
 body {
-    background-image: url("./assets/images/fondo.png");
+    background-image: url("./assets/images/fondo.gif");
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: 100% auto;
-    
+    background-size: calc(850px * var(--pixel-size));
+    image-rendering: pixelated;
+    color: white;
+    overflow: hidden;   
+}
+
+.border{
+    border: 2px solid white;
+}
+
+.pixelated {
+    image-rendering: pixelated;
 }

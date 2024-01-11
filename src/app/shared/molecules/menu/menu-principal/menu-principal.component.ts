@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { ChildrenOutletContexts, Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu-principal',
@@ -8,9 +8,14 @@ import { Router } from '@angular/router';
 })
 export class MenuPrincipalComponent {
   
-  constructor(private router: Router){}
+  constructor(private router: Router, private context: ChildrenOutletContexts){}
 
-  NavigateToANewRoute(route: String){
+  navigateToNewRoute(route: String){
     this.router.navigate([route])
+  }
+  getRouteAnimationData() {
+    console.log(
+      this.context.getContext('primary')?.route?.snapshot?.data?.['animation']
+    )
   }
 }

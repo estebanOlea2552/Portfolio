@@ -1,15 +1,24 @@
-.border {
-    border: 2px solid white;
-}
 p {
     font-family: "amiga4ever_pro";
-    font-size: 12px;
+    font-size: calc(7px * var(--pixel-size));
 }
-.gato-texto-caja{
-    height: 100%;
-
+.gatito-texto{
+    height: calc(289px * var(--pixel-size));
+    width: calc(137px * var(--pixel-size));
     background-image: url("../../../../assets/images/puflito_caja_sm.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    padding-top: calc(7px * var(--pixel-size));
+    padding-bottom: calc(5px * var(--pixel-size));
+}
+.texto-container{
+    height: calc(95px * var(--pixel-size));
+    width: calc(123px * var(--pixel-size));
+    transform: translateX(1px);
+}
+.gatito-container{
+    height: calc(175px * var(--pixel-size));
+    width: calc(123px * var(--pixel-size));
+    transform: translateX(1px);
 }

@@ -5,6 +5,7 @@ import { MenuRoutingModule } from './menu-routing.module';
 import { MenuPrincipalComponent } from './menu-principal/menu-principal.component';
 import { MenuLateralComponent } from './menu-lateral/menu-lateral.component';
 import { GatitoTextoPrincipalComponent } from '../gatito-texto-principal/gatito-texto-principal.component';
+import { GatitoTextoSecundarioComponent } from '../gatito-texto-secundario/gatito-texto-secundario.component';
 
 
 
@@ -12,7 +13,8 @@ import { GatitoTextoPrincipalComponent } from '../gatito-texto-principal/gatito-
   declarations: [
     MenuPrincipalComponent,
     MenuLateralComponent,
-    GatitoTextoPrincipalComponent
+    GatitoTextoPrincipalComponent,
+    GatitoTextoSecundarioComponent
   ],
   imports: [
     CommonModule,
@@ -21,7 +23,8 @@ import { GatitoTextoPrincipalComponent } from '../gatito-texto-principal/gatito-
   exports: [
     MenuPrincipalComponent,
     MenuLateralComponent,
-    GatitoTextoPrincipalComponent
+    GatitoTextoPrincipalComponent,
+    GatitoTextoSecundarioComponent
   ]
 })
 export class MenuModule { }

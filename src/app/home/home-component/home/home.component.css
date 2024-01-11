@@ -1,17 +1,28 @@
-.border {
-    border: 2px solid white;
+a, h5 {
+    font-family: 'amiga4ever_pro';
+    font-size: calc(8px * var(--pixel-size));
+    color: var(--color-white);
 }
 .top-bar{
-    height: 50px;
+    height: calc(26px * var(--pixel-size));
+    width: calc(504px * var(--pixel-size));
     background-image: url('../../../../assets/images/top_bar.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
 }
 .bottom-bar{
-    height: 50px;
+    height: calc(26px * var(--pixel-size));
+    width: calc(504px * var(--pixel-size));
     background-image: url('../../../../assets/images/bottom_bar.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
 }
+.bar-container{
+    height: calc(14px * var(--pixel-size));
+    width: calc(492px * var(--pixel-size));
+    transform: translateX(1px) translateY(1px);
+    background-color: var(--box-background);
+}
+

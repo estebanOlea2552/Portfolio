@@ -1,33 +1,42 @@
-span {
-    height: auto;
-    width: 85%;
-    font-size: 13px;
+h3 {
+    font-size: calc(6px * var(--pixel-size));
     font-family: "amiga4ever_pro";
+    margin-top: calc(5px * var(--pixel-size));
 }
-a {
-    text-decoration: none;
+.menu-lg {
+    height: calc(289px * var(--pixel-size));
+    width: calc(262px * var(--pixel-size));
+    background-image: url("../../../../../assets/images/menu_lg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;  
+    padding-top: calc(7px * var(--pixel-size));   
 }
-.border {
-    border: 2px solid white;
+.menu-container-lg{
+    height: calc(276px * var(--pixel-size));
+    width: calc(249px * var(--pixel-size)); 
+    transform: translate(1px);
+    background-color: var(--box-background);
+}
+.menu-row{
+    width: calc(249px * var(--pixel-size));
+}
+.menu-row-margin-y{
+    margin-top: calc(5px* var(--pixel-size));
+    margin-bottom: calc(5px* var(--pixel-size));
 }
 .menu-item-lg {
-    height: 160px; 
-    width: 160px;
+    height: calc(85px * var(--pixel-size));
+    width: calc(75px * var(--pixel-size));
     background-image: url("../../../../../assets/images/menu_item_lg.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    padding-top: calc(5px * var(--pixel-size));
+    
 }
-.card {
-    background-color: transparent;
-    border: none; 
-    box-shadow: none;
-}
-
-.menu-container-lg {
-    height: 100%;
-    background-image: url("../../../../../assets/images/menu_lg.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+.menu-icon-lg{
+    height: calc(57px * var(--pixel-size));
+    width: calc(64px * var(--pixel-size));
+    margin-bottom: calc(4px * var(--pixel-size));
 }

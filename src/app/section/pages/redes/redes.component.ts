@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'app-redes',
   templateUrl: './redes.component.html',
-  styleUrls: ['./redes.component.css']
+  styleUrls: ['./redes.component.css'],
+  animations: []
 })
 export class RedesComponent {
 

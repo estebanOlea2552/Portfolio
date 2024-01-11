@@ -1,94 +1,70 @@
-<!--Contenedor principal-->
-<div class="container p-0" style="height: 100%;">
-    <!--Contenedor de ítems grupal-->
-    <nav class="row m-0 g-0 menu-container-sm">
+<!--Contenedor de ítems grupal-->
+<nav class="menu-sm">
+    <div class="menu-sm-container d-flex justify-content-evenly mx-auto">
         <!--Columna 1-->
-        <div class="col m-2 d-flex flex-column align-items-center justify-content-evenly">
-            <!--Contenedor ítem 1-->
-            <div class="ms-auto">
-                <div class="card menu-item-sm ">                    
-                    <a class="my-auto mx-2 p-1" routerLink="descripcion">
-                        <img src="./assets/images/perfil_sm.png" alt="perfil" class="img-fluid">
-                    </a>                    
-                </div>
-            </div>
+        <div class="d-flex flex-column align-items-center justify-content-evenly">
+            <!--Contenedor ítem 1-->                                              
+            <div class="menu-item-sm">
+                <div class="menu-item-sm-container mx-auto" (click)="navigateToNewRoute('section/descripcion')">
+                    <img src="./assets/images/perfil_sm.png" alt="Perfil" class="mx-auto">
+                </div>                        
+            </div>                                                
             <!--Contenedor ítem 2-->
-            <div class="ms-auto">
-                <div class="card menu-item-sm">
-                    <a class="my-auto mx-2" routerLink="stack">
-                        <img src="./assets/images/stack_sm.png" alt="stack" class="card-img-top img-fluid">
-                    </a>                    
-                </div>
+            <div class="menu-item-sm">
+                <div class="menu-item-sm-container mx-auto" (click)="navigateToNewRoute('section/stack')">
+                    <img src="./assets/images/stack_sm.png" alt="Stack" class="mx-auto">
+                </div>                        
             </div>
             <!--Contenedor ítem 3-->
-            <div class="ms-auto">
-                <div class="card menu-item-sm">                    
-                    <a class="my-auto mx-2" routerLink="educacion">
-                        <img src="./assets/images/educacion_sm.png" alt="educación"class="card-img-top img-fluid">
-                    </a>                    
-                </div>
+            <div class="menu-item-sm">
+                <div class="menu-item-sm-container mx-auto" (click)="navigateToNewRoute('section/experiencia')">
+                    <img src="./assets/images/experiencia_sm.png" alt="Experiencia" class="mx-auto">
+                </div>                        
             </div>
             <!--Contenedor ítem 4-->
-            <div class="ms-auto">
-                <div class="card menu-item-sm">                    
-                    <a class="my-auto mx-2" routerLink="proyectos">
-                        <img src="./assets/images/proyectos_sm.png" alt="proyectos"class="card-img-top img-fluid">
-                    </a>                    
-                </div>
+            <div class="menu-item-sm">
+                <div class="menu-item-sm-container mx-auto" (click)="navigateToNewRoute('section/redes')">
+                    <img src="./assets/images/redes_sm.png" alt="Redes" class="mx-auto">
+                </div>                        
             </div>
             <!--Contenedor ítem 5-->
-            <div class="ms-auto">
-                <div class="card menu-item-sm">                    
-                    <a class="my-auto mx-2" routerLink="experiencia">
-                        <img src="./assets/images/experiencia_sm.png" alt="experiencia"
-                        class="card-img-top img-fluid">
-                    </a>                    
-                </div>
+            <div class="menu-item-sm">
+                <div class="menu-item-sm-container mx-auto" (click)="navigateToNewRoute('section/gracias')">
+                    <img src="./assets/images/gracias_sm.png" alt="Gracias" class="mx-auto">
+                </div>                        
             </div>
         </div>
         <!--Columna 2-->
-        <div class="col m-2 d-flex flex-column align-items-center justify-content-evenly">
+        <div class="d-flex flex-column align-items-center justify-content-evenly">
             <!--Contenedor ítem 6-->
-            <div class="me-auto">
-                <div class="card menu-item-sm">                    
-                    <a class="my-auto mx-2" routerLink="cv">
-                        <img src="./assets/images/cv_sm.png" alt="cv" class="card-img-top img-fluid">
-                    </a>                    
-                </div>
-            </div>
+            <div class="menu-item-sm">
+                <div class="menu-item-sm-container mx-auto" (click)="navigateToNewRoute('section/educacion')">
+                    <img src="./assets/images/educacion_sm.png" alt="Educación" class="mx-auto">
+                </div>                        
+            </div> 
             <!--Contenedor ítem 7-->
-            <div class="me-auto">
-                <div class="card menu-item-sm">                    
-                    <a class="my-auto mx-2" routerLink="redes">
-                        <img src="./assets/images/redes_sm.png" alt="redes" class="card-img-top img-fluid">
-                    </a>                    
-                </div>
-            </div>
+            <div class="menu-item-sm">
+                <div class="menu-item-sm-container mx-auto" (click)="navigateToNewRoute('section/proyectos')">
+                    <img src="./assets/images/proyectos_sm.png" alt="Proyectos" class="mx-auto">
+                </div>                        
+            </div> 
             <!--Contenedor ítem 8-->
-            <div class="me-auto">
-                <div class="card menu-item-sm">                    
-                    <a class="my-auto mx-2" routerLink="contacto">
-                        <img src="./assets/images/contacto_sm.png" alt="contacto"
-                        class="card-img-top img-fluid">
-                    </a>                    
-                </div>
-            </div>
+            <div class="menu-item-sm">
+                <div class="menu-item-sm-container mx-auto" (click)="navigateToNewRoute('section/cv')">
+                    <img src="./assets/images/cv_sm.png" alt="CV" class="mx-auto">
+                </div>                        
+            </div> 
             <!--Contenedor ítem 9-->
-            <div class="me-auto">
-                <div class="card menu-item-sm">                    
-                    <a class="my-auto mx-2" routerLink="gracias">
-                        <img src="./assets/images/gracias_sm.png" alt="gracias" class="card-img-top img-fluid">
-                    </a>                   
-                </div>
-            </div>
+            <div class="menu-item-sm">
+                <div class="menu-item-sm-container mx-auto" (click)="navigateToNewRoute('section/contacto')">
+                    <img src="./assets/images/contacto_sm.png" alt="Contacto" class="mx-auto">
+                </div>                        
+            </div> 
             <!--Contenedor ítem 10-->
-            <div class="me-auto">
-                <div class="card menu-item-sm">                    
-                    <a class="my-auto mx-2" routerLink="home">
-                        <img src="./assets/images/volver.png" alt="gracias" class="card-img-top img-fluid">
-                    </a>                    
-                </div>
-            </div>
+            <div class="menu-item-sm">
+                <div class="menu-item-sm-container mx-auto" (click)="navigateToNewRoute('home')">
+                    <img src="./assets/images/volver.png" alt="Volver" class="mx-auto">
+                </div>                        
+            </div> 
         </div>
-    </nav>
-</div>
+    </div>

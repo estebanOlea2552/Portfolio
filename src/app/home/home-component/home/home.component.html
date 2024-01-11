@@ -1,22 +1,24 @@
 <!--Contenedor general-->
 <main class="d-flex flex-column justify-content-between" style="height: 100vh;">
     <!--Contenedor del header-->
-    <section class="d-flex justify-content-between mx-auto mt-3 top-bar" style="width: 65vw;">
-        <button class="btn text-white ms-5 p-2" routerLink="">VOLVER</button>
+    <section @enterTopBar class="d-flex mx-auto mt-3 top-bar pixelated border">
+        <div class="bar-container m-auto p-1">
+            <a href="" class="text-decoration-none ms-2">VOLVER</a>
+        </div>       
     </section>
-    <!--Contenedor principal-->    
-    <div class="container" style="height: 75vh; width: 60vw;">
-        <nav class="row g-0" style="height: 100%;">
-            <div class="col-7">
-                <app-menu-principal></app-menu-principal>
+    <!--Contenedor principal-->        
+        <nav class="row mx-auto  border">
+            <div @enterMenu class="col">
+                <app-menu-principal ></app-menu-principal>
             </div>
-            <div class="col-5">
-                <app-gatito-texto-principal></app-gatito-texto-principal>
+            <div @enterGatito class="col">
+                <app-gatito-texto-principal ></app-gatito-texto-principal>
             </div>
         </nav>        
-    </div>
     <!--Contenedor footer-->
-    <section class="d-flex justify-content-center mx-auto mb-3 bottom-bar" style="width: 65vw;">
-        <h5 class="m-0 p-2">Esteban Olea_Desarrollador Web</h5>
-    </section>
+    <footer @enterBottomBar class="d-flex justify-content-center mx-auto mb-3 bottom-bar pixelated border">
+        <div class="bar-container text-center m-auto p-1">
+            <h5>Esteban Olea_Desarrollador Web</h5>
+        </div>
+    </footer>
 </main>

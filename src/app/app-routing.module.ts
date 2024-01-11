@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CursorComponent } from './shared/cursor/cursor.component';
 
 const routes: Routes = [
   {
@@ -13,7 +14,12 @@ const routes: Routes = [
   {
     path: 'section',
     loadChildren: () => import ('./section/section.module').then(m => m.SectionModule)
+  },
+  {
+    path: 'cursor',
+    component: CursorComponent
   }
+  
 ];
 
 @NgModule({

@@ -1,21 +1,28 @@
-.border{
-    border: 2px solid white;
+main {
+    overflow: hidden;
 }
-.esteban_olea{
-    width: 1080px;
-    height: auto;
+.esteban_olea{    
+    width: auto;
+    height: calc(65px * var(--pixel-size));    
 }
 .ds_fullstack{
-    width: 600px;
-    height: auto;
+    width: auto;
+    height: calc(20px * var(--pixel-size));
 }
 div, a, span {
     font-family: "amiga4ever_pro";
-    color: white;
-    font-size: 22px;
+    color: var(--color-white);
+    font-size: calc(8px * var(--pixel-size));    
+}
+a:hover {
+    color: #e52566;
 }
 button {
     background-color: transparent;
 }
+
+
+
+
 
 

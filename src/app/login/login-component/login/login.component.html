@@ -1,25 +1,17 @@
 <!--Contenedor general-->
 <main class="d-flex flex-column" style="height: 100vh;">
     <!--Indicador de créditos-->
-    <span class="position-absolute top-0 start-0 p-5">Credits: 10</span>
+    <span @fadeIn class="position-absolute top-0 start-0 p-5">Credits: 10</span>
     <!--Contenedor de los elementos-->
     <div class="d-flex flex-column my-auto">
-        <figure class="mx-auto">
-            <img class="esteban_olea" src="../assets/images/esteban_olea.png" alt="esteban olea">
-        </figure>
-        <figure class="mx-auto mt-3 mb-5">
-            <img class="ds_fullstack" src="../assets/images/desarrollador_full-stack.png" alt="esteban olea">
-        </figure>
 
-        <a class="mx-auto mt-5 mb-2 text-decoration-none" routerLink="home">iniciar</a>
+        <img @titleEnter class="esteban_olea mx-auto pixelated" src="../assets/images/esteban_olea.png" alt="Esteban Olea">
+        <img @subtitleEnter class="ds_fullstack mx-auto mt-5 mb-5 pixelated" src="../assets/images/desarrollador_full-stack.png" alt="Desarrollador Full-Stack">
 
-        <a class="mx-auto mt-2 text-decoration-none" (click)="opcionesHandle()" href="#">opciones</a>
-
-        <div class="mx-auto mt-2" *ngIf="opciones">
-            <audio [autoplay]="music" src="../../../../assets/music/Cody O'Quinn - Gamer Instincts.mp3"></audio>
-            <button>music</button>            
-        </div>
+        <a @enterRight class="mx-auto mt-5 mb-2 text-decoration-none" routerLink="home">INICIAR</a>
+        <a @enterLeft class="mx-auto mt-2 text-decoration-none">OPCIONES</a>
+        
     </div>
     <!--Copyright-->
-    <span class="position-absolute bottom-0 end-0 p-5">Licenced by <br> PUFLITO Inc. &copy;</span>
+    <span @fadeIn class="position-absolute bottom-0 end-0 p-5">Licenced by <br> PUFLITO Inc. &copy;</span>
 </main>
