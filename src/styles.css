@@ -1,12 +1,19 @@
 :root {
     --pixel-size: 2;
     --color-white: #e6e6e6;
+    --color-turquoise: #47d9e4;
+    --text-shadow: #2a87a6;
     --box-background: rgba(0, 119, 132, 0.3);
 }
 
 @font-face {
     font-family: 'amiga4ever_pro';
     src: url('./assets/fonts/amiga4ever_pro.ttf');
+}
+
+* {
+    cursor: none;
+    font-family: "amiga4ever_pro";
 }
 
 body {
@@ -20,10 +27,22 @@ body {
     overflow: hidden;   
 }
 
+h3 {
+    font-size: calc(10px * var(--pixel-size));
+}
+
+button:hover{
+    cursor: none;
+}
+
 .border{
     border: 2px solid white;
 }
 
 .pixelated {
     image-rendering: pixelated;
+}
+
+.text-shadow {
+    text-shadow: 2px 2px var(--text-shadow);
 }

@@ -28,7 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
     CvComponent,
     RedesComponent,
     ContactoComponent,
-    GraciasComponent
+    GraciasComponent,
   ],
   imports: [
     CommonModule,

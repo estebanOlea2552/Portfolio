@@ -3,23 +3,24 @@ a, h5 {
     font-size: calc(8px * var(--pixel-size));
     color: var(--color-white);
 }
-.top-bar{
+
+.top-bar, .bottom-bar {
     height: calc(26px * var(--pixel-size));
     width: calc(504px * var(--pixel-size));
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.top-bar {
     background-image: url('../../../../assets/images/top_bar.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
 }
-.bottom-bar{
-    height: calc(26px * var(--pixel-size));
-    width: calc(504px * var(--pixel-size));
-    background-image: url('../../../../assets/images/bottom_bar.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+
+.bottom-bar {
+    background-image: url('../../../../assets/images/bottom_bar.png'); 
 }
-.bar-container{
+
+.bar-container {
     height: calc(14px * var(--pixel-size));
     width: calc(492px * var(--pixel-size));
     transform: translateX(1px) translateY(1px);

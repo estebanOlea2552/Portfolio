@@ -1,25 +1,19 @@
-<!--Contenedor general-->
 <main class="d-flex flex-column justify-content-between align-items-center" style="height: 100vh;">
-    <!--Contenedor del header-->
-    <section @enterTopBar class="d-flex mx-auto mt-3 top-bar pixelated border">
-        <div class="bar-container m-auto p-1">
-            <a routerLink="home" class="text-decoration-none ms-2">VOLVER</a>
-        </div>       
+    <section @enterTopBar class="d-flex mx-auto mt-3 top-bar pixelated">
+        <div class="bar-container m-auto p-1"></div>
     </section>
-    <!--Contenedor de Menú, Section y Gatito-->
-    <div class="d-flex border">        
-        <app-menu-lateral @enterMenu></app-menu-lateral>               
-        <div @enterSection class="mx-4 section pixelated border">
+    <div class="d-flex">
+        <app-menu-lateral @.disabled @enterMenu class="d-flex align-items-center border"></app-menu-lateral>
+        <div @.disabled @enterSection class="mx-4 section pixelated border">
             <div [@miTrigger]="getRouteAnimationData()" class="section-container mx-auto p-0">
                 <router-outlet></router-outlet>
-            </div>            
-        </div>                
-        <app-gatito-texto-secundario @enterGatito></app-gatito-texto-secundario>        
+            </div>
+        </div>
+        <app-gatito-texto-secundario @.disabled @enterGatito class="d-flex align-items-center border"></app-gatito-texto-secundario>
     </div>
-    <!--Contenedor footer-->
-    <footer @enterBottomBar class="d-flex justify-content-center mx-auto mb-3 bottom-bar pixelated border">
+    <footer @enterBottomBar class="d-flex justify-content-center mx-auto mb-3 bottom-bar pixelated">
         <div class="bar-container text-center m-auto p-1">
-            <h5>Esteban Olea_Desarrollador Web</h5>
+            <h5 style="text-shadow: 2px 2px var(--text-shadow);">Esteban_Olea - Desarrollador_Full_Stack</h5>
         </div>
     </footer>
 </main>

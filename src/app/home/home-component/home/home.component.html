@@ -1,24 +1,18 @@
-<!--Contenedor general-->
 <main class="d-flex flex-column justify-content-between" style="height: 100vh;">
-    <!--Contenedor del header-->
-    <section @enterTopBar class="d-flex mx-auto mt-3 top-bar pixelated border">
-        <div class="bar-container m-auto p-1">
-            <a href="" class="text-decoration-none ms-2">VOLVER</a>
-        </div>       
+    <section @enterTopBar class="d-flex mx-auto mt-3 top-bar pixelated">
+        <div class="bar-container m-auto p-1"></div>
     </section>
-    <!--Contenedor principal-->        
-        <nav class="row mx-auto  border">
-            <div @enterMenu class="col">
-                <app-menu-principal ></app-menu-principal>
-            </div>
-            <div @enterGatito class="col">
-                <app-gatito-texto-principal ></app-gatito-texto-principal>
-            </div>
-        </nav>        
-    <!--Contenedor footer-->
-    <footer @enterBottomBar class="d-flex justify-content-center mx-auto mb-3 bottom-bar pixelated border">
+    <nav class="row mx-auto">
+        <div @enterMenu class="col">
+            <app-menu-principal></app-menu-principal>
+        </div>
+        <div @.disabled @enterGatito class="col">
+            <app-gatito-texto-principal></app-gatito-texto-principal>
+        </div>
+    </nav>
+    <footer @enterBottomBar class="d-flex justify-content-center mx-auto mb-3 bottom-bar pixelated">
         <div class="bar-container text-center m-auto p-1">
-            <h5>Esteban Olea_Desarrollador Web</h5>
+            <h5 class="text-shadow">Esteban_Olea - Desarrollador_Full_Stack</h5>
         </div>
     </footer>
 </main>

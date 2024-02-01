@@ -22,7 +22,6 @@ export class GatitoTextoPrincipalComponent {
     }
     else{
       this.gatitoSrc = this.gatitoQuieto;
-    }    
+    }
   }
-
 }

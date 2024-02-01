@@ -1,4 +1,5 @@
-* {
-    font-family: "amiga4ever_pro";
-    font-size: calc(8px * var(--pixel-size));
+hr {
+    height: calc(1px*var(--pixel-size));
+    background-color: var(--color-white);
+    opacity: 1;
 }

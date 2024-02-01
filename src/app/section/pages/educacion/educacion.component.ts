@@ -1,4 +1,4 @@
-import { Component, HostBinding } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-educacion',
@@ -7,4 +7,20 @@ import { Component, HostBinding } from '@angular/core';
   animations: []
 })
 export class EducacionComponent {
+  counter: number = 0;
+  
+  next(){
+    if(this.counter >= 3){
+      this.counter = 0;
+    }else{
+      this.counter++;
+    }
+  }
+  previous(){
+    if(this.counter <= 0){
+      this.counter = 3;
+    }else{
+      this.counter--;
+    }
+  }
 }

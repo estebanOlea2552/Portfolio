@@ -1,12 +1,10 @@
-main {
-    overflow: hidden;
+.titles-container {
+    height: 60%;
 }
 .esteban_olea{    
-    width: auto;
     height: calc(65px * var(--pixel-size));    
 }
 .ds_fullstack{
-    width: auto;
     height: calc(20px * var(--pixel-size));
 }
 div, a, span {
@@ -14,11 +12,41 @@ div, a, span {
     color: var(--color-white);
     font-size: calc(8px * var(--pixel-size));    
 }
-a:hover {
-    color: #e52566;
+
+.buttons-container {
+    height: 30%;
 }
+
 button {
+    color: var(--color-white);
     background-color: transparent;
+    border: none;
+    scale: 1;
+    cursor: none;
+}
+
+button:hover {
+    color: #e52566;
+    scale: 1.06;
+}
+button:hover::before {
+    content: "<";
+}
+
+button:hover::after {
+    content: ">";
+}
+
+.options-container {
+    display: block;
+}
+
+.option {
+    display: block;
+}
+
+.hide {
+    display: none;
 }
 
 
