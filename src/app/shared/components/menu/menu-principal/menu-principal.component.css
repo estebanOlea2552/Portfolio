@@ -3,6 +3,7 @@ h3 {
     font-family: "amiga4ever_pro";
     margin-top: calc(5px * var(--pixel-size));
 }
+
 .menu-lg {
     height: calc(289px * var(--pixel-size));
     width: calc(262px * var(--pixel-size));
@@ -10,21 +11,20 @@ h3 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;  
-    padding-top: calc(7px * var(--pixel-size));   
+    padding-top: calc(7px * var(--pixel-size));
 }
-.menu-container-lg{
+
+.menu-container-lg {
     height: calc(276px * var(--pixel-size));
     width: calc(249px * var(--pixel-size)); 
     transform: translate(1px);
     background-color: var(--box-background);
 }
-.menu-row{
+
+.menu-row {
     width: calc(249px * var(--pixel-size));
 }
-.menu-row-margin-y{
-    margin-top: calc(5px* var(--pixel-size));
-    margin-bottom: calc(5px* var(--pixel-size));
-}
+
 .menu-item-lg {
     height: calc(85px * var(--pixel-size));
     width: calc(75px * var(--pixel-size));
@@ -33,10 +33,15 @@ h3 {
     background-repeat: no-repeat;
     background-size: contain;
     padding-top: calc(5px * var(--pixel-size));
-    
 }
-.menu-icon-lg{
+
+.menu-icon-lg {
     height: calc(57px * var(--pixel-size));
     width: calc(64px * var(--pixel-size));
     margin-bottom: calc(4px * var(--pixel-size));
+}
+
+.item-text-container {
+    height: calc(12px * var(--pixel-size));
+    width: calc(64px * var(--pixel-size));
 }

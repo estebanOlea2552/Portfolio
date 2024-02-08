@@ -3,13 +3,13 @@
         <div class="bar-container m-auto p-1"></div>
     </section>
     <div class="d-flex">
-        <app-menu-lateral @.disabled @enterMenu class="d-flex align-items-center border"></app-menu-lateral>
-        <div @.disabled @enterSection class="mx-4 section pixelated border">
+        <app-menu-lateral @enterMenu class="d-flex align-items-center"></app-menu-lateral>
+        <div @enterSection class="section mx-4 pixelated">
             <div [@miTrigger]="getRouteAnimationData()" class="section-container mx-auto p-0">
                 <router-outlet></router-outlet>
             </div>
         </div>
-        <app-gatito-texto-secundario @.disabled @enterGatito class="d-flex align-items-center border"></app-gatito-texto-secundario>
+        <app-gatito-texto @.disabled @enterGatito class="d-flex align-items-center"></app-gatito-texto>
     </div>
     <footer @enterBottomBar class="d-flex justify-content-center mx-auto mb-3 bottom-bar pixelated">
         <div class="bar-container text-center m-auto p-1">

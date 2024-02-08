@@ -13,6 +13,7 @@ export class MenuPrincipalComponent {
   navigateToNewRoute(route: String){
     this.router.navigate([route])
   }
+  
   getRouteAnimationData() {
     console.log(
       this.context.getContext('primary')?.route?.snapshot?.data?.['animation']

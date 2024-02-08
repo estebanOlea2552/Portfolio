@@ -5,8 +5,8 @@ a, h5 {
 }
 
 .top-bar, .bottom-bar {
-    height: calc(26px * var(--pixel-size));
-    width: calc(504px * var(--pixel-size));
+    height: calc(23px * var(--pixel-size));
+    width: calc(436px * var(--pixel-size));
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -21,9 +21,10 @@ a, h5 {
 }
 
 .bar-container {
-    height: calc(14px * var(--pixel-size));
-    width: calc(492px * var(--pixel-size));
+    height: calc(12px * var(--pixel-size));
+    width: calc(424px * var(--pixel-size));
     transform: translateX(1px) translateY(1px);
     background-color: var(--box-background);
 }
+
 

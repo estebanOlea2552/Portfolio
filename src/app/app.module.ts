@@ -7,7 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { CursorComponent } from './shared/cursor/cursor.component';
+import { CursorComponent } from './shared/components/cursor/cursor.component';
 
 @NgModule({
   declarations: [

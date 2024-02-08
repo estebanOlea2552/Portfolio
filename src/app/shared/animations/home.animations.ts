@@ -1,9 +1,9 @@
 import { animate, style, transition, trigger } from "@angular/animations";
 
-export const gatitoLg = trigger('enterGatito' , [
+export const gatito = trigger('enterGatito' , [
     transition(':enter', [
       style({
-        transform: 'translateX(200%)'
+        transform: 'translateX(220%)'
        }),
       animate('700ms 0.3s ease-in')
     ]),      
@@ -12,7 +12,7 @@ export const gatitoLg = trigger('enterGatito' , [
 export const menuLg = trigger('enterMenu' , [
     transition(':enter', [
       style({
-        transform: 'translateX(-200%)'
+        transform: 'translateX(-220%)'
        }),
       animate('700ms 0.3s ease-in')
     ]),      

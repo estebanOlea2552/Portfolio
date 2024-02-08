@@ -4,17 +4,13 @@ import { CommonModule } from '@angular/common';
 import { MenuRoutingModule } from './menu-routing.module';
 import { MenuPrincipalComponent } from './menu-principal/menu-principal.component';
 import { MenuLateralComponent } from './menu-lateral/menu-lateral.component';
-import { GatitoTextoPrincipalComponent } from '../gatito-texto-principal/gatito-texto-principal.component';
-import { GatitoTextoSecundarioComponent } from '../gatito-texto-secundario/gatito-texto-secundario.component';
-
-
+import { GatitoTextoComponent } from '../gatito-texto/gatito-texto.component';
 
 @NgModule({
   declarations: [
     MenuPrincipalComponent,
     MenuLateralComponent,
-    GatitoTextoPrincipalComponent,
-    GatitoTextoSecundarioComponent
+    GatitoTextoComponent
   ],
   imports: [
     CommonModule,
@@ -23,8 +19,7 @@ import { GatitoTextoSecundarioComponent } from '../gatito-texto-secundario/gatit
   exports: [
     MenuPrincipalComponent,
     MenuLateralComponent,
-    GatitoTextoPrincipalComponent,
-    GatitoTextoSecundarioComponent
+    GatitoTextoComponent,
   ]
 })
 export class MenuModule { }

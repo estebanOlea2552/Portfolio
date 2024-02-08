@@ -1,13 +1,13 @@
-import { animate, animateChild, group, query, style, transition, trigger } from '@angular/animations';
-import { Component } from '@angular/core';
-import { ChildrenOutletContexts } from '@angular/router';
-import { gatitoSm, menuSm, section, bottomBar, topBar } from 'src/app/shared/animations/section.animation';
+import { animate, query, style, transition, trigger } from '@angular/animations';
+import { Component, OnInit } from '@angular/core';
+import { ChildrenOutletContexts, Router } from '@angular/router';
+import { gatito, menuSm, section, bottomBar, topBar } from 'src/app/shared/animations/section.animation';
 
 @Component({
   selector: 'app-section',
   templateUrl: './section.component.html',
   styleUrls: ['./section.component.css'],
-  animations: [section, menuSm, gatitoSm, topBar, bottomBar,
+  animations: [section, menuSm, gatito, topBar, bottomBar,
     trigger('miTrigger', [
       transition('* <=> *', [
         style({ position: 'relative' }),
@@ -30,11 +30,18 @@ import { gatitoSm, menuSm, section, bottomBar, topBar } from 'src/app/shared/ani
     ])
   ]
 })
-export class SectionComponent {
-  constructor(private context: ChildrenOutletContexts){}
+export class SectionComponent implements OnInit {
+  routeValue: any;
+
+  constructor(private context: ChildrenOutletContexts, private router: Router){}
 
   getRouteAnimationData(){
     return this.context.getContext('primary')?.route?.snapshot?.data?.['animation'];
+  }
+
+  ngOnInit(){
+    this.routeValue = this.router;
+    console.log(this.routeValue);
   }
 
 }
