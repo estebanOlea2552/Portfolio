@@ -10,7 +10,7 @@ import { CvComponent } from './pages/cv/cv.component';
 import { RedesComponent } from './pages/redes/redes.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { GraciasComponent } from './pages/gracias/gracias.component';
-import { HomeComponent } from '../home/home-component/home/home.component';
+import { HomeComponent } from '../home/home-component/home.component';
 
 const routes: Routes = [
   {

@@ -18,8 +18,7 @@ export class LoginComponent {
   constructor(private musicAndSfxService: MusicAndSfxService){}
 
   confirmSettings() {
-    this.musicAndSfxService.sendMusicValue(this.music);
-    this.musicAndSfxService.sendSfxValue(this.sfx);
+    this.musicAndSfxService.sendValue(this.music, this.sfx);
     this.openCloseOptions();
   }
 
@@ -31,6 +30,7 @@ export class LoginComponent {
     };
     this.music = !this.music;
   }
+  
   turnOnOffSfx(){
     if(this.sfxOnOffText == "OFF"){
       this.sfxOnOffText = "ON"

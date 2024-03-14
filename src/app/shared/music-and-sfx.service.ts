@@ -5,15 +5,11 @@ import { Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class MusicAndSfxService {
-  private sendMusicValueSubject = new Subject<boolean>();
-  private sendSfxValueSubject = new Subject<boolean>();
-  musicObservable$ = this.sendMusicValueSubject.asObservable();
-  sfxObservable$ = this.sendSfxValueSubject.asObservable()
+  musicSubject$ = new Subject<boolean>();
+  sfxSubject$ = new Subject<boolean>();
 
-  sendMusicValue(value: boolean) {
-    this.sendMusicValueSubject.next(value);
-  };
-  sendSfxValue(value: boolean) {
-    this.sendSfxValueSubject.next(value);
+  sendValue(music: boolean, sfx: boolean) {
+    this.musicSubject$.next(music);
+    this.sfxSubject$.next(sfx);
   };
 }

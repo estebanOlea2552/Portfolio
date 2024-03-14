@@ -1,5 +1,7 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { MusicAndSfxService } from './shared/music-and-sfx.service';
+import { MessageByRouterService } from './shared/message-by-router.service';
+import { NavigationStart, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,25 +12,25 @@ export class AppComponent {
   title = 'Esteban Olea - Portfolio';
   musicOnOf: boolean = false;
   sfxOnOf: boolean = false;
-  @ViewChild('audio', {static: true}) audio: ElementRef | undefined;
+  @ViewChild('audio') audio: ElementRef | undefined;
 
-  constructor(private musicAndSfxService: MusicAndSfxService) {}
+  constructor(private musicAndSfxService: MusicAndSfxService,private urlObservable: MessageByRouterService, private router: Router) {}
 
-  ngOnInit() {
-    this.musicAndSfxService.musicObservable$.subscribe(value => {
+  ngOnInit(): void {
+    this.musicAndSfxService.musicSubject$.subscribe(value => {
       this.musicOnOf = value;
 
-      if(this.musicOnOf == true){
+      if (this.musicOnOf == true){
         this.audio?.nativeElement.play();
-      }else{
+      } else{
         this.audio?.nativeElement.pause();
       };
+    });  
 
-      console.log('Valor de Música: ', this.musicOnOf);
-    });
-    this.musicAndSfxService.sfxObservable$.subscribe(value => {
-      this.sfxOnOf = value
-      console.log('Valor de Sfx: ', this.sfxOnOf);
-    });
+      this.router.events.subscribe(event => {
+      if (event instanceof NavigationStart) {
+        this.urlObservable.addMessage(event.url)
+      }
+      });
   }
 }

@@ -13,11 +13,11 @@ a, h5 {
 }
 
 .top-bar {
-    background-image: url('../../../../assets/images/top_bar.png');
+    background-image: url('../../../assets/images/top_bar.png');
 }
 
 .bottom-bar {
-    background-image: url('../../../../assets/images/bottom_bar.png'); 
+    background-image: url('../../../assets/images/bottom_bar.png'); 
 }
 
 .bar-container {

@@ -1,7 +1,8 @@
 import { animate, query, style, transition, trigger } from '@angular/animations';
-import { Component, OnInit } from '@angular/core';
-import { ChildrenOutletContexts, Router } from '@angular/router';
+import { Component } from '@angular/core';
+import { ChildrenOutletContexts, Router, NavigationEnd } from '@angular/router';
 import { gatito, menuSm, section, bottomBar, topBar } from 'src/app/shared/animations/section.animation';
+import { MessageByRouterService } from 'src/app/shared/message-by-router.service';
 
 @Component({
   selector: 'app-section',
@@ -30,18 +31,20 @@ import { gatito, menuSm, section, bottomBar, topBar } from 'src/app/shared/anima
     ])
   ]
 })
-export class SectionComponent implements OnInit {
+export class SectionComponent {
   routeValue: any;
 
-  constructor(private context: ChildrenOutletContexts, private router: Router){}
+  constructor(private context: ChildrenOutletContexts, private urlObservable: MessageByRouterService, private router: Router){}
+
+  ngOnInit(): void {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.urlObservable.addMessage(event.url)
+      }
+    });
+  }
 
   getRouteAnimationData(){
     return this.context.getContext('primary')?.route?.snapshot?.data?.['animation'];
   }
-
-  ngOnInit(){
-    this.routeValue = this.router;
-    console.log(this.routeValue);
-  }
-
 }
