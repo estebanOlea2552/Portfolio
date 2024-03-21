@@ -1,25 +1,48 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, DoCheck, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { MessageByRouterService } from '../../message-by-router.service';
+import { Subject, Subscription } from 'rxjs';
+import { CatMessageService } from './cat-message.service';
 
 @Component({
   selector: 'app-gatito-texto',
   templateUrl: './gatito-texto.component.html',
   styleUrls: ['./gatito-texto.component.css']
 })
-export class GatitoTextoComponent implements OnInit {
+export class GatitoTextoComponent implements OnInit, DoCheck, OnDestroy {
   gatitoSwitch: boolean = false;
   gatitoQuieto: String = "../../../../assets/images/gatito_quieto.png";
   gatitoAnimado: String = "../../../../assets/images/gatito_animado.gif";
   gatitoSrc: String = this.gatitoQuieto;
-  urlPath: String | undefined;
+  urlObservable$ = new Subject<String>();
+  urlSuscription!: Subscription;
+  message!: String;
 
-  constructor(private router: Router, private urlObservable: MessageByRouterService){}
+  constructor(private router: Router, private messagesService: CatMessageService){}
 
   ngOnInit(): void {
-    this.urlObservable.message$.subscribe(
-      value => this.urlPath = value
-    );
+    this.urlSuscription = this.urlObservable$.subscribe(
+      (value) => {
+        this.messagesService.assignToPath(value)
+      }
+    )
+  }
+
+  ngDoCheck(): void {
+    this.getAndAssign()
+    this.message = this.messagesService.comparePath()
+    
+  }
+
+  ngOnDestroy(): void {
+    this.urlSuscription.unsubscribe()
+  }
+
+  getAndAssign(){
+    this.urlObservable$.next(this.getUrl());
+  }
+
+  getUrl(){
+    return this.router.url;
   }
 
   animarGatito(){

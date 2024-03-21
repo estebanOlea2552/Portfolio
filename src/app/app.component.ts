@@ -1,36 +1,32 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
-import { MusicAndSfxService } from './shared/music-and-sfx.service';
-import { MessageByRouterService } from './shared/message-by-router.service';
-import { NavigationStart, Router } from '@angular/router';
+import { Component, ViewChild, ElementRef, AfterViewChecked } from '@angular/core';
+import { MusicAndSfxService } from '../assets/sounds/music-and-sfx.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements AfterViewChecked {
   title = 'Esteban Olea - Portfolio';
-  musicOnOf: boolean = false;
-  sfxOnOf: boolean = false;
   @ViewChild('audio') audio: ElementRef | undefined;
+  musicSuscription!: Subscription;
 
-  constructor(private musicAndSfxService: MusicAndSfxService,private urlObservable: MessageByRouterService, private router: Router) {}
+  constructor(private music: MusicAndSfxService) {}
 
-  ngOnInit(): void {
-    this.musicAndSfxService.musicSubject$.subscribe(value => {
-      this.musicOnOf = value;
+  ngAfterViewChecked(): void {
+    this.playPauseSounds();
+  }
 
-      if (this.musicOnOf == true){
-        this.audio?.nativeElement.play();
-      } else{
-        this.audio?.nativeElement.pause();
-      };
-    });  
-
-      this.router.events.subscribe(event => {
-      if (event instanceof NavigationStart) {
-        this.urlObservable.addMessage(event.url)
+  playPauseSounds() {
+    this.musicSuscription = this.music.musicSubject$.subscribe(
+      (value) => {
+        if (value == true){
+          this.audio?.nativeElement.play();
+        } else {
+          this.audio?.nativeElement.pause();
+        };
       }
-      });
+    );
   }
 }

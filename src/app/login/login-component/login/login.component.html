@@ -2,16 +2,23 @@
     <span @fadeIn class="position-absolute top-0 start-0 p-5">Credits: 10</span>
     <div class="titles-container d-flex flex-column my-auto pt-5">
         <img @titleEnter class="esteban_olea mx-auto w-auto pixelated" src="../assets/images/esteban_olea.png" alt="Esteban Olea">
+
         <img @subtitleEnter class="ds_fullstack mx-auto w-auto mt-5 mb-5 pixelated" src="../assets/images/desarrollador_full-stack.png" alt="Desarrollador Full-Stack">
+
         <div class="buttons-container d-flex flex-column justify-content-center align-items-center">
-            <button @enterRight [ngClass]="{'hide': disabled}" class="button-start mx-auto mb-2 text-decoration-none" routerLink="home">INICIAR</button>
+
+            <button @enterRight [ngClass]="{'hide': disabled}" class="button-start mx-auto mb-2 text-decoration-none" (click)="navigateToNewRoute('home')">INICIAR</button>
+
             <button @enterLeft [ngClass]="{'hide': disabled}" (click)="openCloseOptions()" class="mx-auto mt-2 text-decoration-none">OPCIONES</button>
+            
             <div [ngClass]="{'hide': !disabled}" class="options-container">
                 <button class="option mx-auto" (click)="turnOnOffMusic()">Música: {{musicOnOffText}}</button>
                 <button class="option mx-auto my-2" (click)="turnOnOffSfx()">Efectos de sonido: {{sfxOnOffText}}</button>
             <button (click)="confirmSettings()" class="option confirm mx-auto">Confirmar</button>
+
         </div>
     </div>
     </div>
     <span @fadeIn class="position-absolute bottom-0 end-0 p-5">Licenced by <br> PUFLITO Inc. &copy;</span>
+    <audio src="../../../../assets/sounds/blip_1.wav"></audio>
 </main>

@@ -8,8 +8,11 @@ export class MusicAndSfxService {
   musicSubject$ = new Subject<boolean>();
   sfxSubject$ = new Subject<boolean>();
 
-  sendValue(music: boolean, sfx: boolean) {
-    this.musicSubject$.next(music);
-    this.sfxSubject$.next(sfx);
+  sendMusicValue(value: boolean) {
+    this.musicSubject$.next(value);
+  };
+  
+  sendSfxValue(value: boolean) {
+    this.sfxSubject$.next(value);
   };
 }

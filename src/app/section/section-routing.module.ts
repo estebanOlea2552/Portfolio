@@ -17,15 +17,33 @@ const routes: Routes = [
     path: '',
     component: SectionComponent,
     children:[
-      {path: 'descripcion', component: DescripcionComponent, data: { animation: 'perfilAnimation'}},
-      {path: 'stack', component: StackComponent, data: { animation: 'stackAnimation'}},
-      {path: 'educacion', component: EducacionComponent, data: { animation: 'educacionAnimation'}},
-      {path: 'proyectos', component: ProyectosComponent, data: { animation: 'proyectosAnimation'}},
-      {path: 'experiencia', component: ExperienciaComponent, data: { animation: 'experienciaAnimation'}},
-      {path: 'cv', component: CvComponent, data: { animation: 'cvAnimation'}},
-      {path: 'redes', component: RedesComponent, data: { animation: 'redesAnimation'}},
-      {path: 'contacto', component: ContactoComponent, data: { animation: 'contactoAnimation'}},
-      {path: 'gracias', component: GraciasComponent, data: { animation: 'graciasAnimation'}},      
+      {
+        path: 'descripcion', loadChildren: () => import('./pages/descripcion/description.module').then(m => m.DescriptionModule), data: { animation: 'perfilAnimation'}
+      },
+      {
+        path: 'stack', loadChildren: () => import('./pages/stack/stack.module').then(m => m.StackModule), data: { animation: 'stackAnimation'}
+      },
+      {
+        path: 'educacion', loadChildren: () => import('./pages/educacion/education.module').then(m => m.EducationModule), data: { animation: 'educacionAnimation'}
+      },
+      {
+        path: 'proyectos', loadChildren: () => import('./pages/proyectos/projects.module').then(m => m.ProjectsModule), data: { animation: 'proyectosAnimation'}
+      },
+      {
+        path: 'experiencia', loadChildren: () => import('./pages/experiencia/experience.module').then(m => m.ExperienceModule), data: { animation: 'experienciaAnimation'}
+      },
+      {
+        path: 'cv', loadChildren: () => import('./pages/cv/cv.module').then(m => m.CvModule), data: { animation: 'cvAnimation'}
+      },
+      {
+        path: 'redes', loadChildren: () => import('./pages/redes/social.module').then(m => m.SocialModule), data: { animation: 'redesAnimation'}
+      },
+      {
+        path: 'contacto', loadChildren: () => import('./pages/contacto/contact.module').then(m => m.ContactModule), data: { animation: 'contactoAnimation'}
+      },
+      {
+        path: 'gracias', loadChildren: () => import('./pages/gracias/thanks.module').then(m => m.ThanksModule), data: { animation: 'graciasAnimation'}
+      },      
     ]
   },
   {path: 'home', component: HomeComponent}

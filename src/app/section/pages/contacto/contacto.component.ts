@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, HostBinding } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 
@@ -10,8 +10,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   animations: []
 })
 export class ContactoComponent{
-  
-
    contactForm: FormGroup;
    submitted: boolean = false;
    loading: boolean = false;
@@ -59,7 +57,6 @@ export class ContactoComponent{
     formData.forEach((value: any, key: any) => {
       console.log(key, value);
     });
-
     }
   }
 }

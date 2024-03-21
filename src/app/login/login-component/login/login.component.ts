@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { fadeIn, iniciar, opciones, subtitle, title } from 'src/app/shared/animations/login.animations';
-import { MusicAndSfxService } from 'src/app/shared/music-and-sfx.service';
+import { MusicAndSfxService } from 'src/assets/sounds/music-and-sfx.service';
 
 @Component({
   selector: 'app-login',
@@ -10,37 +11,42 @@ import { MusicAndSfxService } from 'src/app/shared/music-and-sfx.service';
 })
 export class LoginComponent {
   disabled: boolean = false;
-  music: boolean = false;
-  sfx: boolean = false;
+  music: boolean = true;
+  sfx: boolean = true;
   musicOnOffText: string = "OFF";
   sfxOnOffText: string = "OFF";
 
-  constructor(private musicAndSfxService: MusicAndSfxService){}
+  constructor(private musicS: MusicAndSfxService, private router: Router){}
 
   confirmSettings() {
-    this.musicAndSfxService.sendValue(this.music, this.sfx);
     this.openCloseOptions();
   }
 
-  turnOnOffMusic(){
-    if(this.musicOnOffText == "OFF"){
+  turnOnOffMusic() {
+    if (this.musicOnOffText === "OFF"){
       this.musicOnOffText = "ON"
-    }else{
+    } else {
       this.musicOnOffText = "OFF"
     };
+    this.musicS.sendMusicValue(this.music);
     this.music = !this.music;
   }
   
-  turnOnOffSfx(){
+  turnOnOffSfx() {
     if(this.sfxOnOffText == "OFF"){
       this.sfxOnOffText = "ON"
     }else{
       this.sfxOnOffText = "OFF"
     };
+    this.musicS.sendSfxValue(this.sfx)
     this.sfx = !this.sfx;
   }
   
   openCloseOptions(){
     this.disabled = !this.disabled;
+  }
+
+  navigateToNewRoute(route: any){
+    this.router.navigate([route]);
   }
 }

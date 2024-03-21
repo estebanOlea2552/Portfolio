@@ -2,7 +2,7 @@
     <h3 class="text-shadow">También puedes escribirme!</h3>
     <hr>
     <!--Formulario-->
-    <form [formGroup]="contactForm" (ngSubmit)="submit()">
+    <!-- <form [formGroup]="contactForm" (ngSubmit)="submit()"> -->
         <!--Inputs-->
         <label class="form-label text-white" for="name">Nombre</label>
         <input class="form-control" type="text" id="name" formControlName="name">
@@ -19,5 +19,5 @@
         <div [ngClass]="!submitted? 'hidden' : 'visible'">
             <span>{{responseMessage}}</span>
           </div>       
-    </form>
+    <!-- </form> -->
 </article>
