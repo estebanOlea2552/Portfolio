@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { fadeIn, iniciar, opciones, subtitle, title } from 'src/app/shared/animations/login.animations';
-import { MusicAndSfxService } from 'src/assets/sounds/music-and-sfx.service';
+import { MusicAndSfxService } from 'src/app/shared/music-and-sfx.service';
 
 @Component({
   selector: 'app-login',
@@ -9,44 +10,65 @@ import { MusicAndSfxService } from 'src/assets/sounds/music-and-sfx.service';
   styleUrls: ['./login.component.css'],
   animations: [title, subtitle, iniciar, opciones, fadeIn]
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
   disabled: boolean = false;
-  music: boolean = true;
-  sfx: boolean = true;
-  musicOnOffText: string = "OFF";
-  sfxOnOffText: string = "OFF";
+  music!: boolean;
+  sfx!: boolean;
+  musicSuscription!: Subscription;
+  sfxSuscription!: Subscription
+  musicOnOffText!: string;
+  sfxOnOffText!: string;
 
-  constructor(private musicS: MusicAndSfxService, private router: Router){}
+  constructor(private musicAndSfx: MusicAndSfxService, private router: Router){}
+
+  ngOnInit(): void {
+    this.music = this.musicAndSfx.musicSubject$.getValue();
+    this.sfx = this.musicAndSfx.sfxSubject$.getValue();
+    
+    if(this.music) {
+      this.musicOnOffText = 'ON';
+    } else {
+      this.musicOnOffText = 'OFF';
+    };
+
+    if(this.sfx) {
+      this.sfxOnOffText = 'ON';
+    } else {
+      this.sfxOnOffText = 'OFF';
+    };
+  }
+  
+  turnOnOffMusic() {
+    if(!this.music) {
+      this.musicOnOffText = 'ON';
+    } else {
+      this.musicOnOffText = 'OFF';
+    };
+
+    this.music = !this.music;
+    this.musicAndSfx.sendMusicValue(this.music);
+  }
+  
+  turnOnOffSfx() {
+    if(!this.sfx) {
+      this.sfxOnOffText = 'ON';
+    } else {
+      this.sfxOnOffText = 'OFF';
+    };
+
+    this.sfx = !this.sfx;
+    this.musicAndSfx.sendSfxValue(this.sfx);
+  }
 
   confirmSettings() {
     this.openCloseOptions();
   }
-
-  turnOnOffMusic() {
-    if (this.musicOnOffText === "OFF"){
-      this.musicOnOffText = "ON"
-    } else {
-      this.musicOnOffText = "OFF"
-    };
-    this.musicS.sendMusicValue(this.music);
-    this.music = !this.music;
-  }
   
-  turnOnOffSfx() {
-    if(this.sfxOnOffText == "OFF"){
-      this.sfxOnOffText = "ON"
-    }else{
-      this.sfxOnOffText = "OFF"
-    };
-    this.musicS.sendSfxValue(this.sfx)
-    this.sfx = !this.sfx;
-  }
-  
-  openCloseOptions(){
+  openCloseOptions() {
     this.disabled = !this.disabled;
   }
 
-  navigateToNewRoute(route: any){
+  navigateToNewRoute(route: any) {
     this.router.navigate([route]);
   }
 }

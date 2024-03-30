@@ -7,18 +7,18 @@
 
         <div class="buttons-container d-flex flex-column justify-content-center align-items-center">
 
-            <button @enterRight [ngClass]="{'hide': disabled}" class="button-start mx-auto mb-2 text-decoration-none" (click)="navigateToNewRoute('home')">INICIAR</button>
+            <button @enterRight [ngClass]="{'hide': disabled}" class="button-start mx-auto mb-2 text-decoration-none" (click)="navigateToNewRoute('home')" sfx-control>INICIAR</button>
 
-            <button @enterLeft [ngClass]="{'hide': disabled}" (click)="openCloseOptions()" class="mx-auto mt-2 text-decoration-none">OPCIONES</button>
+            <button @enterLeft [ngClass]="{'hide': disabled}"  class="mx-auto mt-2 text-decoration-none" (click)="openCloseOptions()" sfx-control>OPCIONES</button>
             
             <div [ngClass]="{'hide': !disabled}" class="options-container">
-                <button class="option mx-auto" (click)="turnOnOffMusic()">Música: {{musicOnOffText}}</button>
-                <button class="option mx-auto my-2" (click)="turnOnOffSfx()">Efectos de sonido: {{sfxOnOffText}}</button>
-            <button (click)="confirmSettings()" class="option confirm mx-auto">Confirmar</button>
+                <button class="option mx-auto" (click)="turnOnOffMusic()" sfx-control>Música: {{musicOnOffText}}</button>
+                <button class="option mx-auto my-2" (click)="turnOnOffSfx()" sfx-control>Efectos de sonido: {{sfxOnOffText}}</button>
+            <button (click)="confirmSettings()" class="option confirm mx-auto" sfx-control>Confirmar</button>
 
         </div>
     </div>
     </div>
     <span @fadeIn class="position-absolute bottom-0 end-0 p-5">Licenced by <br> PUFLITO Inc. &copy;</span>
-    <audio src="../../../../assets/sounds/blip_1.wav"></audio>
+    <audio #audio></audio>
 </main>

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { GatitoTextoComponent } from './gatito-texto.component';
 import { RouterModule } from '@angular/router';
+import { DirectivesModule } from '../../directives/directives.module';
 
 
 @NgModule({
@@ -10,7 +11,8 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    DirectivesModule
   ],
   exports: [
     GatitoTextoComponent
