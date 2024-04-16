@@ -37,10 +37,10 @@ export const opciones = trigger('enterRight', [
 ])
 
 export const fadeIn = trigger('fadeIn', [
-    transition(':enter', [
-      style({opacity: 0}),
-      animate ('1s 2.5s')
-    ])
+  transition(':enter', [
+    style({opacity: 0}),
+    animate ('1s 2.5s')
   ])
+])
 
 

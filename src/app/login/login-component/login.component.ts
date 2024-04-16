@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { fadeIn, iniciar, opciones, subtitle, title } from 'src/app/shared/animations/login.animations';
-import { MusicAndSfxService } from 'src/app/shared/music-and-sfx.service';
+import { MusicAndSfxService } from 'src/app/shared/services/music-and-sfx.service';
 
 @Component({
   selector: 'app-login',

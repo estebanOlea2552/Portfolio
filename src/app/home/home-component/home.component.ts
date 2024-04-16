@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { bottomBar, gatito, menuLg, topBar } from 'src/app/shared/animations/home.animations';
 
 @Component({
@@ -7,11 +7,8 @@ import { bottomBar, gatito, menuLg, topBar } from 'src/app/shared/animations/hom
   styleUrls: ['./home.component.css'],
   animations: [gatito, menuLg, topBar, bottomBar],
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
 
   constructor(){}
 
-  ngOnInit(): void {
-    
-  }
 }

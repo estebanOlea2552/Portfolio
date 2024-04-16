@@ -1,3 +1,11 @@
-<div *ngIf="!isTouch" class="cursor" [style.top]="top" [style.left]="left">
-    <div class="cursor-inner" [ngClass]="{'cursor-clicked': clicked}" [ngClass]="{'is-hidden': hidden}"></div>
+<div
+class="cursor"
+*ngIf="!isTouch" 
+[style.top]="top"
+[style.left]="left">
+    <div
+    class="cursor-inner"
+    [ngClass]="{'cursor-clicked': clicked}"
+    [ngClass]="{'is-hidden': hidden}">
+    </div>
 </div>

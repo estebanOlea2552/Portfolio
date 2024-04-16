@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 import { SocialRoutingModule } from './social-routing.module';
 import { RedesComponent } from './redes.component';
 
-
 @NgModule({
   declarations: [
     RedesComponent

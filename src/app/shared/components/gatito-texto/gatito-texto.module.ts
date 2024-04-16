@@ -4,7 +4,6 @@ import { GatitoTextoComponent } from './gatito-texto.component';
 import { RouterModule } from '@angular/router';
 import { DirectivesModule } from '../../directives/directives.module';
 
-
 @NgModule({
   declarations: [
     GatitoTextoComponent

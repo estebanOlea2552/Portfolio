@@ -1,19 +1,25 @@
 <main class="d-flex flex-column justify-content-between align-items-center" style="height: 100vh;">
-    <section @enterTopBar class="d-flex mx-auto mt-3 top-bar pixelated">
+    <section @.disabled @enterTopBar class="top-bar d-flex mx-auto mt-3 pixelated">
         <div class="bar-container m-auto p-1"></div>
     </section>
+
     <div class="d-flex">
-        <app-menu-lateral @enterMenu class="d-flex align-items-center"></app-menu-lateral>
-        <div @enterSection class="section mx-4 pixelated">
-            <div [@miTrigger]="getRouteAnimationData()" class="section-container mx-auto p-0">
+        <app-menu-lateral  @enterMenu class="d-flex align-items-center"></app-menu-lateral>
+
+        <div  @enterSection class="section mx-4 pixelated">
+            <div [@articles]="getRouteAnimationData()" class="section-container mx-auto p-0">
                 <router-outlet></router-outlet>
             </div>
         </div>
-        <app-gatito-texto @enterGatito class="d-flex align-items-center"></app-gatito-texto>
+
+        <app-gatito-texto  @enterGatito class="d-flex align-items-center"></app-gatito-texto>
     </div>
-    <footer @enterBottomBar class="d-flex justify-content-center mx-auto mb-3 bottom-bar pixelated">
+
+    <footer @.disabled @enterBottomBar class="bottom-bar d-flex justify-content-center mx-auto mb-3 pixelated">
         <div class="bar-container text-center m-auto p-1">
-            <h5 style="text-shadow: 2px 2px var(--text-shadow);">Esteban_Olea - Desarrollador_Full_Stack</h5>
+            <h5 class="text-shadow">
+                Esteban_Olea - Desarrollador_Full_Stack
+            </h5>
         </div>
     </footer>
 </main>

@@ -1,5 +1,5 @@
 import { Component, ViewChild, ElementRef, AfterViewChecked } from '@angular/core';
-import { MusicAndSfxService } from './shared/music-and-sfx.service';
+import { MusicAndSfxService } from './shared/services/music-and-sfx.service';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -12,14 +12,14 @@ export class AppComponent implements AfterViewChecked {
   @ViewChild('audio') audio: ElementRef | undefined;
   musicSuscription!: Subscription;
 
-  constructor(private music: MusicAndSfxService) {}
+  constructor(private musicAndSfx: MusicAndSfxService) {}
 
   ngAfterViewChecked(): void {
     this.playPauseMusic();
   }
 
   playPauseMusic(): void {
-    this.musicSuscription = this.music.musicSubject$.subscribe(
+    this.musicSuscription = this.musicAndSfx.musicSubject$.subscribe(
       (value) => {
         if (value === true){
           this.audio?.nativeElement.play();

@@ -33,5 +33,4 @@ img {
     height: calc(175px * var(--pixel-size));
     width: calc(123px * var(--pixel-size));
     transform: translateX(2px);
-    background-color: var(--box-background);
 }

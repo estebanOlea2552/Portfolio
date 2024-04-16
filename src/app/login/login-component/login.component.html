@@ -1,0 +1,52 @@
+<main class="d-flex flex-column" style="height: 100vh;">
+    <span @fadeIn class="position-absolute top-0 start-0 p-5">Credits: 10</span>
+
+    <div class="titles-container d-flex flex-column my-auto pt-5">
+        <img
+        @titleEnter
+        class="esteban_olea mx-auto w-auto pixelated"
+        src="../assets/images/esteban_olea.png"
+        alt="Esteban Olea">
+
+        <img
+        @subtitleEnter
+        class="ds_fullstack mx-auto w-auto mt-5 mb-5 pixelated"
+        src="../assets/images/desarrollador_full-stack.png"
+        alt="Desarrollador Full-Stack">
+
+        <div class="buttons-container d-flex flex-column justify-content-center align-items-center">
+            <button 
+            @enterRight
+            class="button-start mx-auto mb-2 text-decoration-none"
+            [ngClass]="{'hide': disabled}"
+            (click)="navigateToNewRoute('home')"
+            sfx-control>INICIAR</button>
+
+            <button
+            class="mx-auto mt-2 text-decoration-none"
+            @enterLeft
+            [ngClass]="{'hide': disabled}"
+            (click)="openCloseOptions()"
+            sfx-control>OPCIONES</button>
+            
+            <div class="options-container" [ngClass]="{'hide': !disabled}">
+                <button
+                class="option mx-auto"
+                (click)="turnOnOffMusic()"
+                sfx-control>Música: {{musicOnOffText}}</button>
+
+                <button
+                class="option mx-auto my-2"
+                (click)="turnOnOffSfx()"
+                sfx-control>Efectos de sonido: {{sfxOnOffText}}</button>
+
+                <button
+                (click)="confirmSettings()"
+                class="option confirm mx-auto"
+                sfx-control>Confirmar</button>
+            </div>
+        </div>
+    </div>
+    <span @fadeIn class="position-absolute bottom-0 end-0 p-5">Licenced by <br> PUFLITO Inc. &copy;</span>
+    <audio #audio></audio>
+</main>

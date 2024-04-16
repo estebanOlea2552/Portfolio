@@ -8,7 +8,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { GatitoTextoModule } from '../shared/components/gatito-texto/gatito-texto.module';
 
-
 @NgModule({
   declarations: [
     SectionComponent

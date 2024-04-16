@@ -1,5 +1,5 @@
 import { Directive, HostListener, ViewChild } from '@angular/core';
-import { MusicAndSfxService } from '../music-and-sfx.service';
+import { MusicAndSfxService } from '../services/music-and-sfx.service';
 
 @Directive({
   selector: '[sfx-control]'

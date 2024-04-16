@@ -2,8 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SfxControlDirective } from './sfx-control.directive';
 
-
-
 @NgModule({
   declarations: [
     SfxControlDirective

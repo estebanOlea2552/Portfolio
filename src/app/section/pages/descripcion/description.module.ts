@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 import { DescriptionRoutingModule } from './description-routing.module';
 import { DescripcionComponent } from './descripcion.component';
 
-
 @NgModule({
   declarations: [
     DescripcionComponent    

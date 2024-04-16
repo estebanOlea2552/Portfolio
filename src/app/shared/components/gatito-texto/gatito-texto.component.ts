@@ -1,7 +1,7 @@
 import { Component, DoCheck, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subject, Subscription } from 'rxjs';
-import { CatMessageService } from './cat-message.service';
+import { CatMessageService } from '../../services/cat-message.service';
 
 @Component({
   selector: 'app-gatito-texto',
@@ -10,8 +10,8 @@ import { CatMessageService } from './cat-message.service';
 })
 export class GatitoTextoComponent implements OnInit, DoCheck, OnDestroy {
   gatitoSwitch: boolean = false;
-  gatitoQuieto: String = "../../../../assets/images/gatito_quieto.png";
-  gatitoAnimado: String = "../../../../assets/images/gatito_animado.gif";
+  gatitoQuieto: String = "../../../../assets/images/gatito_v3.png";
+  gatitoAnimado: String = "../../../../assets/images/gatito_v3.gif";
   gatitoSrc: String = this.gatitoQuieto;
   urlObservable$ = new Subject<String>();
   urlSuscription!: Subscription;

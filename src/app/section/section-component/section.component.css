@@ -30,12 +30,14 @@
     background-size: contain;
     padding-top: calc(7px * var(--pixel-size));
 }
-.section-container{
+
+.section-container {
     height: calc(276px * var(--pixel-size));
     width: calc(309px * var(--pixel-size));
     transform: translateX(1px);
     background-color: var(--box-background);
 }
+
 a, h5 {
     font-family: 'amiga4ever_pro';
     font-size: calc(8px * var(--pixel-size));

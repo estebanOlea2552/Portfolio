@@ -1,12 +1,15 @@
 .titles-container {
     height: 60%;
 }
-.esteban_olea{    
+
+.esteban_olea {    
     height: calc(65px * var(--pixel-size));    
 }
-.ds_fullstack{
+
+.ds_fullstack {
     height: calc(20px * var(--pixel-size));
 }
+
 div, a, span {
     font-family: "amiga4ever_pro";
     color: var(--color-white);
@@ -29,6 +32,7 @@ button:hover {
     color: #e52566;
     scale: 1.06;
 }
+
 button:hover::before {
     content: "<";
 }

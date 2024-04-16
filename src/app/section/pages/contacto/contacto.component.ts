@@ -2,29 +2,29 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-
 @Component({
   selector: 'app-contacto',
   templateUrl: './contacto.component.html',
   styleUrls: ['./contacto.component.css'],
   animations: []
 })
-export class ContactoComponent{
+export class ContactoComponent {
    contactForm: FormGroup;
    submitted: boolean = false;
    loading: boolean = false;
    responseMessage: String = "";
 
-  constructor(private formBulider: FormBuilder, private http: HttpClient){
-    this.contactForm = this.formBulider.group({
-      name: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      message: ['', Validators.required],
-    });
+  constructor(private formBulider: FormBuilder, private http: HttpClient) {
+    this.contactForm = this.formBulider.group(
+      {
+        name: ['', Validators.required],
+        email: ['', [Validators.required, Validators.email]],
+        message: ['', Validators.required],
+      }
+    );
   };
 
   submit(){
-
     if(this.contactForm.status == "VALID"){
 
     let formResponse: any;

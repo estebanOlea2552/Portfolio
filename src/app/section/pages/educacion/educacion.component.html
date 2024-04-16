@@ -1,41 +1,49 @@
 <section class="p-3" style="height: 100%;">
-    <h3 class="text-shadow">Educación</h3>
+    <h3 class="text-shadow">
+        Educación
+    </h3>
     <hr>
     <div class="slider">
         <input type="radio" name="slider" id="slideOne" [checked]="counter == 0">
         <input type="radio" name="slider" id="slideTwo" [checked]="counter == 1">
         <input type="radio" name="slider" id="slideThree" [checked]="counter == 2">
         <input type="radio" name="slider" id="slideFour" [checked]="counter == 3">
+
         <div class="checkers">
             <label for="slideOne"></label>
             <label for="slideTwo"></label>
             <label for="slideThree"></label>
             <label for="slideFour"></label>
         </div>
+
         <div class="content">
             <div class="slide_1">
                 <div class="item d-flex justify-content-center align-items-center mb-4 ">
                     <img src="../../../../assets/images/unt_logo_1.png" alt="Universidad Nacional de Tucumán">
                 </div>
             </div>
+
             <div class="slide_2">
                 <div class="item d-flex justify-content-center align-items-center mb-4 ">
                     <img src="../../../../assets/images/utn-ba_logo_1.png"
                         alt="Universidad Tecnológica Nacional - Facultad Regional de Buenos Aires">
                 </div>
             </div>
+
             <div class="slide_3">
                 <div class="item d-flex justify-content-center align-items-center mb-4 ">
                     <img src="../../../../assets/images/oracle_next_educaction_logo_1.png"
                         alt="Programa Oracle Next Education">
                 </div>
             </div>
+
             <div class="slide_4">
                 <div class="item d-flex justify-content-center align-items-center mb-4 ">
                     <img src="../../../../assets/images/argentina_programa_4.0_logo_1.png" alt="Argentina Programa 4.0">
                 </div>
             </div>
         </div>
+
         <div class="button-container d-flex justify-content-between">
             <button class="right-button" (click)="previous()">&lt;</button>
             <button class="left-button" (click)="next()">&gt;</button>
