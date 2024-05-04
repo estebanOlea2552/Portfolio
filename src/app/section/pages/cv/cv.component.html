@@ -1,12 +1,19 @@
 <article class="p-3" style="height: 100%;">
-<h3 class="text-shadow">
-    CV
-</h3>
-<br>
-<div>
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, natus cupiditate rerum minima cum iusto. Quos eligendi assumenda laboriosam, odit, perspiciatis quam nihil, praesentium dolores natus repellat suscipit quis veniam?
-        Amet porro id aperiam iusto vitae. Beatae consectetur ipsa, enim rem, nostrum, quod mollitia sequi iste dignissimos voluptate hic facere. Odio vel adipisci ipsam sequi alias libero. Culpa, nam illum!.
-    </p>
-</div>
+    <h3 class="text-shadow">
+        Descarga mi CV
+    </h3>
+    <br>
+    <div class="info-container d-flex mb-3 p-3 border">
+        <div class="cv-container p-2 border" (scroll)="onScroll($event)">
+            <img src="../assets/cv/esteban_daniel_olea-cv.png" alt="">
+        </div>
+        <div class="controls-container d-flex flex-column justify-content-start p-2 border">
+            <div class="button-container d-flex justify-content-center align-items-center border">
+                <button>ABRIR</button>
+            </div>
+            <div class="button-container d-flex justify-content-center align-items-center border">
+                <button>DESCARGAR</button>
+            </div>
+        </div>
+    </div>
 </article>

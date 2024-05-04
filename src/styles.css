@@ -4,6 +4,7 @@
     --color-turquoise: #47d9e4;
     --text-shadow: #2a87a6;
     --box-background: rgba(0, 119, 132, 0.3);
+    --box-background-hover: rgba(23, 163, 178, 0.4);
 }
 
 @font-face {

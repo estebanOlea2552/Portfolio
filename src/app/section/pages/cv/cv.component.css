@@ -1,0 +1,34 @@
+.info-container {
+    height: calc(230px * var(--pixel-size));
+    width: 100%;
+}
+
+.cv-container {
+    width: 50%;
+    height: auto;
+}
+
+.controls-container {
+    width: 50%;
+    height: auto;
+}
+
+.button-container {
+    height: 100%;
+    width: auto;
+}
+
+button {
+    width: 70%;
+    height: 50%;
+    background-color: var(--box-background-hover);
+    border: none;
+    box-shadow: none;
+    color: var(--color-white);
+}
+
+img {
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+}

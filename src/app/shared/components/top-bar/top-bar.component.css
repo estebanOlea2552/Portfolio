@@ -1,0 +1,22 @@
+.top-bar {
+    height: calc(23px * var(--pixel-size));
+    width: calc(436px * var(--pixel-size));
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url('../../../../assets/images/top_bar.png');
+}
+
+.bar-container {
+    height: calc(12px * var(--pixel-size));
+    width: calc(424px * var(--pixel-size));
+    transform: translateX(1px) translateY(1px);
+    background-color: var(--box-background);
+}
+
+button {
+    color: var(--color-white);
+    font-size: calc(6px * var(--pixel-size));
+    background-color: var(--box-background-hover);
+    border: none;
+}

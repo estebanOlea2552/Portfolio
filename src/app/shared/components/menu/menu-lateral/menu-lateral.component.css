@@ -29,10 +29,26 @@
     height: calc(37px * var(--pixel-size));
     width: calc(43px * var(--pixel-size));
     transform: translateX(1px);
-    background-color: var(--box-background);
+    padding-left: 4px;
+    /*background-color: var(--box-background);*/
+    transition: 0.1s;
 }
 
 img {
+    /* height: calc(36px * var(--pixel-size));
+    width: calc(42px * var(--pixel-size)); */
+    height: calc(32px * var(--pixel-size));
+    width: calc(38px * var(--pixel-size));
+    margin-top: calc(2px * var(--pixel-size));
+    transition: 0.1s;
+}
+
+.menu-item-sm-container:hover {
+    padding-left: 0px;
+}
+
+.menu-item-sm-container:hover img {
     height: calc(36px * var(--pixel-size));
     width: calc(42px * var(--pixel-size));
+    margin: 0;
 }

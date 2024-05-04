@@ -6,15 +6,14 @@ import { MusicAndSfxService } from '../services/music-and-sfx.service';
 })
 export class SfxControlDirective {
   sound: HTMLAudioElement;
-  sfxActivated!: boolean;
   @ViewChild('audio') audio!: HTMLAudioElement;
 
   constructor(private sfx: MusicAndSfxService) {
-    this.sound = new Audio('../../assets/sounds/blip_5.wav');
+    this.sound = new Audio('../assets/sounds/blip_5.wav');
   }
 
   @HostListener('mouseenter') onMouseEnter() {
-    if (this.sfx.sfxActivated === true){
+    if (this.sfx.sfxActivated){
       this.sound.play();
     }
   }

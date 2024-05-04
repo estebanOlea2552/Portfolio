@@ -1,4 +1,4 @@
-.top-bar, .bottom-bar {
+.bottom-bar {
     height: calc(23px * var(--pixel-size));
     width: calc(436px * var(--pixel-size));
     background-repeat: no-repeat;
@@ -8,6 +8,8 @@
 
 .top-bar {
     background-image: url('../../../assets/images/top_bar.png');
+    animation-duration: 3s;
+    animation-name: slidefromtop;
 }
 
 .bottom-bar {
@@ -42,4 +44,13 @@ a, h5 {
     font-family: 'amiga4ever_pro';
     font-size: calc(8px * var(--pixel-size));
     color: var(--color-white);
+}
+
+@keyframes slidefromtop {
+    from {
+        margin-left: 0px;
+    }
+    to {
+        margin-left: 100px;
+    }
 }

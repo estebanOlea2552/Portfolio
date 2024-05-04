@@ -1,0 +1,82 @@
+h4 {
+    font-size: calc(10px * var(--pixel-size));
+}
+
+.info-container {
+    position: relative;
+    height: calc(230px * var(--pixel-size));
+    overflow: hidden;
+}
+
+.info-container input {
+    visibility: hidden;
+    display: none;
+    cursor: none;
+}
+
+.content {
+    position: relative;
+    width: 90%;
+    height: 300%;
+    display: flex;
+    flex-direction: column;
+    transition: 0.6s ease-in-out;
+}
+
+.slide-1, .slide-2, .slide-3 {
+    height: calc(230px * var(--pixel-size));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.checkers {
+    display: none;
+}
+
+.info-container input:nth-child(1):checked ~ .checkers label:nth-child(1),
+.info-container input:nth-child(2):checked ~ .checkers label:nth-child(2),
+.info-container input:nth-child(3):checked ~ .checkers label:nth-child(3)
+{   
+    opacity: 1;
+}
+
+.info-container input:nth-child(1):checked ~ .content {
+    top: 0;
+}
+
+.info-container input:nth-child(2):checked ~ .content {
+    top: -100%;
+}
+
+.info-container input:nth-child(3):checked ~ .content {
+    top: -200%;
+}
+
+
+.item {
+    width: calc(78px * var(--pixel-size));
+    height: auto;
+}
+
+.icon {
+    height: calc(64px * var(--pixel-size));
+    width: calc(64px * var(--pixel-size));
+}
+
+span {
+    font-size: calc(8px * var(--pixel-size));
+}
+
+.button-container {
+    width: 10%;
+    height: 100%;
+}
+
+button {
+    color: white;
+    background-color: var(--box-background-hover);
+    height: calc(30px * var(--pixel-size));
+    font-size: calc(14px * var(--pixel-size));
+    cursor: none;
+}

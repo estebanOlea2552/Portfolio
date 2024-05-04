@@ -1,0 +1,36 @@
+.info-container {
+    height: calc(230px * var(--pixel-size));
+    overflow: scroll;
+    overflow-x: hidden;
+    scrollbar-width:thin;
+    scrollbar-color: var(--box-background) var(--box-background-hover);
+}
+
+.content {
+    width: 98%;
+    height: 200%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item {
+    height: 10%;
+    width: 100%;
+    display: flex;
+}
+
+.date {
+    width: 30%;
+}
+
+.experience {
+    width: 70%;
+    background-color: var(--box-background);
+}
+
+.date, .experience {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,6 +1,25 @@
+@keyframes blink {
+    from {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 p {
     font-family: "amiga4ever_pro";
     font-size: calc(6px * var(--pixel-size));
+    display: inline;
+}
+
+.blink {
+    display: inline;
+    background-color: var(--color-white);
+    animation: blink 1000ms infinite;
 }
 
 img {
@@ -26,6 +45,26 @@ img {
     width: calc(123px * var(--pixel-size));
     transform: translateX(1px);
     background-color: var(--box-background);
+}
+
+.next-button {
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--color-white);
+    border: 0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-right: calc(4px * var(--pixel-size));
+    margin-bottom: calc(4px * var(--pixel-size));
+}
+
+.next-button-animated {
+    animation: blink 0.8s infinite;
+}
+
+.next-button:hover {
+    color: var(--color-turquoise);
+    animation: none;
 }
 
 .gatito-container {

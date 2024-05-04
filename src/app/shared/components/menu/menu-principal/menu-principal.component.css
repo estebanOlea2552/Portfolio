@@ -33,15 +33,30 @@ h3 {
     background-repeat: no-repeat;
     background-size: contain;
     padding-top: calc(5px * var(--pixel-size));
+    position: relative;
 }
 
 .menu-icon-lg {
+    height: calc(50px * var(--pixel-size));
+    width: calc(57px * var(--pixel-size));
+    margin-top: calc(4px * var(--pixel-size));
+    margin-bottom: calc(7px * var(--pixel-size));
+    transition: 0.1s;
+}
+
+.menu-item-lg:hover .menu-icon-lg {
     height: calc(57px * var(--pixel-size));
     width: calc(64px * var(--pixel-size));
+    margin-top: 0;
     margin-bottom: calc(4px * var(--pixel-size));
 }
 
 .item-text-container {
     height: calc(12px * var(--pixel-size));
     width: calc(64px * var(--pixel-size));
+}
+
+.menu-item-lg:hover h3 {
+    color: var(--color-turquoise);
+    transition: 0.1s;
 }

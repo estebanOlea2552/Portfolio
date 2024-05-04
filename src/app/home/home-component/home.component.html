@@ -1,7 +1,5 @@
 <main class="d-flex flex-column justify-content-between" style="height: 100vh;">
-    <section @enterTopBar class="d-flex mx-auto mt-3 top-bar pixelated">
-        <div class="bar-container m-auto p-1"></div>
-    </section>
+    <app-top-bar></app-top-bar>
     <nav class="row mx-auto">
         <div @enterMenu class="col">
             <app-menu-principal></app-menu-principal>
@@ -12,7 +10,7 @@
     </nav>
     <footer @enterBottomBar class="d-flex justify-content-center mx-auto mb-3 bottom-bar pixelated">
         <div class="bar-container text-center m-auto p-1">
-            <h5 class="text-shadow">Esteban_Olea - Desarrollador_Full_Stack</h5>
+            <h5>Esteban_Olea - Desarrollador_Full_Stack</h5>
         </div>
     </footer>
 </main>

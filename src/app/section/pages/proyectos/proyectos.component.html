@@ -1,5 +1,82 @@
 <article class="p-3" style="height: 100%;">
-<h3 class="text-shadow">
-    Proyectos
-</h3>
+    <h3 class="text-shadow">
+        Proyectos
+    </h3>
+    <br>
+    <div class="info-container mb-3">
+        <input type="radio" name="slider" id="slideOne" [checked]="counter == 0" disabled>
+        <input type="radio" name="slider" id="slideTwo" [checked]="counter == 1" disabled>
+        <input type="radio" name="slider" id="slideThree" [checked]="counter == 2" disabled>
+        <input type="radio" name="slider" id="slideFour" [checked]="counter == 3" disabled>
+
+        <div class="checkers">
+            <label for="slideOne"></label>
+            <label for="slideTwo"></label>
+            <label for="slideThree"></label>
+        </div>
+
+        <div class="content">
+
+            <div class="slide-1">
+                <div class="link-container d-flex justify-content-evenly px-3 mt-3 border">
+                    <a class="mx-1 border">
+                        <img  src="" alt="">
+                    </a>
+                    <a class="mx-1 border">
+                        <img  src="" alt="">
+                    </a>
+                </div>
+
+                <span>Nombre del proyecto</span> 
+
+                <p class="p-3 border">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro quae reiciendis ut dolor cupiditate blanditiis sint libero excepturi soluta molestiae a, magnam velit quasi nisi quo cum harum repellendus expedita!
+                </p>
+            </div>
+
+            <div class="slide-2">
+                <div class="link-container d-flex justify-content-evenly px-3 mt-3 border">
+                    <a class="mx-1 border">
+                        <img  src="" alt="">
+                    </a>
+                    <a class="mx-1 border">
+                        <img  src="" alt="">
+                    </a>
+                </div>
+
+                <span>Nombre del proyecto</span> 
+
+                <p class="p-3 border">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro quae reiciendis ut dolor cupiditate blanditiis sint libero excepturi soluta molestiae a, magnam velit quasi nisi quo cum harum repellendus expedita!
+                </p>
+            </div>
+
+            <div class="slide-3">
+                <div class="link-container d-flex justify-content-evenly px-3 mt-3 border">
+                    <a class="mx-1 border">
+                        <img  src="" alt="">
+                    </a>
+                    <a class="mx-1 border">
+                        <img  src="" alt="">
+                    </a>
+                </div>
+
+                <span>Nombre del proyecto</span> 
+
+                <p class="p-3 border">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro quae reiciendis ut dolor cupiditate blanditiis sint libero excepturi soluta molestiae a, magnam velit quasi nisi quo cum harum repellendus expedita!
+                </p>
+            </div>
+        </div>
+
+        <div class="button-container d-flex justify-content-between">
+            <button
+            class="right-button"
+            (click)="previous()">&lt;</button>
+
+            <button
+            class="left-button"
+            (click)="next()">&gt;</button>
+        </div>
+    </div>
 </article>

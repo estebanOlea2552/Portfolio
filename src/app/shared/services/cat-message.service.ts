@@ -20,11 +20,11 @@ export class CatMessageService {
   
   constructor() {}
 
-  assignToPath(value: String): void{
+  assignPath(value: String): void{
     this.path = value
   }
 
-  comparePath(): String{
+  returnMessage(): String{
     return this.listOfMessages[this.path]
   }
 }

@@ -3,3 +3,30 @@ hr {
     background-color: var(--color-white);
     opacity: 1;
 }
+
+.info-container {
+    height: calc(230px * var(--pixel-size));
+    overflow: hidden;
+}
+
+.form-label {
+    color: var(--color-white);
+}
+
+.form-control {
+    background-color: var(--box-background-hover);
+    border-radius: 0%;
+}
+
+label {
+    font-size: calc(8px * var(--pixel-size));
+}
+
+input, textarea {
+    font-size: calc(6px * var(--pixel-size));
+    color: var(--color-white);
+}
+
+button {
+    cursor: none;
+}

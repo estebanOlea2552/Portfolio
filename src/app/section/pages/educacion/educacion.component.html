@@ -2,12 +2,12 @@
     <h3 class="text-shadow">
         Educación
     </h3>
-    <hr>
-    <div class="slider">
-        <input type="radio" name="slider" id="slideOne" [checked]="counter == 0">
-        <input type="radio" name="slider" id="slideTwo" [checked]="counter == 1">
-        <input type="radio" name="slider" id="slideThree" [checked]="counter == 2">
-        <input type="radio" name="slider" id="slideFour" [checked]="counter == 3">
+    <br>
+    <div class="info-container">
+        <input type="radio" name="slider" id="slideOne" [checked]="counter == 0" disabled>
+        <input type="radio" name="slider" id="slideTwo" [checked]="counter == 1" disabled>
+        <input type="radio" name="slider" id="slideThree" [checked]="counter == 2" disabled>
+        <input type="radio" name="slider" id="slideFour" [checked]="counter == 3" disabled>
 
         <div class="checkers">
             <label for="slideOne"></label>
@@ -17,30 +17,50 @@
         </div>
 
         <div class="content">
-            <div class="slide_1">
-                <div class="item d-flex justify-content-center align-items-center mb-4 ">
-                    <img src="../../../../assets/images/unt_logo_1.png" alt="Universidad Nacional de Tucumán">
+            <div class="slide-1">
+                <div class="item d-flex justify-content-center align-items-center mb-4">
+                    <img src="../assets/images/unt_logo_pixelart_2.png" alt="Universidad Nacional de Tucumán"> 
                 </div>
+                <span class="text-center">
+                    Universidad Nacional
+                    <br>
+                    de Tucumán
+                </span>
             </div>
 
-            <div class="slide_2">
-                <div class="item d-flex justify-content-center align-items-center mb-4 ">
-                    <img src="../../../../assets/images/utn-ba_logo_1.png"
+            <div class="slide-2">
+                <div class="item d-flex justify-content-center align-items-center mb-4">
+                    <img src="../assets/images/utn_logo_pixelart.png"
                         alt="Universidad Tecnológica Nacional - Facultad Regional de Buenos Aires">
                 </div>
+                <span class="text-center">
+                    Universidad Tecnológica	
+                    <br>
+                    Nacional
+                </span>
             </div>
 
-            <div class="slide_3">
-                <div class="item d-flex justify-content-center align-items-center mb-4 ">
-                    <img src="../../../../assets/images/oracle_next_educaction_logo_1.png"
+            <div class="slide-3">
+                <div class="item d-flex justify-content-center align-items-center mb-4">
+                    <img src="../assets/images/one_logo_pixelart.png"
                         alt="Programa Oracle Next Education">
                 </div>
+                <span class="text-center">
+                    ORACLE
+                    <br>
+                    Next Education
+                </span>
             </div>
 
-            <div class="slide_4">
-                <div class="item d-flex justify-content-center align-items-center mb-4 ">
-                    <img src="../../../../assets/images/argentina_programa_4.0_logo_1.png" alt="Argentina Programa 4.0">
+            <div class="slide-4">
+                <div class="item d-flex justify-content-center align-items-center mb-4">
+                    <img src="../assets/images/argentina_programa_logo_pixelart.png" alt="Argentina Programa 4.0">
                 </div>
+                <span class="text-center">
+                    Argentina Programa 
+                    <br>
+                    4.0
+                </span>
             </div>
         </div>
 

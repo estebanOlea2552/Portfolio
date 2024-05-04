@@ -1,16 +1,137 @@
 <article class="p-3" style="height: 100%;">
-<h3 class="text-shadow">Mi stack de tecnologías web</h3>
-<br>
-<ul>
-    <li>Angular</li>
-    <li>Java</li>
-    <li>Spring Boot</li>
-    <li>My SQL</li>
-    <li>JavaScript</li>
-    <li>TypeScript</li>
-    <li>GitHub</li>
-    <li>Docker</li>
-    <li>Figma</li>
-    <li>Más</li>
-</ul>
+    <h3 class="text-shadow">Mi stack de tecnologías!</h3>
+    <br>
+    <div class="info-container d-flex mb-3">
+        <input type="radio" name="slider" id="slideOne" [checked]="counter == 0" disabled>
+        <input type="radio" name="slider" id="slideTwo" [checked]="counter == 1" disabled>
+        <input type="radio" name="slider" id="slideThree" [checked]="counter == 2" disabled>
+
+        <div class="checkers">
+            <label for="slideOne"></label>
+            <label for="slideTwo"></label>
+            <label for="slideThree"></label>
+        </div>
+
+        <div class="content">
+            <!-- slide 1 -->
+            <div class="slide-1">
+                <!-- row 1 -->
+                <div class="d-flex justify-content-evenly">
+                    <div class="item d-flex flex-column align-items-center border">
+                        <img class="icon pixelated"
+                        src="../../../../assets/images/stack_icons/js_logo_pixel.png"
+                        alt="Javascript">
+                        <span class="mt-3">Javascript</span>
+                    </div>
+                    <div class="item d-flex flex-column align-items-center border">
+                        <img class="icon pixelated"
+                        src="../../../../assets/images/stack_icons/typescript_logo_pixel.png" alt="TypeScript">
+                        <span class="mt-3">TypeScript</span>
+                    </div>
+                    <div class="item d-flex flex-column align-items-center border">
+                        <img class="icon pixelated"
+                        src="../../../../assets/images/stack_icons/java_logo_pixel.png"
+                        alt="Java">
+                        <span class="mt-3">Java</span>
+                    </div>
+                </div>
+                <!-- row 2 -->
+                <div class="d-flex justify-content-evenly">
+                    <div class="item d-flex flex-column align-items-center border">
+                        <img class="icon pixelated"
+                        src="../../../../assets/images/stack_icons/sql_logo_pixel.png"
+                        alt="SQL">
+                        <span class="mt-3">SQL</span>
+                    </div>
+                    <div class="item d-flex flex-column align-items-center border">
+                        <img class="icon pixelated"
+                        src="../../../../assets/images/stack_icons/angular_logo_pixel.png"
+                        alt="Angular">
+                        <span class="mt-3">Angular</span>
+                    </div>
+                    <div class="item d-flex flex-column align-items-center border">
+                        <img class="icon pixelated"
+                        src="../../../../assets/images/stack_icons/react_logo_pixel.png"
+                        alt="React">
+                        <span class="mt-3">React</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- slide 2 -->
+            <div class="slide-2">
+                <!-- row 3 -->
+                <div class="d-flex justify-content-evenly">
+                    <div class="item d-flex flex-column align-items-center border">
+                        <img class="icon pixelated"
+                        src="../../../../assets/images/stack_icons/spring_logo_pixel.png"
+                        alt="Spring">
+                        <span class="mt-3">Spring</span>
+                    </div>
+                    <div class="item d-flex flex-column align-items-center border">
+                        <img class="icon pixelated"
+                        src="../../../../assets/images/stack_icons/springboot_logo_pixel.png" alt="SpringBoot">
+                        <span class="mt-3">SpringBoot</span>
+                    </div>
+                    <div class="item d-flex flex-column align-items-center border">
+                        <img class="icon pixelated"
+                        src="../../../../assets/images/stack_icons/mysql_logo_pixel.png"
+                        alt="MySQL">
+                        <span class="mt-3">MySQL</span>
+                    </div>
+                </div>
+                <!-- row 4 -->
+                <div class="d-flex justify-content-evenly">
+                    <div class="item d-flex flex-column align-items-center border">
+                        <img class="icon pixelated"
+                        src="../../../../assets/images/stack_icons/postgre_logo_pixel.png"
+                        alt="PostgreSQL">
+                        <span class="mt-3">PostgreSQL</span>
+                    </div>
+                    <div class="item d-flex flex-column align-items-center border">
+                        <img class="icon pixelated"
+                        src="../../../../assets/images/stack_icons/git_logo_pixel.png"
+                        alt="Git">
+                        <span class="mt-3">Git</span>
+                    </div>
+                    <div class="item d-flex flex-column align-items-center border">
+                        <img class="icon pixelated"
+                        src="../../../../assets/images/stack_icons/docker_logo_pixel.png"
+                        alt="Docker">
+                        <span class="mt-3">Docker</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- slide 3 -->
+            <div class="slide-3">
+                <!-- row 5 -->
+                <div class="d-flex justify-content-evenly">
+                    <div class="item d-flex flex-column align-items-center border">
+                        <img class="icon pixelated"
+                        src="../../../../assets/images/stack_icons/tailwind_logo_pixel.png"
+                        alt="Tailwind">
+                        <span class="mt-3">Tailwind</span>
+                    </div>
+                    <div class="item d-flex flex-column align-items-center border">
+                        <img class="icon pixelated"
+                        src="../../../../assets/images/stack_icons/bootstrap_logo_pixel.png"
+                        alt="Bootstrap">
+                        <span class="mt-3">Bootstrap</span>
+                    </div>
+                    <div class="item d-flex flex-column align-items-center border">
+                        <img class="icon pixelated"
+                        src="../../../../assets/images/stack_icons/figma_logo_pixel.png"
+                        alt="Figma">
+                        <span class="mt-3">Figma</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="button-container d-flex flex-column justify-content-center">
+            <button (click)="previous()">&#8593;</button>
+            <button (click)="next()">&#8595;</button>
+        </div>
+    </div>
 </article>

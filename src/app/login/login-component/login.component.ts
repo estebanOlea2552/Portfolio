@@ -12,7 +12,10 @@ import { MusicAndSfxService } from 'src/app/shared/services/music-and-sfx.servic
   animations: [title, subtitle, iniciar, opciones, fadeIn]
 })
 export class LoginComponent implements OnInit {
+  animations = false;
+
   disabled: boolean = false;
+
   music!: boolean;
   sfx!: boolean;
   musicSuscription!: Subscription;
@@ -23,6 +26,8 @@ export class LoginComponent implements OnInit {
   constructor(private musicAndSfx: MusicAndSfxService, private router: Router){}
 
   ngOnInit(): void {
+    this.animations = true;
+
     this.music = this.musicAndSfx.musicSubject$.getValue();
     this.sfx = this.musicAndSfx.sfxSubject$.getValue();
     
@@ -37,6 +42,10 @@ export class LoginComponent implements OnInit {
     } else {
       this.sfxOnOffText = 'OFF';
     };
+  }
+
+  toggle(){
+    this.animations = !this.animations;
   }
   
   turnOnOffMusic() {
@@ -70,6 +79,9 @@ export class LoginComponent implements OnInit {
   }
 
   navigateToNewRoute(route: any) {
-    this.router.navigate([route]);
+    this.toggle();
+    setTimeout(() => {
+      this.router.navigate([route]);
+    }, 1000)
   }
 }

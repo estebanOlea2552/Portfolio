@@ -16,6 +16,11 @@ div, a, span {
     font-size: calc(8px * var(--pixel-size));    
 }
 
+.angular-logo {
+    height: calc(18px * var(--pixel-size));
+    width: calc(18px * var(--pixel-size))
+}
+
 .buttons-container {
     height: 30%;
 }

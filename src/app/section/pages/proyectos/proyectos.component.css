@@ -1,0 +1,108 @@
+.info-container {
+    position: relative;
+    height: calc(230px * var(--pixel-size));
+    width: 100%;
+    overflow: hidden;
+}
+
+input {
+    visibility: hidden;
+    display: none;
+    cursor: none;
+}
+
+.checkers {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    right: 0px;
+    bottom: 20px;
+    gap: 10px;
+    cursor: none;
+}
+
+.checkers label {
+    display: none;
+    visibility: hidden;
+    cursor: none;
+}
+
+.info-container input:nth-child(1):checked ~ .checkers label:nth-child(1),
+.info-container input:nth-child(2):checked ~ .checkers label:nth-child(2),
+.info-container input:nth-child(3):checked ~ .checkers label:nth-child(3),
+.info-container input:nth-child(4):checked ~ .checkers label:nth-child(4)
+{   
+    opacity: 1;
+}
+
+.info-container input:nth-child(1):checked ~ .content {
+    left: 0;
+}
+
+.info-container input:nth-child(2):checked ~ .content {
+    left: -100%;
+}
+
+.info-container input:nth-child(3):checked ~ .content {
+    left: -200%;
+}
+
+.info-container input:nth-child(4):checked ~ .content {
+    left: -300%;
+}
+
+.content {
+    position: relative;
+    width: 300%;
+    height: calc(230px * var(--pixel-size));
+    display: flex;
+    transition: 0.6s ease-in-out;
+}
+
+.slide-1, .slide-2, .slide-3 {
+    width: 100%;
+    height: calc(230px * var(--pixel-size));
+    display: flex;
+    flex-direction: column;
+}
+
+.link-container {
+    width: 100%;
+    height: calc(80px * var(--pixel-size));
+}
+
+a, img {
+    width: 100%;
+    height: auto;
+}
+
+span {
+    padding-top: calc(10px * var(--pixel-size));
+    padding-left: calc(10px * var(--pixel-size));
+    padding-bottom: calc(14px * var(--pixel-size));
+    font-size: calc(10px * var(--pixel-size));
+}
+
+p {
+    width: 100%;
+}
+
+.button-container {
+    width: 100%;
+    position: absolute;
+    bottom: 45%;
+}
+
+button {
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--color-turquoise);
+    font-size: calc(16px * var(--pixel-size));
+    border: none;
+    transition: 0.1s;
+}
+
+button:hover {
+    color: var(--color-white);
+    transform: scale(1.2);
+}

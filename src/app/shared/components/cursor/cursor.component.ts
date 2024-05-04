@@ -42,8 +42,7 @@ export class CursorComponent {
     this.hidden = false;
   }
 
-  @HostListener('document:mouseover', ['$event'])
-  onMouseOver($event: MouseEvent){
+  listenMouseOver(){
 
   }
 }

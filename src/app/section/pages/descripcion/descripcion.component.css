@@ -1,22 +1,7 @@
-.typewriting {
-    width: 24em;
-    border-right: 8px solid var(--color-white);
-    white-space: nowrap;
-    overflow: hidden;
-    transform: translateY(-50%);
-}
-
-.typewriter-animation {
-    animation: typewriter 2s 1s steps(24) 1 normal both,
-            blinkTextCursor 700ms step-end infinite;
-}
-
-@keyframes typewriter {
-    from{width: 0;}
-    to{width: 24em;}
-}
-
-@keyframes blinkTextCursor {
-    from{border-right-color: var(--color-white)}
-    50%{border-right-color: transparent;}
+.info-container {
+    height: calc(230px * var(--pixel-size));
+    overflow: scroll;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: var(--box-background) var(--box-background-hover);
 }
