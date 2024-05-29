@@ -1,19 +1,30 @@
 <article class="p-3" style="height: 100%;">
+    <div class="preload-images"></div>
     <h3 class="text-shadow">
-        Descarga mi CV
+        Mi CV
     </h3>
-    <br>
-    <div class="info-container d-flex mb-3 p-3 border">
-        <div class="cv-container p-2 border" (scroll)="onScroll($event)">
+    <hr>
+    <div class="info-container d-flex mb-3 p-3">
+        <div class="cv-container p-2">
             <img src="../assets/cv/esteban_daniel_olea-cv.png" alt="">
         </div>
-        <div class="controls-container d-flex flex-column justify-content-start p-2 border">
-            <div class="button-container d-flex justify-content-center align-items-center border">
-                <button>ABRIR</button>
-            </div>
-            <div class="button-container d-flex justify-content-center align-items-center border">
-                <button>DESCARGAR</button>
-            </div>
+        <div class="controls-container d-flex flex-column justify-content-evenly align-items-center">
+            <a
+            #openButton
+            class="button-container ms-4"
+            href="../assets/cv/esteban_daniel_olea-cv.pdf"
+            (mouseenter)="onMouseEnter(openButton)"
+            (mouseleave)="onMouseLeave(openButton)"
+            (click)="openFile($event, openButton)">ABRIR</a>
+
+            <a
+            class="button-container ms-4"
+            #downloadButton
+            href="../assets/cv/esteban_daniel_olea-cv.pdf"
+            download="esteban_daniel_olea-cv.pdf"
+            (mouseenter)="onMouseEnter(downloadButton)"
+            (mouseleave)="onMouseLeave(downloadButton)"
+            (click)="downloadFile($event, downloadButton)">DESCARGAR</a>
         </div>
     </div>
 </article>

@@ -1,10 +1,14 @@
+/* //////////////////VARIABLE DEF/////////////////// */
+
 :root {
     --pixel-size: 2;
     --color-white: #e6e6e6;
     --color-turquoise: #47d9e4;
     --text-shadow: #2a87a6;
+    --text-shadow-darker: #286584;
     --box-background: rgba(0, 119, 132, 0.3);
     --box-background-hover: rgba(23, 163, 178, 0.4);
+    --box-background-darker: #286584; 
 }
 
 @font-face {
@@ -12,9 +16,15 @@
     src: url('./assets/fonts/amiga4ever_pro.ttf');
 }
 
+@font-face {
+    font-family: 'minecraft';
+    src: url('./assets/fonts/minecraft_modified.ttf');
+}
+
+/* //////////////////GENERAL STYLES/////////////////// */
+
 * {
     cursor: none;
-    font-family: "amiga4ever_pro";
 }
 
 body {
@@ -24,17 +34,36 @@ body {
     background-repeat: no-repeat;
     background-size: calc(850px * var(--pixel-size));
     image-rendering: pixelated;
-    color: white;
-    overflow: hidden;   
+    color: var(--color-white);
+    overflow: hidden;
+    font-family: 'minecraft';
 }
 
 h3 {
+    font-family: 'amiga4ever_pro';
     font-size: calc(10px * var(--pixel-size));
 }
 
-button:hover {
+span {
+    font-family: 'amiga4ever_pro';
+}
+
+img {
+    pointer-events: none;
+    user-select: none;
+}
+
+button, button:hover {
     cursor: none;
 }
+
+p {
+    font-family: 'minecraft';
+    font-size: calc(9px * var(--pixel-size));
+    letter-spacing: calc(1px * 3.5);
+}
+
+/* //////////////////PERSONAL CLASSES/////////////////// */
 
 .border {
     border: 2px solid white;

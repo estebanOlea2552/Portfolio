@@ -8,7 +8,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { CursorComponent } from './shared/components/cursor/cursor.component';
-import { TopBarComponent } from './shared/components/top-bar/top-bar.component';
 
 @NgModule({
   declarations: [
@@ -21,9 +20,7 @@ import { TopBarComponent } from './shared/components/top-bar/top-bar.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule,
-    TopBarComponent
-    
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

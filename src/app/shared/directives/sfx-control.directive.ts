@@ -1,20 +1,29 @@
-import { Directive, HostListener, ViewChild } from '@angular/core';
+import { Directive, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { MusicAndSfxService } from '../services/music-and-sfx.service';
 
 @Directive({
   selector: '[sfx-control]'
 })
 export class SfxControlDirective {
-  sound: HTMLAudioElement;
-  @ViewChild('audio') audio!: HTMLAudioElement;
+  hoverSfx: HTMLAudioElement;
+  @ViewChild('hoverSfx') hoverSfxaudio!: HTMLAudioElement;
 
-  constructor(private sfx: MusicAndSfxService) {
-    this.sound = new Audio('../assets/sounds/blip_5.wav');
+  clickSfx: HTMLAudioElement;
+  @ViewChild('hoverSfx') clickSfxaudio!: HTMLAudioElement;
+
+  constructor(private sfx: MusicAndSfxService, private el: ElementRef) {
+    this.hoverSfx = new Audio('../assets/sounds/blip_3.mp3');
+    this.clickSfx = new Audio('../assets/sounds/click_3.mp3');
   }
 
   @HostListener('mouseenter') onMouseEnter() {
-    if (this.sfx.sfxActivated){
-      this.sound.play();
+    if (this.sfx.sfxActivated ){
+      this.hoverSfx.play();
+    }
+  }
+  @HostListener('click') onclick() {
+    if (this.sfx.sfxActivated && this.el.nativeElement.id !== 'start'){
+      this.clickSfx.play();
     }
   }
 }

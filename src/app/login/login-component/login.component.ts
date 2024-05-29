@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
@@ -11,61 +11,69 @@ import { MusicAndSfxService } from 'src/app/shared/services/music-and-sfx.servic
   styleUrls: ['./login.component.css'],
   animations: [title, subtitle, iniciar, opciones, fadeIn]
 })
-export class LoginComponent implements OnInit {
-  animations = false;
 
-  disabled: boolean = false;
+export class LoginComponent implements OnInit, OnDestroy {
+  enterLeaveAnimations = false;
 
-  music!: boolean;
-  sfx!: boolean;
+  hideElement: boolean = false;
+  music: boolean = false;
+  sfx: boolean = false;
   musicSuscription!: Subscription;
-  sfxSuscription!: Subscription
-  musicOnOffText!: string;
-  sfxOnOffText!: string;
+  sfxSuscription!: Subscription;
+  musicOnOffText: string = 'OFF';
+  sfxOnOffText: string = 'OFF';
+  startButtonAudio: HTMLAudioElement = new Audio('../../../assets/sounds/start_1.mp3');
 
-  constructor(private musicAndSfx: MusicAndSfxService, private router: Router){}
+  constructor(private musicAndSfx: MusicAndSfxService, private router: Router) { }
 
   ngOnInit(): void {
-    this.animations = true;
+    this.musicSuscription = this.musicAndSfx.musicSubject$.subscribe(
+      value => this.music = value
+    );
+    this.sfxSuscription = this.musicAndSfx.sfxSubject$.subscribe(
+      value => this.sfx = value
+    );
 
-    this.music = this.musicAndSfx.musicSubject$.getValue();
-    this.sfx = this.musicAndSfx.sfxSubject$.getValue();
-    
-    if(this.music) {
+    this.enterLeaveAnimations = true;
+
+    if (this.music) {
       this.musicOnOffText = 'ON';
     } else {
       this.musicOnOffText = 'OFF';
     };
 
-    if(this.sfx) {
+    if (this.sfx) {
       this.sfxOnOffText = 'ON';
     } else {
       this.sfxOnOffText = 'OFF';
     };
   }
 
-  toggle(){
-    this.animations = !this.animations;
+  ngOnDestroy(): void {
+    this.musicSuscription.unsubscribe();
+    this.sfxSuscription.unsubscribe();
   }
-  
+
+  toggleForLeaveAnim() {
+    this.enterLeaveAnimations = !this.enterLeaveAnimations;
+  }
+
   turnOnOffMusic() {
-    if(!this.music) {
+    if (!this.music) {
       this.musicOnOffText = 'ON';
     } else {
       this.musicOnOffText = 'OFF';
     };
-
     this.music = !this.music;
     this.musicAndSfx.sendMusicValue(this.music);
   }
-  
+
   turnOnOffSfx() {
-    if(!this.sfx) {
+    if (!this.sfx) {
       this.sfxOnOffText = 'ON';
     } else {
       this.sfxOnOffText = 'OFF';
     };
-
     this.sfx = !this.sfx;
     this.musicAndSfx.sendSfxValue(this.sfx);
   }
@@ -73,13 +81,16 @@ export class LoginComponent implements OnInit {
   confirmSettings() {
     this.openCloseOptions();
   }
-  
+
   openCloseOptions() {
-    this.disabled = !this.disabled;
+    this.hideElement = !this.hideElement;
   }
 
   navigateToNewRoute(route: any) {
-    this.toggle();
+    if (this.sfx){
+      this.startButtonAudio.play();
+    }
+    this.toggleForLeaveAnim();
     setTimeout(() => {
       this.router.navigate([route]);
     }, 1000)

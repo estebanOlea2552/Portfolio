@@ -6,16 +6,15 @@ import { Injectable } from '@angular/core';
 export class CatMessageService {
   path: any = '';
   listOfMessages: {[key: string]: String} = {
-    '/home' : 'Hola! Soy Puflito, el Gatito espacial. Yo seré tu guía a lo largo de esta web :)',
-    '/section/descripcion' : 'descripcion',
-    '/section/stack' : 'stack',
-    '/section/educacion' : 'educacion',
-    '/section/proyectos' : 'proyectos',
-    '/section/experiencia' : 'experiencia',
-    '/section/cv' : 'cv',
-    '/section/redes' : 'redes',
-    '/section/contacto' : 'contacto',
-    '/section/gracias' : 'gracias'
+    '/section/description' : 'Gran presentación, hasta yo me emocioné',
+    '/section/stack' : 'Guau! esas son muchas tecnologías',
+    '/section/education' : 'Un sujeto muy educado',
+    '/section/projects' : 'Dicen que yo soy su proyecto favorito :3',
+    '/section/experience' : 'A eso le llamo una persona activa!',
+    '/section/cv' : 'Qué lindos botones, no te dan ganas de presionarlos?',
+    '/section/social' : 'En LinkedIn comparte muchos memes',
+    '/section/contact' : 'Qué nervios!',
+    '/section/thanks' : 'Gracias por visitarnos :)'
   }
   
   constructor() {}

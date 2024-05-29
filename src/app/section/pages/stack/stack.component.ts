@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-stack',
@@ -6,20 +6,39 @@ import { Component } from '@angular/core';
   styleUrls: ['./stack.component.css'],
 })
 export class StackComponent {
-  counter: number = 0;
-  
-  next() {
-    if(this.counter >= 2) {
-      this.counter = 0;
+  currentIndex: number = 0;
+  scrolling: boolean = false;
+  totalCards: number = 3;
+
+  @HostListener('window:wheel', ['$event'])
+  onScroll(event: WheelEvent) {
+    if (this.scrolling) return;
+    this.scrolling = true;
+
+    if (event.deltaY > 0) {
+      this.nextCard();
     } else {
-      this.counter++;
+      this.prevCard();
+    }
+
+    setTimeout(() => {
+      this.scrolling = false;
+    }, 500);
+  }
+
+  nextCard() {
+    if (this.currentIndex < this.totalCards - 1) {
+      this.currentIndex++;
     }
   }
-  previous() {
-    if(this.counter <= 0) {
-      this.counter = 2;
-    } else {
-      this.counter--;
+
+  prevCard() {
+    if (this.currentIndex > 0) {
+      this.currentIndex--;
     }
+  }
+
+  getTransform() {
+    return `translateY(-${this.currentIndex * 100}%)`;
   }
 }

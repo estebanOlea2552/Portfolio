@@ -10,7 +10,7 @@ export class ProyectosComponent {
   counter: number = 0;
   
   next() {
-    if(this.counter >= 2) {
+    if(this.counter >= 1) {
       this.counter = 0;
     } else {
       this.counter++;
@@ -18,7 +18,7 @@ export class ProyectosComponent {
   }
   previous() {
     if(this.counter <= 0) {
-      this.counter = 2;
+      this.counter = 1;
     } else {
       this.counter--;
     }

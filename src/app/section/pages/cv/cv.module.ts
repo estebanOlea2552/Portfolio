@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { CvRoutingModule } from './cv-routing.module';
 import { CvComponent } from './cv.component';
+import { DirectivesModule } from 'src/app/shared/directives/directives.module';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import { CvComponent } from './cv.component';
   ],
   imports: [
     CommonModule,
-    CvRoutingModule
+    CvRoutingModule,
+    DirectivesModule
   ],
   exports: [
     CvComponent      

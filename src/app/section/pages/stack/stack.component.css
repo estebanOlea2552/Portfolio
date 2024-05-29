@@ -1,82 +1,103 @@
-h4 {
-    font-size: calc(10px * var(--pixel-size));
-}
-
-.info-container {
-    position: relative;
-    height: calc(230px * var(--pixel-size));
-    overflow: hidden;
-}
-
-.info-container input {
-    visibility: hidden;
-    display: none;
-    cursor: none;
-}
-
-.content {
-    position: relative;
-    width: 90%;
-    height: 300%;
-    display: flex;
-    flex-direction: column;
-    transition: 0.6s ease-in-out;
-}
-
-.slide-1, .slide-2, .slide-3 {
-    height: calc(230px * var(--pixel-size));
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-
-.checkers {
-    display: none;
-}
-
-.info-container input:nth-child(1):checked ~ .checkers label:nth-child(1),
-.info-container input:nth-child(2):checked ~ .checkers label:nth-child(2),
-.info-container input:nth-child(3):checked ~ .checkers label:nth-child(3)
-{   
+hr {
+    height: calc(2px*var(--pixel-size));
+    background-color: var(--color-turquoise);
+    border: none;
     opacity: 1;
 }
 
-.info-container input:nth-child(1):checked ~ .content {
-    top: 0;
+.info-container {
+    height: calc(230px * var(--pixel-size));
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
 }
 
-.info-container input:nth-child(2):checked ~ .content {
-    top: -100%;
+.slider-container {
+    width: 100%;
+    height: 100%;
 }
 
-.info-container input:nth-child(3):checked ~ .content {
-    top: -200%;
+.arrow-container {
+    width: 6%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
+.arrow-up {
+    width: calc(12px * var(--pixel-size));
+    height: calc(29px * var(--pixel-size));
+    background-image: url('../../../../assets/images/stack_arrow_up.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: blink 2500ms infinite;
+    transition: 500ms 100ms ease-in-out;
+    visibility: hidden;
+}
+
+.arrow-down {
+    width: calc(12px * var(--pixel-size));
+    height: calc(29px * var(--pixel-size));
+    background-image: url('../../../../assets/images/stack_arrow_down.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: blink 2500ms infinite;
+    transition: 500ms 100ms ease-in-out;
+    visibility: hidden;
+}
+
+.display {
+    visibility: visible;
+}
+
+@keyframes blink {
+    from {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.3;
+    }
+}
+
+.cards-wrapper {
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+}
+
+.slider-card {
+    width: 100%;
+    height: 100%;
+}
 
 .item {
-    width: calc(78px * var(--pixel-size));
+    width: calc(72px * var(--pixel-size));
     height: auto;
+    transition: 0.2s;
+}
+
+.item:hover {
+    transition: 0.2s;
+    scale: 1.1;
+}
+
+.item:hover span {
+    color: var(--color-turquoise);
+    transition: 0.2s;
 }
 
 .icon {
-    height: calc(64px * var(--pixel-size));
-    width: calc(64px * var(--pixel-size));
+    height: calc(58px * var(--pixel-size));
+    width: calc(58px * var(--pixel-size));
 }
 
 span {
     font-size: calc(8px * var(--pixel-size));
-}
-
-.button-container {
-    width: 10%;
-    height: 100%;
-}
-
-button {
-    color: white;
-    background-color: var(--box-background-hover);
-    height: calc(30px * var(--pixel-size));
-    font-size: calc(14px * var(--pixel-size));
-    cursor: none;
+    transition: 0.2s;
+    text-decoration: line;
 }

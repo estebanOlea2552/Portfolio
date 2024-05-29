@@ -1,4 +1,4 @@
-import { Component, HostListener, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-cv',
@@ -7,11 +7,48 @@ import { Component, HostListener, ViewChild } from '@angular/core';
   animations: []
 })
 export class CvComponent {
-  scrollTop: number = 0;
 
-  @HostListener('scroll', ['$event'])
-  onScroll(event: Event): void {
-    const target = event.target as HTMLElement;
-      this.scrollTop = target.scrollTop;
+  constructor() {}
+
+  onMouseEnter(button: HTMLElement) {
+    button.classList.toggle('button-container-hover');
+  }
+  onMouseLeave(button: HTMLElement) {
+    button.classList.toggle('button-container-hover');
+  }
+
+  openFile(event: MouseEvent, button: HTMLElement) {
+    const url = button.getAttribute('href');
+
+    event.preventDefault();
+    button.classList.toggle('button-container-click');
+    setTimeout(() =>
+      button.classList.toggle('button-container-click'), 100
+    );
+
+    if (url) {
+      setTimeout(() => {
+        window.open(url, '_blank');
+      }, 300);
+    }
+  }
+
+  downloadFile(event: MouseEvent, button: HTMLElement) {
+    const url = button.getAttribute('href');
+    const downloadLink = document.createElement('a');
+    
+    event.preventDefault();
+    button.classList.toggle('button-container-click');
+    setTimeout(() => 
+      button.classList.toggle('button-container-click'), 100
+    );
+
+    downloadLink.href = url || '';
+    downloadLink.download = button.getAttribute('download') || '';
+    document.body.appendChild(downloadLink);
+    setTimeout(() => {
+      downloadLink.click();
+      document.body.removeChild(downloadLink);
+    }, 300);
   }
 }

@@ -1,6 +1,7 @@
 hr {
-    height: calc(1px*var(--pixel-size));
-    background-color: var(--color-white);
+    height: calc(2px*var(--pixel-size));
+    background-color: var(--color-turquoise);
+    border: none;
     opacity: 1;
 }
 
@@ -22,11 +23,60 @@ label {
     font-size: calc(8px * var(--pixel-size));
 }
 
-input, textarea {
-    font-size: calc(6px * var(--pixel-size));
+input,
+textarea {
+    font-size: calc(8px * var(--pixel-size));
     color: var(--color-white);
+    border: calc(1px * var(--pixel-size)) solid var(--color-turquoise);
+    caret-color: var(--color-white);
+    background-color: var(--box-background-hover);
+    resize: none;
+}
+
+input:focus,
+textarea:focus {
+    color: var(--color-white);
+    caret-color: var(--color-white);
+    box-shadow: none;
+    outline: none;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-turquoise) var(--box-background-hover);
 }
 
 button {
     cursor: none;
+}
+
+.submit {
+    height: calc(14px * var(--pixel-size));
+    padding: auto;
+    font-family: 'amiga4ever_pro';
+    font-size: calc(6px * var(--pixel-size));
+    color: var(--color-white);
+    background-color: var(--box-background-hover);
+    border: var(--color-turquoise);
+    box-shadow: none;
+    transition: 0.1s;
+    cursor: none;
+}
+
+.submit:disabled {
+    opacity: 0.5;
+    height: calc(14px * var(--pixel-size));
+    padding: auto;
+    font-size: calc(6px * var(--pixel-size));
+    color: var(--color-white);
+    background-color: var(--box-background-hover);
+    border: var(--color-turquoise);
+    box-shadow: none;
+}
+
+.submit:not(:disabled):hover {
+    border: 4px solid var(--color-turquoise);
+}
+
+span {
+    font-size: calc(6px * var(--pixel-size));
+    transition: 0.2s;
 }

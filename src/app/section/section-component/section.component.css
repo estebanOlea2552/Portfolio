@@ -1,26 +1,7 @@
-.bottom-bar {
-    height: calc(23px * var(--pixel-size));
-    width: calc(436px * var(--pixel-size));
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-}
-
 .top-bar {
     background-image: url('../../../assets/images/top_bar.png');
     animation-duration: 3s;
     animation-name: slidefromtop;
-}
-
-.bottom-bar {
-    background-image: url('../../../assets/images/bottom_bar.png');
-}
-
-.bar-container {
-    height: calc(12px * var(--pixel-size));
-    width: calc(424px * var(--pixel-size));
-    transform: translateX(1px) translateY(1px);
-    background-color: var(--box-background);
 }
 
 .section {
@@ -40,17 +21,84 @@
     background-color: var(--box-background);
 }
 
-a, h5 {
+a {
     font-family: 'amiga4ever_pro';
     font-size: calc(8px * var(--pixel-size));
     color: var(--color-white);
 }
 
-@keyframes slidefromtop {
-    from {
-        margin-left: 0px;
+a {
+    font-family: 'amiga4ever_pro';
+    font-size: calc(8px * var(--pixel-size));
+    color: var(--color-white);
+}
+
+h4 {
+    font-family: 'amiga4ever_pro';
+    font-size: calc(8px * var(--pixel-size));
+    color: var(--color-turquoise);
+    display: inline;
+    position: absolute;
+    white-space: nowrap;
+    top: calc(2px * var(--pixel-size));
+}
+
+.top-bar, .bottom-bar {
+    height: calc(23px * var(--pixel-size));
+    width: calc(436px * var(--pixel-size));
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.top-bar {
+    background-image: url('../../../assets/images/top_bar.png');
+}
+
+.bottom-bar {
+    background-image: url('../../../assets/images/bottom_bar.png');
+}
+
+.bar-container {
+    height: calc(12px * var(--pixel-size));
+    width: calc(424px * var(--pixel-size));
+    transform: translateX(1px) translateY(1px);
+    background-color: var(--box-background);
+    overflow: hidden;
+}
+
+.slider-1 {
+    animation: slider-1 linear infinite;
+    animation-duration: 20s;
+}
+
+@keyframes slider-1 {
+    0% {
+        left: 102%;
     }
-    to {
-        margin-left: 100px;
+    100% {
+        left: -75%;
+    }
+}
+
+.slider-2 {
+    animation: slider-2 linear infinite;
+    animation-duration: 20s;
+    animation-delay: 10s;
+    opacity: 0;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slider-2 {
+    0% {
+        visibility: visible;
+        opacity: 1;
+        left: 102%;
+    }
+    100% {
+        visibility: visible;
+        opacity: 1;
+        left: -75%;
     }
 }

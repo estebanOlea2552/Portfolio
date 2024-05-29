@@ -1,3 +1,5 @@
 <app-cursor></app-cursor>
-<audio #audio src="../assets/sounds/Cody O'Quinn - Gamer Instincts.mp3" loop></audio>
+<audio #audio (ended)="nextSong()">
+    <source src="{{currentSong}}">
+</audio>
 <router-outlet></router-outlet>

@@ -11,15 +11,15 @@
 }
 
 p {
-    font-family: "amiga4ever_pro";
-    font-size: calc(6px * var(--pixel-size));
     display: inline;
+    font-size: calc(8px * var(--pixel-size));
+    color: var(--color-turquoise);
 }
 
 .blink {
     display: inline;
-    background-color: var(--color-white);
     animation: blink 1000ms infinite;
+    border: 1px solid var(--color-turquoise);
 }
 
 img {

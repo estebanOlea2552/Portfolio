@@ -14,9 +14,86 @@
     background-color: var(--box-background);
 }
 
+.buttons-container {
+    transform: translate(-5%);
+    width: calc(56px * var(--pixel-size));
+    height: calc(15px * var(--pixel-size));
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url('../../../../assets/images/buttons_background.png');
+}
+
 button {
     color: var(--color-white);
-    font-size: calc(6px * var(--pixel-size));
-    background-color: var(--box-background-hover);
     border: none;
+    width: calc(11px * var(--pixel-size));
+    height: calc(9px * var(--pixel-size));
+    background: none;
+    opacity: 0.8;
+    transition: 0.1s;
+    cursor: none;
+}
+
+button:hover {
+    opacity: 1;
+}
+
+.music-button {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 0.2s;
+}
+
+.music-active {
+    background-image: url('../../../../assets/images/music_on.png');
+}
+
+.music-inactive {
+    background-image: url('../../../../assets/images/music_off.png');
+}
+
+.sfx-button {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: 0.2s;
+}
+
+.sfx-active {
+    background-image: url('../../../../assets/images/fx-on.png');
+}
+
+.sfx-inactive {
+    background-image: url('../../../../assets/images/fx-off.png');
+}
+
+@keyframes slowblink {
+    from {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.song-name-container {
+    width: 90%;
+    height: 100%;
+}
+
+p {
+    font-size: calc(6px * var(--pixel-size));
+    color: var(--color-turquoise); 
+    animation: slowblink 10000ms infinite;
 }

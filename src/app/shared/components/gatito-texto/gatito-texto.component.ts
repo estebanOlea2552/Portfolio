@@ -9,10 +9,10 @@ import { CatMessageService } from '../../services/cat-message.service';
   styleUrls: ['./gatito-texto.component.css'],
 })
 export class GatitoTextoComponent implements OnInit, OnDestroy {
-  gatitoSwitch: boolean = false;
-
   catStopped: string = "../assets/images/gatito.png";
   catAnimated: string = "../assets/images/gatito.gif";
+  isAnimating: boolean = false;
+  intervalId: any = null;
   catSrc: string = this.catStopped;
 
   urlObservable$ = new Subject<String>();
@@ -34,11 +34,10 @@ export class GatitoTextoComponent implements OnInit, OnDestroy {
       this.newMessage = "";
       this.getAndAssign();
       this.message = this.messagesService.returnMessage();
-      setTimeout(() => this.addCharacter(), 1300)
+      setTimeout(() => this.addCharacter(), 1300);
     } else {
       this.message = "Hola! Soy Puflito, el Gatito espacial. Yo seré tu guía a lo largo de esta web :)"
-      setTimeout(() => this.addCharacter(), 1300)
-      ;
+      setTimeout(() => this.addCharacter(), 1300);
     }
 
     this.router.events.subscribe((event) => {
@@ -55,29 +54,38 @@ export class GatitoTextoComponent implements OnInit, OnDestroy {
     this.urlSuscription.unsubscribe();
   }
 
-  addCharacter() {
-    let splittedMessage: string[] = this.message.split("");
-    let index = 0;
-  
-    this.animateCat();
-    let intervalId = setInterval(() => {
-      if (index < splittedMessage.length) {
-        this.newMessage += splittedMessage[index];
-        index++;
-      } else {
-        clearInterval(intervalId);
-        this.animateCat();
+  addCharacter(): void {
+    if (this.message) { // Procede solo si hay un mensaje
+      if (this.isAnimating && this.intervalId) { // Si hay una animación en curso, cancela el intervalo
+        clearInterval(this.intervalId);
+        this.intervalId = null;
       }
-    }, 70);
+      this.animateCat(true);
+      this.isAnimating = true; // Marca que la animación está en curso
+      this.newMessage = ''; // Vacía newMessage antes de empezar
+      let splittedMessage: string[] = this.message.split("");
+      let index = 0;
+      
+      this.intervalId = setInterval(() => {
+        if (index < splittedMessage.length) {
+          this.newMessage += splittedMessage[index];
+          index++;
+        } else {
+          this.animateCat(false);
+          clearInterval(this.intervalId);
+          this.intervalId = null;
+          this.isAnimating = false; // Marca que la animación ha terminado
+        }
+      }, 60);
+    }
   }
 
-  getAndAssign() {
+  getAndAssign(): void {
     this.urlObservable$.next(this.router.url);
   }
 
-  animateCat() {
-    this.gatitoSwitch = !this.gatitoSwitch;
-    if (this.gatitoSwitch) {
+  animateCat(start: boolean): void {
+    if (start) {
       this.catSrc = this.catAnimated;
     } else {
       this.catSrc = this.catStopped;

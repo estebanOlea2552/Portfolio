@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
   animations: []
 })
 export class RedesComponent {
-
+  mailPart1: string = "estebanolea2306";
+  mailPart2: string = "@gmail.com";
 }

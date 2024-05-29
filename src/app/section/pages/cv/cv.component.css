@@ -1,34 +1,82 @@
+.preload-images {
+    position: absolute;
+    content: url('../../../../assets/images/cv_button.png')
+    url('../../../../assets/images/cv_button_hover.png')
+    url('../../../../assets/images/cv_button_click.png');
+    visibility: hidden;
+    z-index: -1;
+}
+
+hr {
+    height: calc(2px * var(--pixel-size));
+    background-color: var(--color-turquoise);
+    border: none;
+    opacity: 1;
+}
+
 .info-container {
     height: calc(230px * var(--pixel-size));
     width: 100%;
 }
 
 .cv-container {
-    width: 50%;
-    height: auto;
+    width: calc(140px * var(--pixel-size));
+    height: calc(208px * var(--pixel-size));
+    background-image: url('../../../../assets/images/cv_frame.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .controls-container {
     width: 50%;
-    height: auto;
+    height: 100%;
 }
 
 .button-container {
-    height: 100%;
-    width: auto;
+    display: flex;
+    height: calc(70px * var(--pixel-size));
+    width: calc(110px * var(--pixel-size));
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../../../assets/images/cv_button.png');
+    background-position: center;
+    background-size: contain;
+    padding-bottom: calc(25px * var(--pixel-size));
 }
 
-button {
-    width: 70%;
-    height: 50%;
-    background-color: var(--box-background-hover);
-    border: none;
-    box-shadow: none;
+.button-container-hover {
+    display: flex;
+    height: calc(70px * var(--pixel-size));
+    width: calc(110px * var(--pixel-size));
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../../../assets/images/cv_button_hover.png');
+    background-position: center;
+    background-size: contain;
+}
+
+.button-container-click {
+    display: flex;
+    height: calc(70px * var(--pixel-size));
+    width: calc(110px * var(--pixel-size));
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../../../assets/images/cv_button_click.png');
+    background-position: center;
+    background-size: contain;
+    padding-bottom: calc(0px * var(--pixel-size));
+}
+
+a {
+    font-family: 'amiga4ever_pro';
+    font-size: calc(8px * var(--pixel-size));
     color: var(--color-white);
+    text-decoration: none;
 }
 
 img {
     width: 100%;
-    height: auto;
+    height: 100%;
     pointer-events: none;
 }

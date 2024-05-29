@@ -1,36 +1,105 @@
+hr {
+    height: calc(2px*var(--pixel-size));
+    background-color: var(--color-turquoise);
+    border: none;
+    opacity: 1;
+}
+
 .info-container {
     height: calc(230px * var(--pixel-size));
     overflow: scroll;
     overflow-x: hidden;
-    scrollbar-width:thin;
-    scrollbar-color: var(--box-background) var(--box-background-hover);
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-turquoise) var(--box-background-hover);
 }
 
 .content {
     width: 98%;
-    height: 200%;
+    height: 290%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .item {
-    height: 10%;
+    height: calc(90px * var(--pixel-size));
     width: 100%;
     display: flex;
+    justify-content: space-between;
 }
 
 .date {
-    width: 30%;
+    width: calc(90px* var(--pixel-size));
+    height: calc(90px * var(--pixel-size));
+    padding: calc(16px * var(--pixel-size));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.date-text {
+    font-family: 'minecraft';
+    color: var(--color-turquoise);
+    font-size: calc(9px * var(--pixel-size));
+    text-align: center;
+    text-shadow: 2px 2px var(--text-shadow-darker);
+}
+
+.date-numbers {
+    font-size: calc(9px * var(--pixel-size));
+    font-family: 'amiga4ever_pro';
+}
+
+.date-left {
+    background-image: url('../../../../assets/images/experience_frame_date_left.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.date-right {
+    background-image: url('../../../../assets/images/experience_frame_date_right.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .experience {
-    width: 70%;
-    background-color: var(--box-background);
+    width: calc(190px * var(--pixel-size));
+    height: calc(70px * var(--pixel-size));
+    margin-left: calc(4px * var(--pixel-size));
+    margin-right: calc(4px * var(--pixel-size));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: calc(8px* var(--pixel-size));
+    padding-right: calc(8px* var(--pixel-size));
+    background-image: url('../../../../assets/images/experience_frame.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
-.date, .experience {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.experience-text {
+    font-family: 'amiga4ever_pro';
+    font-size: calc(8px * var(--pixel-size));
+    color: var(--color-white);
+    word-spacing: -8px;
+    text-shadow: 2px 2px var(--text-shadow-darker);
+}
+
+.experience-subtext {
+    font-family: 'minecraft';
+    font-size: calc(7px * var(--pixel-size));
+    color: var(--color-turquoise);
+    letter-spacing: calc(1px * 3.0);
+    text-shadow: 2px 2px var(--text-shadow-darker);
+}
+
+.text-right {
+    text-align: end;
+}
+
+.text-left {
+    text-align: start;
 }

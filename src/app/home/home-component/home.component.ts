@@ -8,7 +8,5 @@ import { bottomBar, gatito, menuLg, topBarHome } from 'src/app/shared/animations
   animations: [gatito, menuLg, topBarHome, bottomBar],
 })
 export class HomeComponent {
-  
-  constructor(){}
 
 }

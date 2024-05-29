@@ -1,22 +1,22 @@
 <article class="p-3" style="height: 100%;">
     <h3 class="text-shadow">También puedes escribirme!</h3>
     <hr>
-    <div class="info-container mb-3 p-3 border">
+    <div class="info-container mb-3 p-3">
         <form [formGroup]="contactForm" (ngSubmit)="submit()">
 
-            <label class="form-label my-1 border" for="name">Nombre</label>
+            <label class="form-label my-1" for="name">Nombre</label>
             <input class="form-control mb-2" type="text" id="name" formControlName="name">
 
-            <label class="form-label my-1 border" for="issue">Asunto</label>
+            <label class="form-label my-1" for="issue">Asunto</label>
             <input class="form-control mb-2" type="text" id="issue" formControlName="issue">
 
-            <label class="form-label my-1 border" for="email">Email</label>
+            <label class="form-label my-1" for="email">Email</label>
             <input class="form-control mb-2" type="email" id="email" formControlName="email">
 
-            <label class="form-label my-1 border" for="message">Mensaje</label>
+            <label class="form-label my-1" for="message">Mensaje</label>
             <textarea class="form-control mb-2" id="message" formControlName="message" rows="3"></textarea>
 
-            <button class="mt-4 mb-4" type="submit" [disabled]="!contactForm.valid">Enviar</button>
+            <button class="submit mt-2 mb-2" type="submit" [disabled]="!contactForm.valid">Enviar</button>
 
             <div>
                 <span *ngIf="loading">Enviando...</span>

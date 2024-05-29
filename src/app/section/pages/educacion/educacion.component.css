@@ -1,12 +1,8 @@
 hr {
-    height: calc(1px*var(--pixel-size));
-    background-color: var(--color-white);
+    height: calc(2px*var(--pixel-size));
+    background-color: var(--color-turquoise);
+    border: none;
     opacity: 1;
-}
-
-img {
-    width: 100%;
-    height: auto;
 }
 
 .info-container {
@@ -41,16 +37,6 @@ input {
     z-index: 1;
     transition:  300ms ease-in-out;
     cursor: none;
-}
-
-
-/* opacidad de los cuadraditos */
-.info-container input:nth-child(1):checked ~ .checkers label:nth-child(1),
-.info-container input:nth-child(2):checked ~ .checkers label:nth-child(2),
-.info-container input:nth-child(3):checked ~ .checkers label:nth-child(3),
-.info-container input:nth-child(4):checked ~ .checkers label:nth-child(4)
-{   
-    opacity: 1;
 }
 
 .info-container input:nth-child(1):checked ~ .content {
@@ -88,9 +74,27 @@ input {
 }
 
 .item {
-    width: calc(192px * var(--pixel-size));
-    height: calc(192px * var(--pixel-size));
-    /* background-color: var(--box-background); */
+    width: calc(188px * var(--pixel-size));
+    height: calc(188px * var(--pixel-size));
+    background-image: url('../../../../assets/images/schools_frame.png');
+    background-size: contain;
+    background-position: center;
+}
+
+img {
+    width: 85%;
+    height: auto;
+}
+
+span {
+    width: calc(184px * var(--pixel-size));
+    height: calc(40px * var(--pixel-size));
+    padding-top: calc(6px * var(--pixel-size));
+    line-height: 1.8;
+    background-image: url('../../../../assets/images/education_box.png');
+    background-size: contain;
+    background-position: center;
+    text-shadow: 2px 2px var(--text-shadow-darker);;
 }
 
 .button-container {
@@ -100,14 +104,30 @@ input {
 }
 
 button {
-    background-color: rgba(0, 0, 0, 0);
+    width: calc(16px * var(--pixel-size));
+    height: calc(16px * var(--pixel-size));
+    background-color: transparent;
     color: var(--color-turquoise);
     font-size: calc(16px * var(--pixel-size));
+    cursor: none;
     border: none;
+    box-shadow: none;
     transition: 0.1s;
 }
 
 button:hover {
     color: var(--color-white);
     transform: scale(1.2);
+}
+
+.right-button {
+    background-image: url('../../../../assets/images/arrow_right.png');
+    background-position: center;
+    background-size: contain;
+}
+
+.left-button {
+    background-image: url('../../../../assets/images/arrow_left.png');
+    background-position: center;
+    background-size: contain;
 }
