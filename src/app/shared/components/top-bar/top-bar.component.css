@@ -1,3 +1,15 @@
+@media (min-width: 800px) and (max-width: 1023px) {
+    .buttons-container {
+        transform: translate(-6px);
+    }
+}
+
+@media (min-width: 1024px) {
+    .buttons-container {
+        transform: translate(-6px);
+    }
+}
+
 .top-bar {
     height: calc(23px * var(--pixel-size));
     width: calc(436px * var(--pixel-size));
@@ -7,7 +19,7 @@
     background-image: url('../../../../assets/images/top_bar.png');
 }
 
-.bar-container {
+.bar-content {
     height: calc(12px * var(--pixel-size));
     width: calc(424px * var(--pixel-size));
     transform: translateX(1px) translateY(1px);
@@ -15,7 +27,7 @@
 }
 
 .buttons-container {
-    transform: translate(-5%);
+    /* transform: translate(-5%); */
     width: calc(56px * var(--pixel-size));
     height: calc(15px * var(--pixel-size));
     background-repeat: no-repeat;

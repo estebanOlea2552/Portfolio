@@ -30,7 +30,7 @@ export const section = trigger('enterSection' , [
 export const topBarSection = trigger('enterTopBar', [
   transition(':enter', [
     style({
-      transform: 'translateY(-200%)'
+      transform: 'translateY(-220%)'
     }),
     animate('1100ms ease-in')
   ])
@@ -39,7 +39,7 @@ export const topBarSection = trigger('enterTopBar', [
 export const bottomBar = trigger('enterBottomBar', [
   transition(':enter', [
     style({       
-      transform: 'translateY(200%)'
+      transform: 'translateY(220%)'
     }),
     animate('900ms 0.1s ease-in')
   ])

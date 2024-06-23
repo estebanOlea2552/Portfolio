@@ -1,13 +1,20 @@
+.main-container {
+    position: relative;
+    height: 100vh;
+}
 .titles-container {
+    width: 100%;
     height: 60%;
 }
 
 .esteban_olea {    
-    height: calc(65px * var(--pixel-size));    
+    height: calc(65px * var(--pixel-size));
+    width: auto;
 }
 
 .ds_fullstack {
     height: calc(20px * var(--pixel-size));
+    width: auto;
 }
 
 div, a, span {
@@ -57,9 +64,3 @@ button:hover::after {
 .hide {
     display: none;
 }
-
-
-
-
-
-

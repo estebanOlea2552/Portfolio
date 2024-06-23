@@ -1,3 +1,22 @@
+@media (min-width: 800px) and (max-width: 1023px) {
+    .info-container {
+        transform: translateY(-2%);
+        height: calc(215px * var(--pixel-size));
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .info-container {
+        height: calc(220px * var(--pixel-size));
+    }
+}
+
+@media (min-width: 1280px) {
+    .info-container {
+        height: calc(230px * var(--pixel-size));
+    }
+}
+
 hr {
     height: calc(2px*var(--pixel-size));
     background-color: var(--color-turquoise);
@@ -6,7 +25,6 @@ hr {
 }
 
 .info-container {
-    height: calc(230px * var(--pixel-size));
     overflow: hidden;
 }
 

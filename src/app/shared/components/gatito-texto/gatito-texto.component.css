@@ -1,3 +1,23 @@
+@media (min-width: 800px) and (max-width: 1023px) {
+    p {
+        font-size: calc(7px * var(--pixel-size));
+        letter-spacing: 1px;
+    }
+}
+
+@media (min-width: 1024px) {
+    p {
+        font-size: calc(7px * var(--pixel-size));
+        letter-spacing: 2px;
+    }
+}
+
+@media (min-width: 1280px) {
+    p {
+        font-size: calc(8px * var(--pixel-size));
+    }
+}
+
 @keyframes blink {
     from {
         opacity: 1;
@@ -12,7 +32,6 @@
 
 p {
     display: inline;
-    font-size: calc(8px * var(--pixel-size));
     color: var(--color-turquoise);
 }
 
@@ -47,29 +66,9 @@ img {
     background-color: var(--box-background);
 }
 
-.next-button {
-    background-color: rgba(0, 0, 0, 0);
-    color: var(--color-white);
-    border: 0;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    margin-right: calc(4px * var(--pixel-size));
-    margin-bottom: calc(4px * var(--pixel-size));
-}
-
-.next-button-animated {
-    animation: blink 0.8s infinite;
-}
-
-.next-button:hover {
-    color: var(--color-turquoise);
-    animation: none;
-}
-
 .gatito-container {
     overflow: hidden;
     height: calc(175px * var(--pixel-size));
     width: calc(123px * var(--pixel-size));
-    transform: translateX(2px);
+    transform: translateX(1px);
 }

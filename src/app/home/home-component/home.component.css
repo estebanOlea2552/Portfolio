@@ -1,3 +1,31 @@
+@media (min-width: 800px) and (max-width: 1023px) {
+    .bottom-bar {
+        min-height: calc(24px * var(--pixel-size));
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .bottom-bar {
+        min-height: calc(24px * var(--pixel-size));
+    }
+}
+
+@media (min-width: 1280px) and (max-width: 1599px) {
+    .bottom-bar {
+        min-height: calc(23px * var(--pixel-size));
+    }
+}
+
+@media (min-width: 1600px) {
+    .bottom-bar {
+        min-height: calc(23px * var(--pixel-size));
+    }
+}
+
+.main-container {
+    height: 100vh;
+}
+
 h4 {
     font-family: 'amiga4ever_pro';
     font-size: calc(8px * var(--pixel-size));
@@ -9,21 +37,17 @@ h4 {
 }
 
 .bottom-bar {
-    height: calc(23px * var(--pixel-size));
-    width: calc(436px * var(--pixel-size));
+    min-width: calc(436px * var(--pixel-size));
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-}
-
-.bottom-bar {
     background-image: url('../../../assets/images/bottom_bar.png');
 }
 
-.bar-container {
+.bar-content {
     height: calc(12px * var(--pixel-size));
-    width: calc(424px * var(--pixel-size));
-    transform: translateX(1px) translateY(1px);
+    width: calc(426px * var(--pixel-size));
+    transform: translateX(0px) translateY(1px);
     background-color: var(--box-background);
     overflow: hidden;
 }

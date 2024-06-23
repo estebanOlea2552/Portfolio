@@ -36,7 +36,7 @@ export class GatitoTextoComponent implements OnInit, OnDestroy {
       this.message = this.messagesService.returnMessage();
       setTimeout(() => this.addCharacter(), 1300);
     } else {
-      this.message = "Hola! Soy Puflito, el Gatito espacial. Yo seré tu guía a lo largo de esta web :)"
+      this.message = "Hola! Soy Puflito, el Gatito Espacial. Te doy la bienvenida a este Portfolio Web! :)"
       setTimeout(() => this.addCharacter(), 1300);
     }
 

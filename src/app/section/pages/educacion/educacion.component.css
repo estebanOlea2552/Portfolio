@@ -1,3 +1,37 @@
+@media (min-width: 800px) and (max-width: 1023px) {
+    .info-container {
+        transform: translateY(-2%);
+        height: calc(215px * var(--pixel-size));
+    }
+
+    span {
+        font-size: calc(7px * var(--pixel-size));
+        text-shadow: 1px 1px var(--text-shadow-darker);
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .info-container {
+        height: calc(220px * var(--pixel-size));
+    }
+
+    span {
+        font-size: calc(8px * var(--pixel-size));
+        text-shadow: 2px 2px var(--text-shadow-darker);
+    }
+}
+
+@media (min-width: 1280px) {
+    .info-container {
+        height: calc(230px * var(--pixel-size));
+    }
+
+    span {
+        font-size: calc(8px * var(--pixel-size));
+        text-shadow: 2px 2px var(--text-shadow-darker);
+    }
+}
+
 hr {
     height: calc(2px*var(--pixel-size));
     background-color: var(--color-turquoise);
@@ -8,7 +42,6 @@ hr {
 .info-container {
     position: relative;
     width: 100%;
-    height: calc(230px*var(--pixel-size));
     overflow: hidden;
 }
 
@@ -78,6 +111,7 @@ input {
     height: calc(188px * var(--pixel-size));
     background-image: url('../../../../assets/images/schools_frame.png');
     background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
 }
 
@@ -92,9 +126,9 @@ span {
     padding-top: calc(6px * var(--pixel-size));
     line-height: 1.8;
     background-image: url('../../../../assets/images/education_box.png');
+    background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    text-shadow: 2px 2px var(--text-shadow-darker);;
 }
 
 .button-container {

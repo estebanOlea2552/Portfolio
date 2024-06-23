@@ -1,7 +1,23 @@
+@media (min-width: 800px) and (max-width: 1023px) {
+    h3 {
+        font-size: calc(7px * var(--pixel-size));
+        margin-top: calc(4px * var(--pixel-size));
+    }
+
+    .experience-text {font-size: calc(6px * var(--pixel-size));}
+}
+
+@media (min-width: 1024px) {
+    h3 {
+        font-size: calc(7px * var(--pixel-size));
+        margin-top: calc(4px * var(--pixel-size));
+    }
+
+    .experience-text {font-size: calc(6px * var(--pixel-size));}
+}
+
 h3 {
-    font-size: calc(6px * var(--pixel-size));
     font-family: "amiga4ever_pro";
-    margin-top: calc(5px * var(--pixel-size));
 }
 
 .menu-lg {

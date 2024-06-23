@@ -1,20 +1,26 @@
-<main class="d-flex flex-column justify-content-between align-items-center" style="height: 100vh;">
-    <app-top-bar></app-top-bar>
-    
-    <div class="d-flex">
-        <app-menu-lateral @enterMenu class="d-flex align-items-center"></app-menu-lateral>
-
-        <div @enterSection class="section mx-4 pixelated">
-            <div [@articles]="getRouteAnimationData()" class="section-container mx-auto p-0">
+<main class="main-container d-flex flex-column justify-content-center">
+    <app-top-bar class="mx-auto mt-2"></app-top-bar>
+    <div class="d-flex mx-auto my-md-1 my-lg-2 my-xl-2 my-xxl-3">
+        <app-menu-lateral
+        @enterMenu
+        class="d-flex align-items-center">
+        </app-menu-lateral>
+        <div @enterSection class="section mx-md-1 mx-lg-2 mx-xl-3 mx-xxl-4 pixelated">
+            <div
+            [@articles]="getRouteAnimationData()"
+            class="section-container mx-auto p-0">
                 <router-outlet></router-outlet>
             </div>
         </div>
-
-        <app-gatito-texto @enterGatito class="d-flex align-items-center"></app-gatito-texto>
+        <app-gatito-texto
+        @enterGatito
+        class="d-flex align-items-center">
+        </app-gatito-texto>
     </div>
-
-    <footer @enterBottomBar class="d-flex justify-content-center mx-auto mb-3 bottom-bar pixelated">
-        <div class="bar-container m-auto">
+    <footer
+    @enterBottomBar
+    class="bottom-bar d-flex flex-column justify-content-center mx-auto mb-2 pixelated">
+        <div class="bar-content m-auto pb-lg-3 pb-xl-4">
             <h4 class="slider-1">Esteban_Olea - Desarrollador_Full_Stack</h4>
             <h4 class="slider-2">Esteban_Olea - Desarrollador_Full_Stack</h4>
         </div>

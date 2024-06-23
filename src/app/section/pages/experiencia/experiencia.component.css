@@ -1,3 +1,50 @@
+@media (min-width: 800px) and (max-width: 1023px) {
+    .info-container {
+        transform: translateY(-2%);
+        height: calc(215px * var(--pixel-size));
+    }
+
+    .experience-text {
+        font-size: calc(8px * var(--pixel-size));
+        word-spacing: -8px;
+        text-shadow: 1px 1px var(--text-shadow-darker);
+    }
+    
+    .experience-subtext {
+        font-size: calc(7px * var(--pixel-size));
+        letter-spacing: calc(1px * 3.0);
+        text-shadow: 1px 1px var(--text-shadow-darker);
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .info-container {
+        height: calc(220px * var(--pixel-size));
+    }
+
+    .experience-text {
+        text-shadow: 2px 2px var(--text-shadow-darker);
+    }
+    
+    .experience-subtext {
+        text-shadow: 2px 2px var(--text-shadow-darker);
+    }
+}
+
+@media (min-width: 1280px) {
+    .info-container {
+        height: calc(230px * var(--pixel-size));
+    }
+
+    .experience-text {
+        text-shadow: 2px 2px var(--text-shadow-darker);
+    }
+    
+    .experience-subtext {
+        text-shadow: 2px 2px var(--text-shadow-darker);
+    }
+}
+
 hr {
     height: calc(2px*var(--pixel-size));
     background-color: var(--color-turquoise);
@@ -6,7 +53,6 @@ hr {
 }
 
 .info-container {
-    height: calc(230px * var(--pixel-size));
     overflow: scroll;
     overflow-x: hidden;
     scrollbar-width: thin;
@@ -85,7 +131,6 @@ hr {
     font-size: calc(8px * var(--pixel-size));
     color: var(--color-white);
     word-spacing: -8px;
-    text-shadow: 2px 2px var(--text-shadow-darker);
 }
 
 .experience-subtext {
@@ -93,7 +138,6 @@ hr {
     font-size: calc(7px * var(--pixel-size));
     color: var(--color-turquoise);
     letter-spacing: calc(1px * 3.0);
-    text-shadow: 2px 2px var(--text-shadow-darker);
 }
 
 .text-right {

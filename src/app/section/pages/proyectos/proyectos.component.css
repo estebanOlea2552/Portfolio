@@ -1,3 +1,40 @@
+@media (min-width: 800px) and (max-width: 1023px) {
+    .info-container {
+        transform: translateY(-2%);
+        height: calc(215px * var(--pixel-size));
+    }
+
+    p {
+        letter-spacing: 1px;
+    }
+
+    .overlay {
+        top: 6px;
+        left: 6px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .info-container {
+        height: calc(220px * var(--pixel-size));
+    }
+
+    p {
+        letter-spacing: 1px;
+    }
+
+    .overlay {
+        top: 8px;
+        left: 8px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .info-container {
+        height: calc(230px * var(--pixel-size));
+    }
+}
+
 hr {
     height: calc(2px*var(--pixel-size));
     background-color: var(--color-turquoise);
@@ -7,7 +44,6 @@ hr {
 
 .info-container {
     position: relative;
-    height: calc(230px * var(--pixel-size));
     width: 100%;
     overflow: hidden;
 }
@@ -82,21 +118,11 @@ img {
 
 .overlay {
     position: absolute;
-    width: calc(130px * var(--pixel-size));
+    width: calc(132px * var(--pixel-size));
     height: calc(70px * var(--pixel-size));
     background-color: var(--box-background-hover);
     transition: 0.3s ease;
     pointer-events: none;
-}
-
-.overlay-1 {
-    top: 9px;
-    left: 10px;
-}
-
-.overlay-2 {
-    top: 9px;
-    left: 10px;
 }
 
 .image-container:hover .overlay {

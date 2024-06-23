@@ -1,8 +1,8 @@
-<section @enterTopBar class="top-bar d-flex mx-auto mt-3 pixelated">
-    <div class="bar-container d-flex align-items-center m-auto">
+<section @enterTopBar class="top-bar d-flex pixelated">
+    <div class="bar-content d-flex align-items-center m-auto">
         <div class="buttons-container d-flex align-items-center">
-            <button [ngClass]="{'music-active': musicIsActivated, 'music-inactive': !musicIsActivated}" class="music-button ms-2 me-2" (click)="turnOnOffMusic()"></button>
-            <button [ngClass]="{'sfx-active': sfxIsActivated, 'sfx-inactive': !sfxIsActivated}" class="sfx-button ms-2" (click)="turnOnOffSfx()"></button>
+            <button [ngClass]="{'music-active': musicIsActivated, 'music-inactive': !musicIsActivated}" class="music-button ms-2 ms-xxl-3 me-md-1 me-xl-2" (click)="turnOnOffMusic()"></button>
+            <button [ngClass]="{'sfx-active': sfxIsActivated, 'sfx-inactive': !sfxIsActivated}" class="sfx-button ms-md-1 me-lg-2 me-xl-3" (click)="turnOnOffSfx()"></button>
         </div>
         <div *ngIf="musicIsActivated" class="song-name-container d-flex">
             <p class="mx-auto my-1">Está sonando: {{songName}}</p>
