@@ -9,7 +9,7 @@ import { Subscription } from 'rxjs';
 })
 
 export class AppComponent implements AfterViewChecked, OnDestroy {
-  title = 'Esteban Olea - Portfolio de desarrollador';
+  title = 'Esteban Olea - Portfolio';
   @ViewChild('audio') audio: ElementRef | undefined;
   musicSuscription!: Subscription;
   songIndex: number = 0;
