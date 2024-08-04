@@ -41,7 +41,7 @@ hr {
 .item {
     height: calc(100px * var(--pixel-size));;
     width: calc(100px * var(--pixel-size));
-    background-image: url('../../../../assets/images/social_frame.png');
+    background-image: url('../../../../assets/images/social_frame.webp');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;

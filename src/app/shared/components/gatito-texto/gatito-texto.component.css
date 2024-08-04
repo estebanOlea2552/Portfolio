@@ -51,7 +51,7 @@ img {
 .gatito-texto-caja {
     height: calc(289px * var(--pixel-size));
     width: calc(137px * var(--pixel-size));   
-    background-image: url("../../../../assets/images/puflito_caja_sm.png");
+    background-image: url("../../../../assets/images/puflito_caja_sm.webp");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;

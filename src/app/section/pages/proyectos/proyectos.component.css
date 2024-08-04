@@ -106,7 +106,7 @@ input {
     justify-content: center;
     align-items: center;
     position: relative;
-    background-image: url('../../../../assets/images/projects_frame.png');
+    background-image: url('../../../../assets/images/projects_frame.webp');
     background-position: center;
     background-size: cover;
 }
@@ -165,13 +165,13 @@ button:hover {
 }
 
 .right-button {
-    background-image: url('../../../../assets/images/arrow_right.png');
+    background-image: url('../../../../assets/images/arrow_right.webp');
     background-position: center;
     background-size: contain;
 }
 
 .left-button {
-    background-image: url('../../../../assets/images/arrow_left.png');
+    background-image: url('../../../../assets/images/arrow_left.webp');
     background-position: center;
     background-size: contain;
 }

@@ -65,7 +65,7 @@ img {
 .text-bubble {
     width: calc(140px * var(--pixel-size));
     height: calc(55px * var(--pixel-size));
-    background-image: url('../../../../assets/images/text_bubble.png');
+    background-image: url('../../../../assets/images/text_bubble.webp');
     background-position: center;
     background-size: contain;
 }

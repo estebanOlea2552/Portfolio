@@ -40,7 +40,7 @@ hr {
 .arrow-up {
     width: calc(12px * var(--pixel-size));
     height: calc(29px * var(--pixel-size));
-    background-image: url('../../../../assets/images/stack_arrow_up.png');
+    background-image: url('../../../../assets/images/stack_arrow_up.webp');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -52,7 +52,7 @@ hr {
 .arrow-down {
     width: calc(12px * var(--pixel-size));
     height: calc(29px * var(--pixel-size));
-    background-image: url('../../../../assets/images/stack_arrow_down.png');
+    background-image: url('../../../../assets/images/stack_arrow_down.webp');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;

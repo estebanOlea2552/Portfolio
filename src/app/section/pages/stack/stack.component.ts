@@ -8,7 +8,7 @@ import { Component, HostListener } from '@angular/core';
 export class StackComponent {
   currentIndex: number = 0;
   scrolling: boolean = false;
-  totalCards: number = 3;
+  totalCards: number = 2;
 
   @HostListener('window:wheel', ['$event'])
   onScroll(event: WheelEvent) {

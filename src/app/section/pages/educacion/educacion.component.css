@@ -109,7 +109,7 @@ input {
 .item {
     width: calc(188px * var(--pixel-size));
     height: calc(188px * var(--pixel-size));
-    background-image: url('../../../../assets/images/schools_frame.png');
+    background-image: url('../../../../assets/images/schools_frame.webp');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -125,7 +125,7 @@ span {
     height: calc(40px * var(--pixel-size));
     padding-top: calc(6px * var(--pixel-size));
     line-height: 1.8;
-    background-image: url('../../../../assets/images/education_box.png');
+    background-image: url('../../../../assets/images/education_box.webp');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -155,13 +155,13 @@ button:hover {
 }
 
 .right-button {
-    background-image: url('../../../../assets/images/arrow_right.png');
+    background-image: url('../../../../assets/images/arrow_right.webp');
     background-position: center;
     background-size: contain;
 }
 
 .left-button {
-    background-image: url('../../../../assets/images/arrow_left.png');
+    background-image: url('../../../../assets/images/arrow_left.webp');
     background-position: center;
     background-size: contain;
 }

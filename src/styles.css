@@ -117,7 +117,7 @@ body {
 }
 
 body {
-    background-image: url("./assets/images/fondo.gif");
+    background-image: url("./assets/images/fondo.webp");
     background-position: center center;
     background-repeat: no-repeat;
     image-rendering: pixelated;

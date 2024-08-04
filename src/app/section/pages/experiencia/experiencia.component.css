@@ -97,14 +97,14 @@ hr {
 }
 
 .date-left {
-    background-image: url('../../../../assets/images/experience_frame_date_left.png');
+    background-image: url('../../../../assets/images/experience_frame_date_left.webp');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 .date-right {
-    background-image: url('../../../../assets/images/experience_frame_date_right.png');
+    background-image: url('../../../../assets/images/experience_frame_date_right.webp');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -120,7 +120,7 @@ hr {
     justify-content: space-evenly;
     padding-left: calc(8px* var(--pixel-size));
     padding-right: calc(8px* var(--pixel-size));
-    background-image: url('../../../../assets/images/experience_frame.png');
+    background-image: url('../../../../assets/images/experience_frame.webp');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;

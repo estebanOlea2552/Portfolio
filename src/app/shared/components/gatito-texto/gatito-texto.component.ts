@@ -9,8 +9,8 @@ import { CatMessageService } from '../../services/cat-message.service';
   styleUrls: ['./gatito-texto.component.css'],
 })
 export class GatitoTextoComponent implements OnInit, OnDestroy {
-  catStopped: string = "../assets/images/gatito.png";
-  catAnimated: string = "../assets/images/gatito.gif";
+  catStopped: string = "../assets/images/gatito_stopped.webp";
+  catAnimated: string = "../assets/images/gatito_animated.webp";
   isAnimating: boolean = false;
   intervalId: any = null;
   catSrc: string = this.catStopped;

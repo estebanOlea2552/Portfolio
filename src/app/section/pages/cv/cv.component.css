@@ -31,9 +31,9 @@
 
 .preload-images {
     position: absolute;
-    content: url('../../../../assets/images/cv_button.png')
-    url('../../../../assets/images/cv_button_hover.png')
-    url('../../../../assets/images/cv_button_click.png');
+    content: url('../../../../assets/images/cv_button.webp')
+    url('../../../../assets/images/cv_button_hover.webp')
+    url('../../../../assets/images/cv_button_click.webp');
     visibility: hidden;
     z-index: -1;
 }
@@ -52,7 +52,7 @@ hr {
 .cv-container {
     position: relative;
     width: 50%;
-    background-image: url('../../../../assets/images/cv_frame.png');
+    background-image: url('../../../../assets/images/cv_frame.webp');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -69,7 +69,7 @@ hr {
     width: calc(110px * var(--pixel-size));
     justify-content: center;
     align-items: center;
-    background-image: url('../../../../assets/images/cv_button.png');
+    background-image: url('../../../../assets/images/cv_button.webp');
     background-position: center;
     background-size: contain;
     padding-bottom: calc(25px * var(--pixel-size));
@@ -81,7 +81,7 @@ hr {
     width: calc(110px * var(--pixel-size));
     justify-content: center;
     align-items: center;
-    background-image: url('../../../../assets/images/cv_button_hover.png');
+    background-image: url('../../../../assets/images/cv_button_hover.webp');
     background-position: center;
     background-size: contain;
 }
@@ -92,7 +92,7 @@ hr {
     width: calc(110px * var(--pixel-size));
     justify-content: center;
     align-items: center;
-    background-image: url('../../../../assets/images/cv_button_click.png');
+    background-image: url('../../../../assets/images/cv_button_click.webp');
     background-position: center;
     background-size: contain;
     padding-bottom: calc(0px * var(--pixel-size));
