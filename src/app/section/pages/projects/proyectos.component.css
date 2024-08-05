@@ -4,8 +4,12 @@
         height: calc(215px * var(--pixel-size));
     }
 
-    p {
+    p, a {
         letter-spacing: 1px;
+    }
+
+    a {
+        font-size: calc(6px * var(--pixel-size));
     }
 
     .overlay {
@@ -19,8 +23,12 @@
         height: calc(220px * var(--pixel-size));
     }
 
-    p {
+    p, a {
         letter-spacing: 1px;
+    }
+
+    a {
+        font-size: calc(8px * var(--pixel-size));
     }
 
     .overlay {
@@ -116,6 +124,11 @@ img {
     height: calc(70px * var(--pixel-size));
 }
 
+.clock {
+    height: calc(60px * var(--pixel-size));
+    width: auto;
+}
+
 .overlay {
     position: absolute;
     width: calc(132px * var(--pixel-size));
@@ -138,7 +151,6 @@ p {
     font-family: 'minecraft';
     font-size: calc(8px * var(--pixel-size));
     width: calc(265px * var(--pixel-size));
-    height: calc(95px * var(--pixel-size));
 }
 
 .button-container {

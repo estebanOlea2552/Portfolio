@@ -4,12 +4,12 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { catchError } from 'rxjs';
 
 @Component({
-  selector: 'app-contacto',
-  templateUrl: './contacto.component.html',
-  styleUrls: ['./contacto.component.css'],
+  selector: 'app-contact',
+  templateUrl: './contact.component.html',
+  styleUrls: ['./contact.component.css'],
   animations: []
 })
-export class ContactoComponent {
+export class ContactComponent {
   contactForm: FormGroup;
   submitted: boolean = false;
   loading: boolean = false;

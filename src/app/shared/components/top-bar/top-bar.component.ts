@@ -1,4 +1,4 @@
-import { AfterContentChecked, Component, DoCheck, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
 import { topBarHome } from '../../animations/home.animations';
 import { topBarSection } from '../../animations/section.animations';
 import { Subscription } from 'rxjs';
@@ -13,7 +13,7 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule],
   animations: [topBarHome, topBarSection]
 })
-export class TopBarComponent implements OnInit, AfterContentChecked, OnDestroy {
+export class TopBarComponent implements OnInit, OnDestroy {
   musicIsActivated!: boolean;
   sfxIsActivated!: boolean;
   musicSuscription!: Subscription;
@@ -21,7 +21,7 @@ export class TopBarComponent implements OnInit, AfterContentChecked, OnDestroy {
   currentSongSuscription!: Subscription;
   songName: string = "";
 
-  constructor(private musicAndSfx: MusicAndSfxService) { }
+  constructor(private musicAndSfx: MusicAndSfxService, private cdr: ChangeDetectorRef) { }
 
   ngOnInit(): void {
     this.musicSuscription = this.musicAndSfx.musicSubject$.subscribe(
@@ -33,12 +33,9 @@ export class TopBarComponent implements OnInit, AfterContentChecked, OnDestroy {
     this.currentSongSuscription = this.musicAndSfx.currentSongSubject$.subscribe(
       (value) => {
         this.songName = this.extractSongName(value);
+        this.cdr.detectChanges();
       }
     );
-  }
-
-  ngAfterContentChecked(): void {
-
   }
 
   ngOnDestroy(): void {

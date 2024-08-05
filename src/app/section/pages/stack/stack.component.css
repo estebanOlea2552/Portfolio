@@ -44,6 +44,8 @@ hr {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
     animation: blink 2500ms infinite;
     transition: 500ms 100ms ease-in-out;
     visibility: hidden;
@@ -56,6 +58,8 @@ hr {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
     animation: blink 2500ms infinite;
     transition: 500ms 100ms ease-in-out;
     visibility: hidden;
