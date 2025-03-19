@@ -1,64 +1,115 @@
-<article class="p-3" style="height: 100%;">
-    <h3 class="text-shadow">
-        Proyectos
-    </h3>
-    <hr>
-    <div class="info-container mb-3">
-        <input type="radio" name="slider" id="slideOne" [checked]="counter == 0" disabled>
-        <input type="radio" name="slider" id="slideTwo" [checked]="counter == 1" disabled>
+<article class="p-3">
+  <h3 class="text-shadow">Proyectos</h3>
+  <hr />
+  <div class="info-container mb-3">
+    <input
+      type="radio"
+      name="slider"
+      id="slideOne"
+      [checked]="counter == 0"
+      disabled
+    />
+    <input
+      type="radio"
+      name="slider"
+      id="slideTwo"
+      [checked]="counter == 1"
+      disabled
+    />
 
-        <div class="checkers">
-            <label for="slideOne"></label>
-            <label for="slideTwo"></label>
-        </div>
-
-        <div class="content">
-            <div class="slide-1">
-                <div class="link-container d-flex justify-content-center">
-                    <div class="image-container me-md-0 me-lg-1">
-                        <img src="../../../../assets/images/portfolio_1.webp" alt="Portfolio 1">
-                        <div class="overlay"></div>
-                    </div>
-                    <div class="image-container ms-md-0 ms-lg-1">
-                        <img src="../../../../assets/images/portfolio_2.webp" alt="Portfolio 2">
-                        <div class="overlay"></div>
-                    </div>
-                </div>
-                <span class="ms-md-0 ms-lg-1 ms-xl-2 mt-md-3 mt-lg-4 mb-md-2 mb-lg-3 text-shadow">Este Portfolio!</span> 
-                <p class="mx-auto">
-                    En este proyecto hay implementados tantos conceptos y tecnologías que no podría parar de escribir! Por mencionar algunos: <br>
-                    - RxJS. <br>
-                    - HTTP Requests <br>
-                    - Angular Animations <br>
-                    - Manejo de Estado
-                </p>
-            </div>
-            <div class="slide-2">
-                <div class="link-container d-flex justify-content-center">
-                    <div class="image-container me-md-0 me-lg-1">
-                        <img class="clock" src="../../../../assets/images/clock.gif" alt="En proceso">
-                        <div class="overlay"></div>
-                    </div>
-                    <div class="image-container ms-md-0 ms-lg-1">
-                        <img class="clock" src="../../../../assets/images/clock.gif" alt="En proceso">
-                        <div class="overlay"></div>
-                    </div>
-                </div>
-                <span class="ms-md-0 ms-lg-1 ms-xl-2 mt-md-3 mt-lg-4 mb-md-2 mb-lg-3 text-shadow">CV-Maker Online</span> 
-                <div class="mx-auto">
-                    <p class="m-0" style="color: var(--color-turquoise);">Este proyecto se está cocinando!</p>
-                    <p>CV-Maker Online es una aplicación web gratuita que te permite crear un currículum profesional de forma fácil e intuitiva. Basado en plantillas modernas y originales, crear un CV nunca había sido tan fácil!</p>
-                </div>
-                <a
-                class="ms-4"
-                href="https://github.com/estebanOlea2552/cv-maker-online"
-                style="color: var(--color-turquoise);"
-                target="_blank">Visista el repositorio</a>
-            </div>
-        </div>
-        <div class="button-container d-flex justify-content-center">
-            <button class="left-button me-2" (click)="previous()"></button>
-            <button class="right-button ms-2" (click)="next()"></button>
-        </div>
+    <div class="checkers">
+      <label for="slideOne"></label>
+      <label for="slideTwo"></label>
     </div>
+
+    <div class="content">
+      <div class="slide-1">
+        <div class="link-container d-flex justify-content-center">
+          <div class="image-container me-md-0 me-lg-1">
+            <img
+              src="../../../../assets/images/portfolio_1.webp"
+              alt="Portfolio 1"
+            />
+            <div class="overlay"></div>
+          </div>
+          <div class="image-container ms-md-0 ms-lg-1">
+            <img
+              src="../../../../assets/images/portfolio_2.webp"
+              alt="Portfolio 2"
+            />
+            <div class="overlay"></div>
+          </div>
+        </div>
+        <span
+          class="ms-md-0 ms-lg-1 ms-xl-2 mt-md-3 mt-lg-4 mb-md-2 mb-lg-3 text-shadow"
+          >Este Portfolio!</span
+        >
+        <p class="mx-auto">
+          En este proyecto hay implementados tantos conceptos y tecnologías que
+          no podría parar de escribir! Por mencionar algunos: <br />
+          - RxJS. <br />
+          - HTTP Requests <br />
+          - Angular Animations <br />
+          - Manejo de Estado
+        </p>
+        <a
+          class="ms-4"
+          href="https://github.com/estebanOlea2552/Portfolio"
+          style="color: var(--color-turquoise)"
+          target="_blank"
+          >Visista el repositorio</a
+        >
+      </div>
+      <div class="slide-2">
+        <div class="link-container d-flex justify-content-center">
+          <a
+            href="https://el-mejor-cv.web.app"
+            target="_blank"
+            class="image-container me-md-0 me-lg-1"
+          >
+            <img
+              src="../../../../assets/images/el-mejor-cv_1.png"
+              alt="En proceso"
+            />
+            <div class="overlay"></div>
+          </a>
+          <a
+            href="https://el-mejor-cv.web.app"
+            target="_blank"
+            class="image-container ms-md-0 ms-lg-1"
+          >
+            <img
+              src="../../../../assets/images/el-mejor-cv_2.png"
+              alt="En proceso"
+            />
+            <div class="overlay"></div>
+          </a>
+        </div>
+        <span
+          class="ms-md-0 ms-lg-1 ms-xl-2 mt-md-3 mt-lg-4 mb-md-2 mb-lg-3 text-shadow"
+          >El Mejor Cv</span
+        >
+        <div class="mx-auto">
+          <p>
+            El Mejor CV es una aplicación web gratuita que te permite crear un
+            currículum profesional de forma fácil e intuitiva. Construída
+            totalmente en Angular, esta app implementa los estándares más altos
+            en cuanto a rendimiento y usabilidad. Crear un currículum nunca
+            había sido tan fácil!
+          </p>
+        </div>
+        <a
+          class="ms-4"
+          href="https://github.com/estebanOlea2552/cv-maker-online"
+          style="color: var(--color-turquoise)"
+          target="_blank"
+          >Visista el repositorio</a
+        >
+      </div>
+    </div>
+    <div class="button-container d-flex justify-content-center">
+      <button class="left-button me-2" (click)="previous()"></button>
+      <button class="right-button ms-2" (click)="next()"></button>
+    </div>
+  </div>
 </article>

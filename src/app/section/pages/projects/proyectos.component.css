@@ -43,6 +43,10 @@
     }
 }
 
+article {
+    height: 100%;
+}
+
 hr {
     height: calc(2px*var(--pixel-size));
     background-color: var(--color-turquoise);
@@ -124,10 +128,10 @@ img {
     height: calc(70px * var(--pixel-size));
 }
 
-.clock {
+/* .clock {
     height: calc(60px * var(--pixel-size));
     width: auto;
-}
+} */
 
 .overlay {
     position: absolute;

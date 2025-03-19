@@ -6,14 +6,14 @@ import { Injectable } from '@angular/core';
 export class CatMessageService {
   path: any = '';
   listOfMessages: { [key: string]: String } = {
-    '/section/description': 'Un perfil bien detallado!',
-    '/section/stack': 'Una lista completa de herramientas de desarrollo!',
+    '/section/description': 'Un gusto!',
+    '/section/stack': 'Esas son muchas tecnologías!',
     '/section/education':
-      'Algunas instituciones importantes, además de lo que aprendió por cuenta propia!',
+      'Instituciones de gran renombre!',
     '/section/projects': 'Dicen que yo soy su proyecto favorito :3',
-    '/section/experience': 'Más de 6 años en la industria digital!',
-    '/section/cv': 'Aquí encontrarás una versión resumida de todo lo que viste',
-    '/section/social': 'LinkedIn es la recomendación de la casa!',
+    '/section/experience': 'Una vasta experiencia en el campo',
+    '/section/cv': 'Este CV fue creado en El-Mejor-CV.web.app, la conoces?',
+    '/section/social': 'Conectando!',
     '/section/contact':
       'Aquí puedes mandar un correo directo, escribe con confianza! ;)',
     '/section/thanks': 'Gracias, vuelva prontos!',
