@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef, AfterViewChecked, OnDestroy, AfterViewInit } from '@angular/core';
+import { Component, ViewChild, ElementRef, AfterViewChecked, OnDestroy } from '@angular/core';
 import { MusicAndSfxService } from './shared/services/music-and-sfx.service';
 import { Subscription } from 'rxjs';
 

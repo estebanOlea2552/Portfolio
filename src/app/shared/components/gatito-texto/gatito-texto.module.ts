@@ -5,16 +5,8 @@ import { RouterModule } from '@angular/router';
 import { DirectivesModule } from '../../directives/directives.module';
 
 @NgModule({
-  declarations: [
-    GatitoTextoComponent
-  ],
-  imports: [
-    CommonModule,
-    RouterModule,
-    DirectivesModule
-  ],
-  exports: [
-    GatitoTextoComponent
-  ]
+  declarations: [GatitoTextoComponent],
+  imports: [CommonModule, RouterModule, DirectivesModule],
+  exports: [GatitoTextoComponent],
 })
-export class GatitoTextoModule { }
+export class GatitoTextoModule {}

@@ -1,106 +1,106 @@
 @media (min-width: 800px) and (max-width: 1279px) {
-    .bottom-bar {
-        min-height: calc(24px * var(--pixel-size));
-    }
+  .bottom-bar {
+    min-height: calc(24px * var(--pixel-size));
+  }
 }
 
 @media (min-width: 1280px) {
-    .bottom-bar {
-        min-height: calc(23px * var(--pixel-size));
-    }
+  .bottom-bar {
+    min-height: calc(23px * var(--pixel-size));
+  }
 }
 
 .main-container {
-    height: 100vh;
+  height: 100vh;
 }
 
 .section {
-    height: calc(289px * var(--pixel-size));
-    width: calc(322px * var(--pixel-size));
-    background-image: url('../../../assets/images/section.webp');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    padding-top: calc(7px * var(--pixel-size));
+  height: calc(289px * var(--pixel-size));
+  width: calc(322px * var(--pixel-size));
+  background-image: url("../../../assets/images/section.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  padding-top: calc(7px * var(--pixel-size));
 }
 
 .section-container {
-    height: calc(276px * var(--pixel-size));
-    width: calc(309px * var(--pixel-size));
-    transform: translateX(1px);
-    background-color: var(--box-background);
+  height: calc(276px * var(--pixel-size));
+  width: calc(309px * var(--pixel-size));
+  transform: translateX(1px);
+  background-color: var(--box-background);
 }
 
 a {
-    font-family: 'amiga4ever_pro';
-    font-size: calc(8px * var(--pixel-size));
-    color: var(--color-white);
+  font-family: "amiga4ever_pro";
+  font-size: calc(8px * var(--pixel-size));
+  color: var(--color-white);
 }
 
 a {
-    font-family: 'amiga4ever_pro';
-    font-size: calc(8px * var(--pixel-size));
-    color: var(--color-white);
+  font-family: "amiga4ever_pro";
+  font-size: calc(8px * var(--pixel-size));
+  color: var(--color-white);
 }
 
 h4 {
-    font-family: 'amiga4ever_pro';
-    font-size: calc(8px * var(--pixel-size));
-    color: var(--color-turquoise);
-    display: inline;
-    position: absolute;
-    white-space: nowrap;
-    top: calc(2px * var(--pixel-size));
+  font-family: "amiga4ever_pro";
+  font-size: calc(8px * var(--pixel-size));
+  color: var(--color-turquoise);
+  display: inline;
+  position: absolute;
+  white-space: nowrap;
+  top: calc(2px * var(--pixel-size));
 }
 
 .bottom-bar {
-    min-width: calc(436px * var(--pixel-size));
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    background-image: url('../../../assets/images/bottom_bar.webp');
+  min-width: calc(436px * var(--pixel-size));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url("../../../assets/images/bottom_bar.webp");
 }
 
 .bar-content {
-    height: calc(12px * var(--pixel-size));
-    width: calc(426px * var(--pixel-size));
-    transform: translateX(0px) translateY(1px);
-    background-color: var(--box-background);
-    overflow: hidden;
+  height: calc(12px * var(--pixel-size));
+  width: calc(426px * var(--pixel-size));
+  transform: translateX(0px) translateY(1px);
+  background-color: var(--box-background);
+  overflow: hidden;
 }
 
 .slider-1 {
-    animation: slider-1 linear infinite;
-    animation-duration: 20s;
+  animation: slider-1 linear infinite;
+  animation-duration: 20s;
 }
 
 @keyframes slider-1 {
-    0% {
-        left: 102%;
-    }
-    100% {
-        left: -75%;
-    }
+  0% {
+    left: 102%;
+  }
+  100% {
+    left: -75%;
+  }
 }
 
 .slider-2 {
-    animation: slider-2 linear infinite;
-    animation-duration: 20s;
-    animation-delay: 10s;
-    opacity: 0;
-    visibility: hidden;
-    animation-fill-mode: forwards;
+  animation: slider-2 linear infinite;
+  animation-duration: 20s;
+  animation-delay: 10s;
+  opacity: 0;
+  visibility: hidden;
+  animation-fill-mode: forwards;
 }
 
 @keyframes slider-2 {
-    0% {
-        visibility: visible;
-        opacity: 1;
-        left: 102%;
-    }
-    100% {
-        visibility: visible;
-        opacity: 1;
-        left: -75%;
-    }
+  0% {
+    visibility: visible;
+    opacity: 1;
+    left: 102%;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    left: -75%;
+  }
 }

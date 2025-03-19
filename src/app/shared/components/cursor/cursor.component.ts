@@ -3,7 +3,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 @Component({
   selector: 'app-cursor',
   templateUrl: './cursor.component.html',
-  styleUrls: ['./cursor.component.css']
+  styleUrls: ['./cursor.component.css'],
 })
 export class CursorComponent implements OnInit {
   isTouch: boolean = this.isTouchDevice();
@@ -18,7 +18,7 @@ export class CursorComponent implements OnInit {
   }
 
   isTouchDevice() {
-    return (('ontouchstart' in window) || (navigator.maxTouchPoints > 0));
+    return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
   }
 
   setInitialPosition() {
@@ -26,15 +26,15 @@ export class CursorComponent implements OnInit {
     const windowWidth = window.innerWidth;
 
     // Ajustando la posición para la esquina inferior derecha
-    this.top = (windowHeight - 20) + 'px';
-    this.left = (windowWidth - 20) + 'px';
+    this.top = windowHeight - 20 + 'px';
+    this.left = windowWidth - 20 + 'px';
   }
 
   @HostListener('document:mousemove', ['$event'])
   onMouseMove($event: MouseEvent) {
-    this.top = ($event.pageY -4) + "px";
-    this.left = ($event.pageX - 8) + "px";
-  };
+    this.top = $event.pageY - 4 + 'px';
+    this.left = $event.pageX - 8 + 'px';
+  }
 
   @HostListener('document:mousedown', ['$event'])
   onMouseDown() {

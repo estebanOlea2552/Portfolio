@@ -1,30 +1,55 @@
-<article class="p-3" style="height: 100%;">
-    <h3 class="text-shadow">También puedes escribirme!</h3>
-    <hr>
-    <div class="info-container mb-3 p-md-0 p-lg-1 p-xl-3">
-        <form [formGroup]="contactForm" (ngSubmit)="submit()">
+<article class="p-3" style="height: 100%">
+  <h3 class="text-shadow">También puedes escribirme!</h3>
+  <hr />
+  <div class="info-container mb-3 p-md-0 p-lg-1 p-xl-3">
+    <form [formGroup]="contactForm" (ngSubmit)="submit()">
+      <label class="form-label my-1" for="name">Nombre</label>
+      <input
+        class="form-control mb-md-0 mb-xl-2 p-md-1 p-lg-2"
+        type="text"
+        id="name"
+        formControlName="name"
+      />
 
-            <label class="form-label my-1" for="name">Nombre</label>
-            <input class="form-control mb-md-0 mb-xl-2 p-md-1 p-lg-2" type="text" id="name" formControlName="name">
+      <label class="form-label my-1" for="issue">Asunto</label>
+      <input
+        class="form-control mb-md-0 mb-xl-2 p-md-1 p-lg-2"
+        type="text"
+        id="issue"
+        formControlName="issue"
+      />
 
-            <label class="form-label my-1" for="issue">Asunto</label>
-            <input class="form-control mb-md-0 mb-xl-2 p-md-1 p-lg-2" type="text" id="issue" formControlName="issue">
+      <label class="form-label my-1" for="email">Email</label>
+      <input
+        class="form-control mb-md-0 mb-xl-2 p-md-1 p-lg-2"
+        type="email"
+        id="email"
+        formControlName="email"
+      />
 
-            <label class="form-label my-1" for="email">Email</label>
-            <input class="form-control mb-md-0 mb-xl-2 p-md-1 p-lg-2" type="email" id="email" formControlName="email">
+      <label class="form-label my-1" for="message">Mensaje</label>
+      <textarea
+        class="form-control mb-md-0 mb-xl-2 p-md-1 p-lg-2"
+        id="message"
+        formControlName="message"
+        rows="3"
+      ></textarea>
 
-            <label class="form-label my-1" for="message">Mensaje</label>
-            <textarea class="form-control mb-md-0 mb-xl-2 p-md-1 p-lg-2" id="message" formControlName="message" rows="3"></textarea>
+      <button
+        class="submit mt-md-1 mt-lg-2 mb-md-0 mb-xl-2 p-1"
+        type="submit"
+        [disabled]="!contactForm.valid"
+      >
+        Enviar
+      </button>
 
-            <button class="submit mt-md-1 mt-lg-2 mb-md-0 mb-xl-2 p-1" type="submit" [disabled]="!contactForm.valid">Enviar</button>
+      <div>
+        <span *ngIf="loading">Enviando...</span>
+      </div>
 
-            <div>
-                <span *ngIf="loading">Enviando...</span>
-            </div>
-
-            <div [ngClass]="!submitted? 'hidden' : 'visible'">
-                <span>{{responseMessage}}</span>
-            </div>
-        </form>
-    </div>
+      <div [ngClass]="!submitted ? 'hidden' : 'visible'">
+        <span>{{ responseMessage }}</span>
+      </div>
+    </form>
+  </div>
 </article>

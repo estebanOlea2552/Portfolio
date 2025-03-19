@@ -10,9 +10,7 @@ import { GatitoTextoModule } from '../shared/components/gatito-texto/gatito-text
 import { TopBarComponent } from '../shared/components/top-bar/top-bar.component';
 
 @NgModule({
-  declarations: [
-    SectionComponent
-  ],
+  declarations: [SectionComponent],
   imports: [
     CommonModule,
     SectionRoutingModule,
@@ -21,7 +19,7 @@ import { TopBarComponent } from '../shared/components/top-bar/top-bar.component'
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    TopBarComponent
-  ]
+    TopBarComponent,
+  ],
 })
-export class SectionModule { }
+export class SectionModule {}

@@ -1,66 +1,68 @@
 .main-container {
-    position: relative;
-    height: 100vh;
+  position: relative;
+  height: 100vh;
 }
 .titles-container {
-    width: 100%;
-    height: 60%;
+  width: 100%;
+  height: 60%;
 }
 
-.esteban_olea {    
-    height: calc(65px * var(--pixel-size));
-    width: auto;
+.esteban_olea {
+  height: calc(65px * var(--pixel-size));
+  width: auto;
 }
 
 .ds_fullstack {
-    height: calc(20px * var(--pixel-size));
-    width: auto;
+  height: calc(20px * var(--pixel-size));
+  width: auto;
 }
 
-div, a, span {
-    font-family: "amiga4ever_pro";
-    color: var(--color-white);
-    font-size: calc(8px * var(--pixel-size));    
+div,
+a,
+span {
+  font-family: "amiga4ever_pro";
+  color: var(--color-white);
+  font-size: calc(8px * var(--pixel-size));
 }
 
 .angular-logo {
-    height: calc(18px * var(--pixel-size));
-    width: calc(18px * var(--pixel-size))
+  height: calc(18px * var(--pixel-size));
+  width: calc(18px * var(--pixel-size));
 }
 
 .buttons-container {
-    height: 30%;
+  height: 30%;
 }
 
 button {
-    color: var(--color-white);
-    background-color: transparent;
-    border: none;
-    scale: 1;
-    cursor: none;
+  color: var(--color-white);
+  background-color: transparent;
+  border: none;
+  scale: 1;
+  cursor: none;
 }
 
 button:hover {
-    color: #e52566;
-    scale: 1.06;
+  color: #e52566;
+  scale: 1.06;
 }
 
 button:hover::before {
-    content: "<";
+  content: "<";
 }
 
 button:hover::after {
-    content: ">";
+  content: ">";
 }
 
 .options-container {
-    display: block;
+  display: block;
 }
 
 .option {
-    display: block;
+  display: block;
 }
 
 .hide {
-    display: none;
+  display: none;
 }

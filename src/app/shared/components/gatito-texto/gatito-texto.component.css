@@ -1,74 +1,74 @@
 @media (min-width: 800px) and (max-width: 1023px) {
-    p {
-        font-size: calc(7px * var(--pixel-size));
-        letter-spacing: 1px;
-    }
+  p {
+    font-size: calc(7px * var(--pixel-size));
+    letter-spacing: 1px;
+  }
 }
 
 @media (min-width: 1024px) {
-    p {
-        font-size: calc(7px * var(--pixel-size));
-        letter-spacing: 2px;
-    }
+  p {
+    font-size: calc(7px * var(--pixel-size));
+    letter-spacing: 2px;
+  }
 }
 
 @media (min-width: 1280px) {
-    p {
-        font-size: calc(8px * var(--pixel-size));
-    }
+  p {
+    font-size: calc(8px * var(--pixel-size));
+  }
 }
 
 @keyframes blink {
-    from {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 p {
-    display: inline;
-    color: var(--color-turquoise);
+  display: inline;
+  color: var(--color-turquoise);
 }
 
 .blink {
-    display: inline;
-    animation: blink 1000ms infinite;
-    border: 1px solid var(--color-turquoise);
+  display: inline;
+  animation: blink 1000ms infinite;
+  border: 1px solid var(--color-turquoise);
 }
 
 img {
-    height: calc(174px * var(--pixel-size));
-    width: calc(157px * var(--pixel-size));
-    margin-bottom: calc(6px * var(--pixel-size));
-    transform: translateX(1px);
+  height: calc(174px * var(--pixel-size));
+  width: calc(157px * var(--pixel-size));
+  margin-bottom: calc(6px * var(--pixel-size));
+  transform: translateX(1px);
 }
 
 .gatito-texto-caja {
-    height: calc(289px * var(--pixel-size));
-    width: calc(137px * var(--pixel-size));   
-    background-image: url("../../../../assets/images/puflito_caja_sm.webp");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    padding-top: calc(7px * var(--pixel-size));
-    padding-bottom: calc(5px * var(--pixel-size));
+  height: calc(289px * var(--pixel-size));
+  width: calc(137px * var(--pixel-size));
+  background-image: url("../../../../assets/images/puflito_caja_sm.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  padding-top: calc(7px * var(--pixel-size));
+  padding-bottom: calc(5px * var(--pixel-size));
 }
 
 .texto-container {
-    height: calc(95px * var(--pixel-size));
-    width: calc(123px * var(--pixel-size));
-    transform: translateX(1px);
-    background-color: var(--box-background);
+  height: calc(95px * var(--pixel-size));
+  width: calc(123px * var(--pixel-size));
+  transform: translateX(1px);
+  background-color: var(--box-background);
 }
 
 .gatito-container {
-    overflow: hidden;
-    height: calc(175px * var(--pixel-size));
-    width: calc(123px * var(--pixel-size));
-    transform: translateX(1px);
+  overflow: hidden;
+  height: calc(175px * var(--pixel-size));
+  width: calc(123px * var(--pixel-size));
+  transform: translateX(1px);
 }

@@ -1,88 +1,97 @@
 <main class="main-container d-flex flex-column">
-    <span
+  <span
     @fadeIn
     *ngIf="enterLeaveAnimations"
-    class="position-absolute top-0 start-0 m-3">Credits: 10</span>
+    class="position-absolute top-0 start-0 m-3"
+    >Credits: 10</span
+  >
 
-    <div class="titles-container d-flex flex-column justify-content-center align-items-center my-auto">
-        <img
-        @titleEnter
+  <div
+    class="titles-container d-flex flex-column justify-content-center align-items-center my-auto"
+  >
+    <img
+      @titleEnter
+      *ngIf="enterLeaveAnimations"
+      class="esteban_olea mx-auto mb-md-2 mb-lg-3 mb-xxl-4 pixelated"
+      src="../assets/images/esteban_olea.webp"
+      alt="Esteban Olea"
+    />
+    <img
+      @subtitleEnter
+      *ngIf="enterLeaveAnimations"
+      class="ds_fullstack mx-auto mt-md-2 mt-lg-3 mt-xxl-4 mb-lg-0 mb-xl-2 pixelated"
+      src="../assets/images/desarrollador_full-stack.webp"
+      alt="Desarrollador Full-Stack"
+    />
+
+    <div
+      class="buttons-container d-flex flex-column justify-content-center align-items-center mx-auto mt-lg-0 mt-xl-2"
+    >
+      <button
+        @enterRight
         *ngIf="enterLeaveAnimations"
-        class="esteban_olea mx-auto mb-md-2 mb-lg-3 mb-xxl-4 pixelated"
-        src="../assets/images/esteban_olea.webp"
-        alt="Esteban Olea">
-        <img
-        @subtitleEnter
+        class="button-start mx-auto m-2 text-decoration-none"
+        [ngClass]="{ hide: hideElement }"
+        (click)="navigateToNewRoute('home')"
+        #start
+        id="start"
+        sfx-control
+      >
+        INICIAR
+      </button>
+
+      <button
+        class="mx-auto mt-2 text-decoration-none"
+        @enterLeft
         *ngIf="enterLeaveAnimations"
-        class="ds_fullstack mx-auto mt-md-2 mt-lg-3 mt-xxl-4 mb-lg-0 mb-xl-2 pixelated"
-        src="../assets/images/desarrollador_full-stack.webp"
-        alt="Desarrollador Full-Stack">
+        [ngClass]="{ hide: hideElement }"
+        (click)="openCloseOptions()"
+        sfx-control
+      >
+        OPCIONES
+      </button>
 
-        <div class="buttons-container d-flex flex-column justify-content-center align-items-center mx-auto mt-lg-0 mt-xl-2">
-            <button 
-            @enterRight
-            *ngIf="enterLeaveAnimations"
-            class="button-start mx-auto m-2 text-decoration-none"
-            [ngClass]="{'hide': hideElement}"
-            (click)="navigateToNewRoute('home')"
-            #start
-            id="start"
-            sfx-control>
-                INICIAR
-            </button>
+      <div class="options-container" [ngClass]="{ hide: !hideElement }">
+        <button class="option mx-auto" (click)="turnOnOffMusic()" sfx-control>
+          Música: {{ musicOnOffText }}
+        </button>
 
-            <button
-            class="mx-auto mt-2 text-decoration-none"
-            @enterLeft
-            *ngIf="enterLeaveAnimations"
-            [ngClass]="{'hide': hideElement}"
-            (click)="openCloseOptions()"
-            sfx-control>
-                OPCIONES
-            </button>
-            
-            <div class="options-container"
-            [ngClass]="{'hide': !hideElement}">
-                <button
-                class="option mx-auto"
-                (click)="turnOnOffMusic()"
-                sfx-control>
-                    Música: {{musicOnOffText}}
-                </button>
+        <button
+          class="option mx-auto my-2"
+          (click)="turnOnOffSfx()"
+          sfx-control
+        >
+          Efectos de sonido: {{ sfxOnOffText }}
+        </button>
 
-                <button
-                class="option mx-auto my-2"
-                (click)="turnOnOffSfx()"
-                sfx-control>
-                    Efectos de sonido: {{sfxOnOffText}}
-                </button>
-
-                <button
-                (click)="confirmSettings()"
-                class="option confirm mx-auto"
-                sfx-control>
-                    Confirmar
-                </button>
-            </div>
-        </div>
+        <button
+          (click)="confirmSettings()"
+          class="option confirm mx-auto"
+          sfx-control
+        >
+          Confirmar
+        </button>
+      </div>
     </div>
-    
-    <div class="position-absolute bottom-0 start-0 d-flex m-3">
-        <span
-        @fadeIn
-        *ngIf="enterLeaveAnimations">
-        Powered by <br>
-           <img
-            class="angular-logo m-1"
-            src="../assets/images/angular_logo.webp"
-            alt="Angular Logo">ANGULAR 
-        </span>
-    </div>
-    
-    <span
+  </div>
+
+  <div class="position-absolute bottom-0 start-0 d-flex m-3">
+    <span @fadeIn *ngIf="enterLeaveAnimations">
+      Powered by <br />
+      <img
+        class="angular-logo m-1"
+        src="../assets/images/angular_logo.webp"
+        alt="Angular Logo"
+      />ANGULAR
+    </span>
+  </div>
+
+  <span
     @fadeIn
     *ngIf="enterLeaveAnimations"
     class="position-absolute bottom-0 end-0 m-3"
-    >Licenced by <br> PUFLITO Inc. &copy;</span>
-    <audio #audio></audio>
+    >Licenced by <br />
+    PUFLITO Inc. &copy;</span
+  >
+  <audio #audio></audio>
 </main>

@@ -1,4 +1,4 @@
-/*GENERAL CSS VARIABLES*/
+/*MEDIA QUERIES*/
 @media (min-width: 800px) and (max-width: 1023px) {
     :root {
         --pixel-size: 1.2;
@@ -83,6 +83,8 @@
         text-shadow: 4px 4px var(--text-shadow);
     }
   }
+
+/* CSS VARIABLES */
 
 :root {
     --color-white: #e6e6e6;

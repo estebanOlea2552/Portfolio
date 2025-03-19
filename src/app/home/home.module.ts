@@ -8,15 +8,13 @@ import { GatitoTextoModule } from '../shared/components/gatito-texto/gatito-text
 import { TopBarComponent } from '../shared/components/top-bar/top-bar.component';
 
 @NgModule({
-  declarations: [
-    HomeComponent
-  ],
+  declarations: [HomeComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,
     MenuModule,
     GatitoTextoModule,
-    TopBarComponent
-  ]
+    TopBarComponent,
+  ],
 })
-export class HomeModule { }
+export class HomeModule {}

@@ -1,111 +1,111 @@
 @media (min-width: 800px) and (max-width: 1023px) {
-    .buttons-container {
-        transform: translate(-6px);
-    }
+  .buttons-container {
+    transform: translate(-6px);
+  }
 }
 
 @media (min-width: 1024px) {
-    .buttons-container {
-        transform: translate(-6px);
-    }
+  .buttons-container {
+    transform: translate(-6px);
+  }
 }
 
 .top-bar {
-    height: calc(23px * var(--pixel-size));
-    width: calc(436px * var(--pixel-size));
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    background-image: url('../../../../assets/images/top_bar.webp');
+  height: calc(23px * var(--pixel-size));
+  width: calc(436px * var(--pixel-size));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url("../../../../assets/images/top_bar.webp");
 }
 
 .bar-content {
-    height: calc(12px * var(--pixel-size));
-    width: calc(424px * var(--pixel-size));
-    transform: translateX(1px) translateY(1px);
-    background-color: var(--box-background);
+  height: calc(12px * var(--pixel-size));
+  width: calc(424px * var(--pixel-size));
+  transform: translateX(1px) translateY(1px);
+  background-color: var(--box-background);
 }
 
 .buttons-container {
-    /* transform: translate(-5%); */
-    width: calc(56px * var(--pixel-size));
-    height: calc(15px * var(--pixel-size));
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-image: url('../../../../assets/images/buttons_background.webp');
+  /* transform: translate(-5%); */
+  width: calc(56px * var(--pixel-size));
+  height: calc(15px * var(--pixel-size));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../../../assets/images/buttons_background.webp");
 }
 
 button {
-    color: var(--color-white);
-    border: none;
-    width: calc(11px * var(--pixel-size));
-    height: calc(9px * var(--pixel-size));
-    background: none;
-    opacity: 0.8;
-    transition: 0.1s;
-    cursor: none;
+  color: var(--color-white);
+  border: none;
+  width: calc(11px * var(--pixel-size));
+  height: calc(9px * var(--pixel-size));
+  background: none;
+  opacity: 0.8;
+  transition: 0.1s;
+  cursor: none;
 }
 
 button:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 .music-button {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    transition: 0.2s;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: 0.2s;
 }
 
 .music-active {
-    background-image: url('../../../../assets/images/music_on.webp');
+  background-image: url("../../../../assets/images/music_on.webp");
 }
 
 .music-inactive {
-    background-image: url('../../../../assets/images/music_off.webp');
+  background-image: url("../../../../assets/images/music_off.webp");
 }
 
 .sfx-button {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    transition: 0.2s;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: 0.2s;
 }
 
 .sfx-active {
-    background-image: url('../../../../assets/images/fx-on.webp');
+  background-image: url("../../../../assets/images/fx-on.webp");
 }
 
 .sfx-inactive {
-    background-image: url('../../../../assets/images/fx-off.webp');
+  background-image: url("../../../../assets/images/fx-off.webp");
 }
 
 @keyframes slowblink {
-    from {
-        opacity: 0;
-    }
-    25% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    75% {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
+  from {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 .song-name-container {
-    width: 90%;
-    height: 100%;
+  width: 90%;
+  height: 100%;
 }
 
 p {
-    font-size: calc(6px * var(--pixel-size));
-    color: var(--color-turquoise); 
-    animation: slowblink 10000ms infinite;
+  font-size: calc(6px * var(--pixel-size));
+  color: var(--color-turquoise);
+  animation: slowblink 10000ms infinite;
 }

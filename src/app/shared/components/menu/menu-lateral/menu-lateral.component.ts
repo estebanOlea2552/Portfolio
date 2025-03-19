@@ -1,16 +1,17 @@
 import { Component } from '@angular/core';
-import { ChildrenOutletContexts, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu-lateral',
   templateUrl: './menu-lateral.component.html',
-  styleUrls: ['./menu-lateral.component.css']
+  styleUrls: ['./menu-lateral.component.css'],
 })
 export class MenuLateralComponent {
-  
-  constructor(private router: Router, private context: ChildrenOutletContexts){}
-  
-  navigateToNewRoute(route: String){
-    this.router.navigate([route])
+  constructor(
+    private router: Router
+  ) {}
+
+  navigateToNewRoute(route: String) {
+    this.router.navigate([route]);
   }
 }

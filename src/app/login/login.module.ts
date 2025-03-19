@@ -6,13 +6,7 @@ import { LoginComponent } from './login-component/login.component';
 import { DirectivesModule } from '../shared/directives/directives.module';
 
 @NgModule({
-  declarations: [
-    LoginComponent
-  ],
-  imports: [
-    CommonModule,
-    LoginRoutingModule,
-    DirectivesModule
-  ]
+  declarations: [LoginComponent],
+  imports: [CommonModule, LoginRoutingModule, DirectivesModule],
 })
-export class LoginModule { }
+export class LoginModule {}

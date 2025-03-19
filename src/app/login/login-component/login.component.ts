@@ -2,16 +2,21 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { fadeIn, iniciar, opciones, subtitle, title } from 'src/app/shared/animations/login.animations';
+import {
+  fadeIn,
+  iniciar,
+  opciones,
+  subtitle,
+  title,
+} from 'src/app/shared/animations/login.animations';
 import { MusicAndSfxService } from 'src/app/shared/services/music-and-sfx.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
-  animations: [title, subtitle, iniciar, opciones, fadeIn]
+  animations: [title, subtitle, iniciar, opciones, fadeIn],
 })
-
 export class LoginComponent implements OnInit, OnDestroy {
   enterLeaveAnimations = false;
 
@@ -22,16 +27,21 @@ export class LoginComponent implements OnInit, OnDestroy {
   sfxSuscription!: Subscription;
   musicOnOffText: string = 'OFF';
   sfxOnOffText: string = 'OFF';
-  startButtonAudio: HTMLAudioElement = new Audio('../../../assets/sounds/start_1.mp3');
+  startButtonAudio: HTMLAudioElement = new Audio(
+    '../../../assets/sounds/start_1.mp3'
+  );
 
-  constructor(private musicAndSfx: MusicAndSfxService, private router: Router) { }
+  constructor(
+    private musicAndSfx: MusicAndSfxService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.musicSuscription = this.musicAndSfx.musicSubject$.subscribe(
-      value => this.music = value
+      (value) => (this.music = value)
     );
     this.sfxSuscription = this.musicAndSfx.sfxSubject$.subscribe(
-      value => this.sfx = value
+      (value) => (this.sfx = value)
     );
 
     this.enterLeaveAnimations = true;
@@ -40,13 +50,13 @@ export class LoginComponent implements OnInit, OnDestroy {
       this.musicOnOffText = 'ON';
     } else {
       this.musicOnOffText = 'OFF';
-    };
+    }
 
     if (this.sfx) {
       this.sfxOnOffText = 'ON';
     } else {
       this.sfxOnOffText = 'OFF';
-    };
+    }
   }
 
   ngOnDestroy(): void {
@@ -63,7 +73,7 @@ export class LoginComponent implements OnInit, OnDestroy {
       this.musicOnOffText = 'ON';
     } else {
       this.musicOnOffText = 'OFF';
-    };
+    }
     this.music = !this.music;
     this.musicAndSfx.sendMusicValue(this.music);
   }
@@ -73,7 +83,7 @@ export class LoginComponent implements OnInit, OnDestroy {
       this.sfxOnOffText = 'ON';
     } else {
       this.sfxOnOffText = 'OFF';
-    };
+    }
     this.sfx = !this.sfx;
     this.musicAndSfx.sendSfxValue(this.sfx);
   }
@@ -87,12 +97,12 @@ export class LoginComponent implements OnInit, OnDestroy {
   }
 
   navigateToNewRoute(route: any) {
-    if (this.sfx){
+    if (this.sfx) {
       this.startButtonAudio.play();
     }
     this.toggleForLeaveAnim();
     setTimeout(() => {
       this.router.navigate([route]);
-    }, 1000)
+    }, 1000);
   }
 }

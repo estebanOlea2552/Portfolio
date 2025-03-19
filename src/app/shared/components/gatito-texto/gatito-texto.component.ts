@@ -9,8 +9,8 @@ import { CatMessageService } from '../../services/cat-message.service';
   styleUrls: ['./gatito-texto.component.css'],
 })
 export class GatitoTextoComponent implements OnInit, OnDestroy {
-  catStopped: string = "../assets/images/gatito_stopped.webp";
-  catAnimated: string = "../assets/images/gatito_animated.webp";
+  catStopped: string = '../assets/images/gatito_stopped.webp';
+  catAnimated: string = '../assets/images/gatito_animated.webp';
   isAnimating: boolean = false;
   intervalId: any = null;
   catSrc: string = this.catStopped;
@@ -18,36 +18,38 @@ export class GatitoTextoComponent implements OnInit, OnDestroy {
   urlObservable$ = new Subject<String>();
   urlSuscription!: Subscription;
 
-  message: String = "";
-  newMessage: string = "";
+  message: String = '';
+  newMessage: string = '';
 
-  constructor(private router: Router, private messagesService: CatMessageService) { }
+  constructor(
+    private router: Router,
+    private messagesService: CatMessageService
+  ) {}
 
   ngOnInit(): void {
-    this.urlSuscription = this.urlObservable$.subscribe(
-      (value) => {
-        this.messagesService.assignPath(value)
-      }
-    )
+    this.urlSuscription = this.urlObservable$.subscribe((value) => {
+      this.messagesService.assignPath(value);
+    });
 
     if (this.router.url !== '/home') {
-      this.newMessage = "";
+      this.newMessage = '';
       this.getAndAssign();
       this.message = this.messagesService.returnMessage();
       setTimeout(() => this.addCharacter(), 1300);
     } else {
-      this.message = "Hola! Soy Puflito, el Gatito Espacial. Te doy la bienvenida a este Portfolio Web! :)"
+      this.message =
+        'Hola! Soy Puflito, el Gatito Espacial. Te doy la bienvenida a este Portfolio Web! :)';
       setTimeout(() => this.addCharacter(), 1300);
     }
 
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        this.newMessage = "";
+        this.newMessage = '';
         this.getAndAssign();
         this.message = this.messagesService.returnMessage();
         this.addCharacter();
       }
-    })
+    });
   }
 
   ngOnDestroy(): void {
@@ -55,17 +57,19 @@ export class GatitoTextoComponent implements OnInit, OnDestroy {
   }
 
   addCharacter(): void {
-    if (this.message) { // Procede solo si hay un mensaje
-      if (this.isAnimating && this.intervalId) { // Si hay una animación en curso, cancela el intervalo
+    if (this.message) {
+      // Procede solo si hay un mensaje
+      if (this.isAnimating && this.intervalId) {
+        // Si hay una animación en curso, cancela el intervalo
         clearInterval(this.intervalId);
         this.intervalId = null;
       }
       this.animateCat(true);
       this.isAnimating = true; // Marca que la animación está en curso
       this.newMessage = ''; // Vacía newMessage antes de empezar
-      let splittedMessage: string[] = this.message.split("");
+      let splittedMessage: string[] = this.message.split('');
       let index = 0;
-      
+
       this.intervalId = setInterval(() => {
         if (index < splittedMessage.length) {
           this.newMessage += splittedMessage[index];
@@ -89,6 +93,6 @@ export class GatitoTextoComponent implements OnInit, OnDestroy {
       this.catSrc = this.catAnimated;
     } else {
       this.catSrc = this.catStopped;
-    };
+    }
   }
 }
