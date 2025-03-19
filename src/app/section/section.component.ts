@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ChildrenOutletContexts } from '@angular/router';
+import { ChildrenOutletContexts, RouterModule, RouterOutlet } from '@angular/router';
 import {
   gatito,
   menuSm,
@@ -7,11 +7,24 @@ import {
   bottomBar,
 } from 'src/app/shared/animations/section.animations';
 import { articles } from 'src/app/shared/animations/articles.animations';
+import { CommonModule } from '@angular/common';
+import { TopBarComponent } from 'src/app/shared/components/top-bar/top-bar.component';
+import { MenuLateralComponent } from 'src/app/shared/components/menu-lateral/menu-lateral.component';
+import { GatitoTextoComponent } from 'src/app/shared/components/gatito-texto/gatito-texto.component';
 
 @Component({
   selector: 'app-section',
   templateUrl: './section.component.html',
   styleUrls: ['./section.component.css'],
+  standalone: true,
+  imports: [
+    CommonModule,
+    RouterModule,
+    RouterOutlet,
+    TopBarComponent,
+    MenuLateralComponent,
+    GatitoTextoComponent,
+  ],
   animations: [section, menuSm, gatito, bottomBar, articles],
 })
 export class SectionComponent {

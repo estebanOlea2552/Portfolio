@@ -1,9 +1,12 @@
+import { CommonModule } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-stack',
   templateUrl: './stack.component.html',
   styleUrls: ['./stack.component.css'],
+  standalone: true,
+  imports: [CommonModule],
 })
 export class StackComponent {
   currentIndex: number = 0;

@@ -1,11 +1,11 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-descripcion',
   templateUrl: './descripcion.component.html',
   styleUrls: ['./descripcion.component.css'],
-  animations:[]
+  standalone: true,
+  imports: [CommonModule],
 })
-export class DescripcionComponent {
-  
-}
+export class DescripcionComponent {}

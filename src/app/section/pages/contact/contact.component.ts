@@ -1,13 +1,20 @@
+import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 import { catchError } from 'rxjs';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css'],
-  animations: [],
+  standalone: true,
+  imports: [CommonModule, ReactiveFormsModule],
 })
 export class ContactComponent {
   contactForm: FormGroup;

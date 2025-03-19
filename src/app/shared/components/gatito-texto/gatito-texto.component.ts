@@ -2,11 +2,14 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { Subject, Subscription } from 'rxjs';
 import { CatMessageService } from '../../services/cat-message.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-gatito-texto',
   templateUrl: './gatito-texto.component.html',
   styleUrls: ['./gatito-texto.component.css'],
+  standalone: true,
+  imports: [CommonModule],
 })
 export class GatitoTextoComponent implements OnInit, OnDestroy {
   catStopped: string = '../assets/images/gatito_stopped.webp';

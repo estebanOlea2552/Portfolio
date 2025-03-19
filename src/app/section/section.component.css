@@ -1,22 +1,10 @@
-@media (min-width: 800px) and (max-width: 1023px) {
+@media (min-width: 800px) and (max-width: 1279px) {
   .bottom-bar {
     min-height: calc(24px * var(--pixel-size));
   }
 }
 
-@media (min-width: 1024px) and (max-width: 1279px) {
-  .bottom-bar {
-    min-height: calc(24px * var(--pixel-size));
-  }
-}
-
-@media (min-width: 1280px) and (max-width: 1599px) {
-  .bottom-bar {
-    min-height: calc(23px * var(--pixel-size));
-  }
-}
-
-@media (min-width: 1600px) {
+@media (min-width: 1280px) {
   .bottom-bar {
     min-height: calc(23px * var(--pixel-size));
   }
@@ -24,6 +12,35 @@
 
 .main-container {
   height: 100vh;
+}
+
+.section {
+  height: calc(289px * var(--pixel-size));
+  width: calc(322px * var(--pixel-size));
+  background-image: url("../../assets/images/section.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  padding-top: calc(7px * var(--pixel-size));
+}
+
+.section-container {
+  height: calc(276px * var(--pixel-size));
+  width: calc(309px * var(--pixel-size));
+  transform: translateX(1px);
+  background-color: var(--box-background);
+}
+
+a {
+  font-family: "amiga4ever_pro";
+  font-size: calc(8px * var(--pixel-size));
+  color: var(--color-white);
+}
+
+a {
+  font-family: "amiga4ever_pro";
+  font-size: calc(8px * var(--pixel-size));
+  color: var(--color-white);
 }
 
 h4 {
@@ -41,7 +58,7 @@ h4 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  background-image: url("../../../assets/images/bottom_bar.webp");
+  background-image: url("../../assets/images/bottom_bar.webp");
 }
 
 .bar-content {

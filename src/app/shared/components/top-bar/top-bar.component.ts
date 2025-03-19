@@ -6,10 +6,10 @@ import { MusicAndSfxService } from '../../services/music-and-sfx.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  standalone: true,
   selector: 'app-top-bar',
   templateUrl: './top-bar.component.html',
   styleUrls: ['./top-bar.component.css'],
+  standalone: true,
   imports: [CommonModule],
   animations: [topBarHome, topBarSection]
 })

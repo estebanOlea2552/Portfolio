@@ -2,7 +2,8 @@ import { Directive, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { MusicAndSfxService } from '../services/music-and-sfx.service';
 
 @Directive({
-  selector: '[sfx-control]'
+  selector: '[sfx-control]',
+  standalone: true
 })
 export class SfxControlDirective {
   hoverSfx: HTMLAudioElement;

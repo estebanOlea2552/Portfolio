@@ -1,13 +1,14 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-cv',
   templateUrl: './cv.component.html',
   styleUrls: ['./cv.component.css'],
-  animations: []
+  standalone: true,
+  imports: [CommonModule],
 })
 export class CvComponent {
-
   constructor() {}
 
   onMouseEnter(button: HTMLElement) {
@@ -22,9 +23,7 @@ export class CvComponent {
 
     event.preventDefault();
     button.classList.toggle('button-container-click');
-    setTimeout(() =>
-      button.classList.toggle('button-container-click'), 100
-    );
+    setTimeout(() => button.classList.toggle('button-container-click'), 100);
 
     if (url) {
       setTimeout(() => {
@@ -36,12 +35,10 @@ export class CvComponent {
   downloadFile(event: MouseEvent, button: HTMLElement) {
     const url = button.getAttribute('href');
     const downloadLink = document.createElement('a');
-    
+
     event.preventDefault();
     button.classList.toggle('button-container-click');
-    setTimeout(() => 
-      button.classList.toggle('button-container-click'), 100
-    );
+    setTimeout(() => button.classList.toggle('button-container-click'), 100);
 
     downloadLink.href = url || '';
     downloadLink.download = button.getAttribute('download') || '';

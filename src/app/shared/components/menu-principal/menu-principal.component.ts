@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ChildrenOutletContexts, Router } from '@angular/router';
 
@@ -5,6 +6,8 @@ import { ChildrenOutletContexts, Router } from '@angular/router';
   selector: 'app-menu-principal',
   templateUrl: './menu-principal.component.html',
   styleUrls: ['./menu-principal.component.css'],
+  standalone: true,
+  imports: [CommonModule],
 })
 export class MenuPrincipalComponent {
   constructor(

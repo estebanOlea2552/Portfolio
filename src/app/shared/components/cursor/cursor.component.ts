@@ -1,9 +1,12 @@
+import { CommonModule } from '@angular/common';
 import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-cursor',
   templateUrl: './cursor.component.html',
   styleUrls: ['./cursor.component.css'],
+  standalone: true,
+  imports: [CommonModule]
 })
 export class CursorComponent implements OnInit {
   isTouch: boolean = this.isTouchDevice();

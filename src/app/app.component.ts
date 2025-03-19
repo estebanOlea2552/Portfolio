@@ -1,13 +1,32 @@
-import { Component, ViewChild, ElementRef, AfterViewChecked, OnDestroy } from '@angular/core';
+import {
+  Component,
+  ViewChild,
+  ElementRef,
+  AfterViewChecked,
+  OnDestroy,
+} from '@angular/core';
 import { MusicAndSfxService } from './shared/services/music-and-sfx.service';
 import { Subscription } from 'rxjs';
+import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { CursorComponent } from './shared/components/cursor/cursor.component';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  standalone: true,
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    RouterOutlet,
+    CursorComponent,
+  ],
 })
-
 export class AppComponent implements AfterViewChecked, OnDestroy {
   title = 'Esteban Olea - Portfolio';
   @ViewChild('audio') audio: ElementRef | undefined;
@@ -17,12 +36,11 @@ export class AppComponent implements AfterViewChecked, OnDestroy {
     "../assets/sounds/Cody O'Quinn - Gamer Instincts.mp3",
     "../assets/sounds/Cody O'Quinn - Cherry Cola.mp3",
     "../assets/sounds/Cody O'Quinn - Sunny Dreams.mp3",
-    "../assets/sounds/Cody O'Quinn - Berrylife City.mp3"
-  ]
+    "../assets/sounds/Cody O'Quinn - Berrylife City.mp3",
+  ];
   currentSong: string = this.songsList[0];
 
   constructor(private musicAndSfx: MusicAndSfxService) {}
-
 
   ngAfterViewChecked(): void {
     this.playPauseMusic();
@@ -36,16 +54,16 @@ export class AppComponent implements AfterViewChecked, OnDestroy {
   playPauseMusic(): void {
     this.musicSuscription = this.musicAndSfx.musicSubject$.subscribe(
       (value) => {
-        if (value === true){
+        if (value === true) {
           this.audio?.nativeElement.play();
         } else {
           this.audio?.nativeElement.pause();
-        };
+        }
       }
     );
   }
 
-  nextSong(): void{
+  nextSong(): void {
     this.songIndex = (this.songIndex + 1) % this.songsList.length;
     this.currentSong = this.songsList[this.songIndex];
     this.audio?.nativeElement.load();

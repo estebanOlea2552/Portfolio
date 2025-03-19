@@ -23,7 +23,7 @@ h3 {
 .menu-lg {
     height: calc(289px * var(--pixel-size));
     width: calc(262px * var(--pixel-size));
-    background-image: url("../../../../../assets/images/menu_lg.webp");
+    background-image: url("../../../../assets/images/menu_lg.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;  
@@ -44,7 +44,7 @@ h3 {
 .menu-item-lg {
     height: calc(85px * var(--pixel-size));
     width: calc(75px * var(--pixel-size));
-    background-image: url("../../../../../assets/images/menu_item_lg.webp");
+    background-image: url("../../../../assets/images/menu_item_lg.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;

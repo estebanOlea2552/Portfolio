@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 
 import { Router } from '@angular/router';
@@ -15,6 +16,8 @@ import { MusicAndSfxService } from 'src/app/shared/services/music-and-sfx.servic
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
+  standalone: true,
+  imports: [CommonModule],
   animations: [title, subtitle, iniciar, opciones, fadeIn],
 })
 export class LoginComponent implements OnInit, OnDestroy {
