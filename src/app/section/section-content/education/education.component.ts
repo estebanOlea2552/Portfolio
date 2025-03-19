@@ -2,17 +2,17 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-proyectos',
-  templateUrl: './proyectos.component.html',
-  styleUrls: ['./proyectos.component.css'],
+  selector: 'app-education',
+  templateUrl: './education.component.html',
+  styleUrls: ['./education.component.css'],
   standalone: true,
   imports: [CommonModule],
 })
-export class ProyectosComponent {
+export class EducationComponent {
   counter: number = 0;
 
   next() {
-    if (this.counter >= 1) {
+    if (this.counter >= 3) {
       this.counter = 0;
     } else {
       this.counter++;
@@ -20,7 +20,7 @@ export class ProyectosComponent {
   }
   previous() {
     if (this.counter <= 0) {
-      this.counter = 1;
+      this.counter = 3;
     } else {
       this.counter--;
     }

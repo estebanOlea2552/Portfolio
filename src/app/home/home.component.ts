@@ -6,8 +6,8 @@ import {
   menuLg,
   topBarHome,
 } from 'src/app/shared/animations/home.animations';
-import { GatitoTextoComponent } from 'src/app/shared/components/gatito-texto/gatito-texto.component';
-import { MenuPrincipalComponent } from 'src/app/shared/components/menu-principal/menu-principal.component';
+import { GatitoTextoComponent } from 'src/app/shared/components/cat/gatito-texto.component';
+import { MenuPrincipalComponent } from 'src/app/shared/components/full-menu/menu-principal.component';
 import { TopBarComponent } from 'src/app/shared/components/top-bar/top-bar.component';
 
 @Component({

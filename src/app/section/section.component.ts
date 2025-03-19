@@ -9,8 +9,8 @@ import {
 import { articles } from 'src/app/shared/animations/articles.animations';
 import { CommonModule } from '@angular/common';
 import { TopBarComponent } from 'src/app/shared/components/top-bar/top-bar.component';
-import { MenuLateralComponent } from 'src/app/shared/components/menu-lateral/menu-lateral.component';
-import { GatitoTextoComponent } from 'src/app/shared/components/gatito-texto/gatito-texto.component';
+import { MenuLateralComponent } from 'src/app/shared/components/side-menu/menu-lateral.component';
+import { GatitoTextoComponent } from 'src/app/shared/components/cat/gatito-texto.component';
 
 @Component({
   selector: 'app-section',

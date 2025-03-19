@@ -9,7 +9,7 @@ export const ROUTES: Routes = [
   {
     path: 'main-title',
     loadComponent: () =>
-      import('./login/login.component').then((m) => m.LoginComponent),
+      import('./main-title/main-title.component').then((m) => m.MainTitleComponent),
   },
   {
     path: 'home',

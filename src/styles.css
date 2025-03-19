@@ -1,180 +1,180 @@
 /*MEDIA QUERIES*/
 @media (min-width: 800px) and (max-width: 1023px) {
-    :root {
-        --pixel-size: 1.2;
-    }
-    
-    body {
-        background-size: calc(1090px * var(--pixel-size));
-    }
+  :root {
+    --pixel-size: 1.2;
+  }
 
-    
-    .text-shadow {
-        text-shadow: 1px 1px var(--text-shadow);
-    }
+  body {
+    background-size: calc(1090px * var(--pixel-size));
+  }
+
+  .text-shadow {
+    text-shadow: 1px 1px var(--text-shadow);
+  }
 }
 
 @media (min-width: 1024px) and (max-width: 1279px) {
-    :root {
-        --pixel-size: 1.5;
-    }
+  :root {
+    --pixel-size: 1.5;
+  }
 
-    body {
-        background-size: calc(1090px * var(--pixel-size));
-    }
+  body {
+    background-size: calc(1090px * var(--pixel-size));
+  }
 
-    .text-shadow {
-        text-shadow: 2px 2px var(--text-shadow);
-    }
+  .text-shadow {
+    text-shadow: 2px 2px var(--text-shadow);
+  }
 }
 
 @media (min-width: 1280px) and (max-width: 1599px) {
-    :root {
-        --pixel-size: 1.8;
-    }
+  :root {
+    --pixel-size: 1.8;
+  }
 
-    body {
-        background-size: calc(984px * var(--pixel-size));
-    }
+  body {
+    background-size: calc(984px * var(--pixel-size));
+  }
 
-    .text-shadow {
-        text-shadow: 2px 2px var(--text-shadow);
-    }
+  .text-shadow {
+    text-shadow: 2px 2px var(--text-shadow);
+  }
 }
 
 @media (min-width: 1600px) and (max-width: 1919px) {
-    :root {
-        --pixel-size: 2.55;
-    }
+  :root {
+    --pixel-size: 2.55;
+  }
 
-    body {
-        background-size: calc(984px * var(--pixel-size));
-    }
+  body {
+    background-size: calc(984px * var(--pixel-size));
+  }
 
-    .text-shadow {
-        text-shadow: 2px 2px var(--text-shadow);
-    }
+  .text-shadow {
+    text-shadow: 2px 2px var(--text-shadow);
+  }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    :root {
-        --pixel-size: 2.95;
-    }
+  :root {
+    --pixel-size: 2.95;
+  }
 
-    body {
-        background-size: calc(984px * var(--pixel-size));
-    }
+  body {
+    background-size: calc(984px * var(--pixel-size));
+  }
 
-    .text-shadow {
-        text-shadow: 3px 3px var(--text-shadow);
-    }
+  .text-shadow {
+    text-shadow: 3px 3px var(--text-shadow);
+  }
 }
 
 @media (min-width: 3840px) {
-    :root {
-        --pixel-size: 5.8;
-    }
-
-    body {
-        background-size: calc(984px * var(--pixel-size));
-    }
-
-    .text-shadow {
-        text-shadow: 4px 4px var(--text-shadow);
-    }
+  :root {
+    --pixel-size: 5.8;
   }
+
+  body {
+    background-size: calc(984px * var(--pixel-size));
+  }
+
+  .text-shadow {
+    text-shadow: 4px 4px var(--text-shadow);
+  }
+}
 
 /* CSS VARIABLES */
 
 :root {
-    --color-white: #e6e6e6;
-    --color-turquoise: #47d9e4;
-    --text-shadow: #2a87a6;
-    --text-shadow-darker: #286584;
-    --box-background: rgba(0, 119, 132, 0.3);
-    --box-background-hover: rgba(23, 163, 178, 0.4);
-    --box-background-darker: #286584;
+  --color-white: #e6e6e6;
+  --color-turquoise: #47d9e4;
+  --text-shadow: #2a87a6;
+  --text-shadow-darker: #286584;
+  --box-background: rgba(0, 119, 132, 0.3);
+  --box-background-hover: rgba(23, 163, 178, 0.4);
+  --box-background-darker: #286584;
 }
 
 @font-face {
-    font-family: 'amiga4ever_pro';
-    src: url('./assets/fonts/amiga4ever_pro.ttf');
+  font-family: "amiga4ever_pro";
+  src: url("./assets/fonts/amiga4ever_pro.ttf");
 }
 
 @font-face {
-    font-family: 'minecraft';
-    src: url('./assets/fonts/minecraft_modified.ttf');
+  font-family: "minecraft";
+  src: url("./assets/fonts/minecraft_modified.ttf");
 }
 
 /*GENERAL STYLES*/
 * {
-    cursor: none;
+  cursor: none;
 }
 
 html,
 body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background-image: url("./assets/images/fondo.webp");
-    background-position: center center;
-    background-repeat: no-repeat;
-    image-rendering: pixelated;
-    color: var(--color-white);
-    overflow: hidden;
-    font-family: 'minecraft';
-    filter: blur(0.6px) contrast(1.3);
+  background-image: url("./assets/images/fondo.webp");
+  background-position: center center;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  color: var(--color-white);
+  overflow: hidden;
+  font-family: "minecraft";
+  filter: blur(0.6px) contrast(1.4)
+    drop-shadow(0 0 5px rgba(253, 232, 255, 0.2));
 }
 
 body::after {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: repeating-linear-gradient(
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0.2) 2px,
-        transparent 2px,
-        transparent 4px
-    );
-    pointer-events: none;
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2) 2px,
+    transparent 2px,
+    transparent 4px
+  );
+  pointer-events: none;
 }
 
 h3 {
-    font-family: 'amiga4ever_pro';
-    font-size: calc(10px * var(--pixel-size));
+  font-family: "amiga4ever_pro";
+  font-size: calc(10px * var(--pixel-size));
 }
 
 span {
-    font-family: 'amiga4ever_pro';
+  font-family: "amiga4ever_pro";
 }
 
 img {
-    pointer-events: none;
-    user-select: none;
+  pointer-events: none;
+  user-select: none;
 }
 
 button,
 button:hover {
-    cursor: none;
+  cursor: none;
 }
 
 p {
-    font-family: 'minecraft';
-    font-size: calc(9px * var(--pixel-size));
-    letter-spacing: calc(1px * 3.5);
+  font-family: "minecraft";
+  font-size: calc(9px * var(--pixel-size));
+  letter-spacing: calc(1px * 3.5);
 }
 
 /*PERSONAL CLASSES*/
 .border {
-    border: 2px solid white;
+  border: 2px solid white;
 }
 
 .pixelated {
-    image-rendering: pixelated;
+  image-rendering: pixelated;
 }

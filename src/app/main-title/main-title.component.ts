@@ -9,18 +9,18 @@ import {
   opciones,
   subtitle,
   title,
-} from 'src/app/shared/animations/login.animations';
+} from 'src/app/shared/animations/main-title.animations';
 import { MusicAndSfxService } from 'src/app/shared/services/music-and-sfx.service';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css'],
+  selector: 'app-main-title',
+  templateUrl: './main-title.component.html',
+  styleUrls: ['./main-title.component.css'],
   standalone: true,
   imports: [CommonModule],
   animations: [title, subtitle, iniciar, opciones, fadeIn],
 })
-export class LoginComponent implements OnInit, OnDestroy {
+export class MainTitleComponent implements OnInit, OnDestroy {
   enterLeaveAnimations = false;
 
   hideElement: boolean = false;

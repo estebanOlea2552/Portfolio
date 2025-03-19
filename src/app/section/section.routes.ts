@@ -8,59 +8,59 @@ export const SECTION_ROUTES: Routes = [
       {
         path: 'description',
         loadComponent: () =>
-          import('./pages/description/descripcion.component').then(
-            (m) => m.DescripcionComponent
+          import('./section-content/description/description.component').then(
+            (m) => m.DescriptionComponent
           ),
         data: { animation: 'descriptionAnimation' },
       },
       {
         path: 'stack',
         loadComponent: () =>
-          import('./pages/stack/stack.component').then((m) => m.StackComponent),
+          import('./section-content/stack/stack.component').then((m) => m.StackComponent),
         data: { animation: 'stackAnimation' },
       },
       {
         path: 'education',
         loadComponent: () =>
-          import('./pages/education/educacion.component').then(
-            (m) => m.EducacionComponent
+          import('./section-content/education/education.component').then(
+            (m) => m.EducationComponent
           ),
         data: { animation: 'educationAnimation' },
       },
       {
         path: 'projects',
         loadComponent: () =>
-          import('./pages/projects/proyectos.component').then(
-            (m) => m.ProyectosComponent
+          import('./section-content/projects/projects.component').then(
+            (m) => m.ProjectsComponent
           ),
         data: { animation: 'projectsAnimation' },
       },
       {
         path: 'experience',
         loadComponent: () =>
-          import('./pages/experience/experiencia.component').then(
-            (m) => m.ExperienciaComponent
+          import('./section-content/experience/experience.component').then(
+            (m) => m.ExperienceComponent
           ),
         data: { animation: 'experienceAnimation' },
       },
       {
         path: 'cv',
         loadComponent: () =>
-          import('./pages/cv/cv.component').then((m) => m.CvComponent),
+          import('./section-content/cv/cv.component').then((m) => m.CvComponent),
         data: { animation: 'cvAnimation' },
       },
       {
         path: 'social',
         loadComponent: () =>
-          import('./pages/social/redes.component').then(
-            (m) => m.RedesComponent
+          import('./section-content/social/social.component').then(
+            (m) => m.SocialComponent
           ),
         data: { animation: 'socialAnimation' },
       },
       {
         path: 'contact',
         loadComponent: () =>
-          import('./pages/contact/contact.component').then(
+          import('./section-content/contact/contact.component').then(
             (m) => m.ContactComponent
           ),
         data: { animation: 'contactAnimation' },
@@ -68,8 +68,8 @@ export const SECTION_ROUTES: Routes = [
       {
         path: 'thanks',
         loadComponent: () =>
-          import('./pages/thanks/gracias.component').then(
-            (m) => m.GraciasComponent
+          import('./section-content/thanks/thanks.component').then(
+            (m) => m.ThanksComponent
           ),
         data: { animation: 'thanksAnimation' },
       },
